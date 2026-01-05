@@ -131,8 +131,8 @@ specs = OrderedDict(
             ACCOUNT_REGEX,
             OrderedDict(
                 [
+                    (REGEX, str),
                     (ACCOUNT_NAME, str),
-                    (ACCOUNT, str),
                 ]
             ),
         ),
@@ -166,8 +166,8 @@ def main():
     )
 
     account_regexes = [
-        (x.account_name, re.compile(x.account_name, re.IGNORECASE))
-        for x in load_csv("account_regex.csv", specs[ACCOUNT_REGEX], TAB)
+        (x.account_name, re.compile(x.regex, re.IGNORECASE), x.regex.casefold())
+        for x in load_csv("account_regex.csv", specs[ACCOUNT_REGEX], ";")
     ]
 
     # load bank csv
@@ -176,21 +176,23 @@ def main():
     # process each row in bank_csv
     for row in bank_csv:
         date_payed = bank_date_parser(row.date_payed)
-        if date_payed.month != 1:
+        if date_payed.month > 3:
             continue
         amount = parse_amount(row.amount, DOT)
         total = parse_amount(row.total, DOT)
 
         # match account
+        desc = row.description.lower()
         account_matches = [
-            account
-            for account, regex in account_regexes
-            if regex.match(row.description)
+            (account, x)
+            for account, regex, x in account_regexes
+            if x in desc.casefold()
         ]
         if len(account_matches) != 1:
-            print("incorrect matches for %s" % (row.description,))
+            print("incorrect matches for %s" % (row.description,), len(account_matches))
+            continue
         account = account_matches[0]
-        print(date_payed, amount, total)
+        # print(date_payed, amount, total)
 
 
 if __name__ == "__main__":
