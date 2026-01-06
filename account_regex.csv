@@ -1,12 +1,12 @@
-﻿løn;LoenAnsat
+﻿løn;LoenAnsatBetalt
 TELMORE;Telmore
 FIBIA;Fibia
 FRANTECH;Frantech
 DUSTIN;Dustin
-OVERFØRSEL;Loenkoersel
-AFREGNING TIL TOLD & SKAT;LoenSkat
+OVERFØRSEL;LoenGebyrBetalt
+AFREGNING TIL TOLD & SKAT;LoenSkatBetalt
 proshop;Proshop
-Betalingsservice ATP;ATP
+Betalingsservice ATP;ATPBetalt
 forsikring;AON
 punktum;Punktum
 DAN CATERING;Dancatering
@@ -22,5 +22,5 @@ Coop;Coop365
  moms ;Resulterende
 Dankort OK ;OkPlus
 Rente af indestående;Rente
-moms;AfregnetMoms
+moms;Liabilities:Moms:ResulterendeMoms
 VELOCONCEPT;VELOCONCEPT

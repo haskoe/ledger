@@ -11,6 +11,14 @@ import re
 from jinja2 import Environment, FileSystemLoader
 
 
+def write_file(filename, content, encoding="utf-8"):
+    with open(filename, "w", encoding=encoding) as f:
+        if isinstance(content, list):
+            f.write("\n".join(content))
+        else:
+            f.write(content)
+
+
 def date_parser(date_format):
     return lambda d: datetime.strptime(d, date_format)
 
@@ -19,6 +27,7 @@ def get_bank_row_key(account_name, date_payed):
     return "%s_%s" % (account_name, date_payed.strftime("%Y%m%d"))
 
 
+GENERATED_DIR = "generated"
 TEMPLATE_DIR = "templates"
 TAB = "\t"
 COMMA = ","
@@ -84,6 +93,9 @@ bank_date_parser = date_parser("%d-%m-%Y")
     DATE_PAYED_KEY,
     DATE_POSTED_KEY,
     TEMPLATE_NAME,
+    ACCOUNT2,
+    ACCOUNT3,
+    TRANSACTION_TYPE,
 ) = (
     "date_posted",
     "date_payed",
@@ -99,6 +111,9 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "date_payed_key",
     "date_posted_key",
     "template_name",
+    "account2",
+    "account3",
+    "transaction_type",
 )
 
 specs = OrderedDict(
@@ -181,6 +196,8 @@ specs = OrderedDict(
                 [
                     (ACCOUNT_GROUP, str),
                     (TEMPLATE_NAME, str),
+                    (ACCOUNT2, str),
+                    (ACCOUNT3, str),
                 ]
             ),
         ),
@@ -257,6 +274,8 @@ def main():
 
     # process each row in bank_csv
     account_groups = []
+    errors = []
+    transactions = []
     for row in bank_csv:
         date_payed = bank_date_parser(row[DATE_PAYED])
         if date_payed.month > 1:
@@ -268,12 +287,12 @@ def main():
         desc = row[DESCRIPTION].casefold()
         account_matches = [a for a, regex, x in account_regexes if x in desc]
         if len(account_matches) == 0:
-            print("Ingen matches for %s" % (row[DESCRIPTION],), len(account_matches))
+            errors.append("Ingen matches for %s" % (row[DESCRIPTION],))
             continue
 
         account_matches = list(set(account_matches))
         if len(account_matches) > 1:
-            print(
+            errors.append(
                 "Forskellige konti matcher for %s" % (row[DESCRIPTION],),
                 account_matches,
             )
@@ -281,11 +300,11 @@ def main():
 
         account_match = account_matches.pop()
         if account_match.casefold() not in all_accounts:
-            print(
+            errors.append(
                 "Konto %s (matchet fra %s) findes ikke i all_accounts"
                 % (account_match, row[DESCRIPTION])
             )
-            break
+            continue
 
         account_name = all_accounts[account_match.casefold()][-1]
         account_group = all_accounts[account_match.casefold()][0]
@@ -299,13 +318,36 @@ def main():
             account_group, transaction_types.get(account_name)
         )
         if not transaction_type:
-            print("Ingen transaktionstype for %s %s" % (account_group, account_name))
+            errors.append(
+                "Ingen transaktionstype for %s %s" % (account_group, account_name)
+            )
             continue
         account_groups.append(account_group)
+
+        transactions.append(
+            {
+                DATE_PAYED: date_payed,
+                AMOUNT: amount,
+                TOTAL: total,
+                ACCOUNT_NAME: account_name,
+                ACCOUNT_GROUP: account_group,
+                TRANSACTION_TYPE: transaction_type,
+            }
+        )
 
         # date_posted = bank_to_invoice_date[bank_row_key]
 
         # print(date_payed, amount, total)
+    if errors:
+        print("\n".join(errors))
+        return
+
+    # opdater kontoplan fil
+    write_file(
+        path.join(GENERATED_DIR, "kontoplan.beancount"),
+        ["1900-01-01 open %s DKK" % (x[1],) for x in sorted(all_accounts.values())],
+    )
+
     # print("\n".join(sorted(list(set(account_groups)))))
 
 

@@ -1,0 +1,11 @@
+option "title" "Danish Company Accounting"
+option "operating_currency" "DKK"
+option "documents" "bilag"
+
+; generated: kontoplan og yearly transactions
+include "generated/*.beancount"
+
+; 4. RAPPORTERING
+1900-01-01 custom "fava-option" "language" "da"
+
+include "queries/*.beancount"
