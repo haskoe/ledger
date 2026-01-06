@@ -10,10 +10,6 @@ Dancatering;Expenses:Mad
 VELOCONCEPT;Expenses:Mad
 LIDL;Expenses:Mad
 ALDI;Expenses:Mad
-ATP;Liabilities:Kreditorer:Loen
-LoenSkat;Liabilities:Kreditorer:Loen
-LoenAnsat;Liabilities:Kreditorer:Loen
-Loenkoersel;Liabilities:Kreditorer:Loen
 Naturenergi;Expenses:Kontor
 OkPlus;Expenses:Mad
 GebyrBank;Expenses:Bankkonto
@@ -27,3 +23,11 @@ SalgMoms;Assets:Moms
 AfregnetMoms;Assets:Moms
 Rente;Expenses:Bankkonto
 AON;Expenses:Forsikring
+ATP;Expenses:Loen
+LoenSkat;Expenses:Loen
+LoenAnsat;Expenses:Loen
+LoenKoersel;Expenses:Loen
+ATPBetalt;Liabilities:Skat:ATP
+LoenSkatBetalt;Liabilities:Skat:Kildeskat
+LoenAnsatBetalt;Liabilities:Ansat
+LoenkoerselBetalt;Liabilities:Ansat

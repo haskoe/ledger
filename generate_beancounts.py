@@ -1,3 +1,4 @@
+import os
 import sys
 import pandas as pd
 from os import path
@@ -7,15 +8,18 @@ from collections import OrderedDict
 from datetime import datetime
 from itertools import groupby
 import re
+from jinja2 import Environment, FileSystemLoader
 
 
 def date_parser(date_format):
     return lambda d: datetime.strptime(d, date_format)
 
 
-ACCOUNT_CSV = "account.csv"
-ACCOUNT_REGEX_CSV = "account_regex.csv"
+def get_bank_row_key(account_name, date_payed):
+    return "%s_%s" % (account_name, date_payed.strftime("%Y%m%d"))
 
+
+TEMPLATE_DIR = "templates"
 TAB = "\t"
 COMMA = ","
 DOT = "."
@@ -37,16 +41,32 @@ def parse_amount(amount, thousand_separator):
 
 bank_date_parser = date_parser("%d-%m-%Y")
 
+
 # input filnavne
-KOEB_MEDMOMS, KOEB_UDENMOMS, BETALING, SALG, BANK, ACCOUNT, ACCOUNT_REGEX = (
-    "koeb_medmoms",
-    "koeb_udenmoms",
-    "betaling",
-    "salg",
-    "bank",
-    "account",
-    "account_regex",
-)
+(
+    KOEB_MEDMOMS_CSV,
+    KOEB_UDENMOMS_CSV,
+    BETALING_CSV,
+    SALG_CSV,
+    BANK_CSV,
+    ACCOUNT_CSV,
+    ACCOUNT_REGEX_CSV,
+    BANK_TO_INVOICE_DATE_CSV,
+    TRANSACTION_TYPE_CSV,
+) = [
+    "%s.csv" % (fn,)
+    for fn in (
+        "koeb_medmoms",
+        "koeb_udenmoms",
+        "betaling",
+        "salg",
+        "bank",
+        "account",
+        "account_regex",
+        "bank_to_invoice_date",
+        "transaction_type",
+    )
+]
 
 # CSV column names
 (
@@ -61,6 +81,9 @@ KOEB_MEDMOMS, KOEB_UDENMOMS, BETALING, SALG, BANK, ACCOUNT, ACCOUNT_REGEX = (
     ACCOUNT_NAME,
     ACCOUNT_GROUP,
     REGEX,
+    DATE_PAYED_KEY,
+    DATE_POSTED_KEY,
+    TEMPLATE_NAME,
 ) = (
     "date_posted",
     "date_payed",
@@ -73,12 +96,15 @@ KOEB_MEDMOMS, KOEB_UDENMOMS, BETALING, SALG, BANK, ACCOUNT, ACCOUNT_REGEX = (
     "account_name",
     "account_group",
     "regex",
+    "date_payed_key",
+    "date_posted_key",
+    "template_name",
 )
 
 specs = OrderedDict(
     [
         (
-            KOEB_MEDMOMS,
+            KOEB_MEDMOMS_CSV,
             OrderedDict(
                 [
                     (DATE_POSTED, int),
@@ -89,7 +115,7 @@ specs = OrderedDict(
             ),
         ),
         (
-            KOEB_UDENMOMS,
+            KOEB_UDENMOMS_CSV,
             OrderedDict(
                 [
                     (DATE_POSTED, int),
@@ -98,9 +124,9 @@ specs = OrderedDict(
                 ]
             ),
         ),
-        (BETALING, OrderedDict([(DATE_PAYED, int), (POST_LINK, str)])),
+        (BETALING_CSV, OrderedDict([(DATE_PAYED, int), (POST_LINK, str)])),
         (
-            SALG,
+            SALG_CSV,
             OrderedDict(
                 [
                     (DATE_POSTED, int),
@@ -111,7 +137,7 @@ specs = OrderedDict(
             ),
         ),
         (
-            BANK,
+            BANK_CSV,
             OrderedDict(
                 [
                     (DATE_PAYED, str),
@@ -123,7 +149,7 @@ specs = OrderedDict(
             ),
         ),
         (
-            ACCOUNT,
+            ACCOUNT_CSV,
             OrderedDict(
                 [
                     (ACCOUNT_NAME, str),
@@ -132,11 +158,29 @@ specs = OrderedDict(
             ),
         ),
         (
-            ACCOUNT_REGEX,
+            ACCOUNT_REGEX_CSV,
             OrderedDict(
                 [
                     (REGEX, str),
                     (ACCOUNT_NAME, str),
+                ]
+            ),
+        ),
+        (
+            BANK_TO_INVOICE_DATE_CSV,
+            OrderedDict(
+                [
+                    (DATE_PAYED_KEY, str),
+                    (DATE_POSTED_KEY, str),
+                ]
+            ),
+        ),
+        (
+            TRANSACTION_TYPE_CSV,
+            OrderedDict(
+                [
+                    (ACCOUNT_GROUP, str),
+                    (TEMPLATE_NAME, str),
                 ]
             ),
         ),
@@ -155,47 +199,83 @@ def load_csv(filename, spec, sep=SEMICOLON):
     dicts = pd.read_csv(
         filename, names=spec.keys(), sep=sep, encoding="utf-8", dtype=spec
     ).to_dict(orient="records")
-    return [SimpleNamespace(**row) for row in dicts]
+    return dicts
+    # return [SimpleNamespace(**row) for row in dicts]
 
 
 def main():
     yr = len(sys.argv) > 1 and sys.argv[1] or "21"
 
-    # load account csv
+    jinja_env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
+    templates = dict(
+        [
+            (fn.split(".")[0], jinja_env.get_template(fn))
+            for fn in os.listdir(TEMPLATE_DIR)
+        ]
+    )  # load account csv
     all_accounts = dict(
         [
-            (x.account_name.casefold(), "%s:%s" % (x.account_group, x.account_name))
-            for x in load_csv(ACCOUNT_CSV, specs[ACCOUNT], SEMICOLON)
+            (
+                x[ACCOUNT_NAME].casefold(),
+                (x[ACCOUNT_GROUP], "%s:%s" % (x[ACCOUNT_GROUP], x[ACCOUNT_NAME])),
+            )
+            for x in load_csv(ACCOUNT_CSV, specs[ACCOUNT_CSV], SEMICOLON)
         ]
     )
 
     account_regexes = [
-        (x.account_name, re.compile(x.regex, re.IGNORECASE), x.regex.casefold())
-        for x in load_csv(ACCOUNT_REGEX_CSV, specs[ACCOUNT_REGEX], SEMICOLON)
+        (x[ACCOUNT_NAME], re.compile(x[REGEX], re.IGNORECASE), x[REGEX].casefold())
+        for x in load_csv(ACCOUNT_REGEX_CSV, specs[ACCOUNT_REGEX_CSV], SEMICOLON)
     ]
 
+    # load mapning fra bank til faktureringsdato
+    bank_to_invoice_date = dict(
+        [
+            (k[DATE_PAYED_KEY], k[DATE_POSTED_KEY])
+            for k in load_csv(
+                BANK_TO_INVOICE_DATE_CSV,
+                specs[BANK_TO_INVOICE_DATE_CSV],
+                SEMICOLON,
+            )
+        ]
+    )
+
     # load bank csv
-    bank_csv = load_csv(path.join(yr, "aps20%s.csv" % (yr,)), specs[BANK], SEMICOLON)
+    bank_csv = load_csv(
+        path.join(yr, "aps20%s.csv" % (yr,)), specs[BANK_CSV], SEMICOLON
+    )
+
+    # load transaction type csv
+    transaction_types = dict(
+        [
+            (k[ACCOUNT_GROUP], k[TEMPLATE_NAME])
+            for k in load_csv(
+                TRANSACTION_TYPE_CSV, specs[TRANSACTION_TYPE_CSV], SEMICOLON
+            )
+        ]
+    )
 
     # process each row in bank_csv
+    account_groups = []
     for row in bank_csv:
-        date_payed = bank_date_parser(row.date_payed)
-        if date_payed.month > 3:
+        date_payed = bank_date_parser(row[DATE_PAYED])
+        if date_payed.month > 1:
             continue
-        amount = parse_amount(row.amount, DOT)
-        total = parse_amount(row.total, DOT)
+        amount = parse_amount(row[AMOUNT], DOT)
+        total = parse_amount(row[TOTAL], DOT)
 
         # match account
-        desc = row.description.casefold()
+        desc = row[DESCRIPTION].casefold()
         account_matches = [a for a, regex, x in account_regexes if x in desc]
         if len(account_matches) == 0:
-            print("Ingen matches for %s" % (row.description,), len(account_matches))
+            print("Ingen matches for %s" % (row[DESCRIPTION],), len(account_matches))
             continue
 
         account_matches = list(set(account_matches))
         if len(account_matches) > 1:
             print(
-                "Forskellige konti matcher for %s" % (row.description,), account_matches
+                "Forskellige konti matcher for %s" % (row[DESCRIPTION],),
+                account_matches,
             )
             continue
 
@@ -203,11 +283,28 @@ def main():
         if account_match.casefold() not in all_accounts:
             print(
                 "Konto %s (matchet fra %s) findes ikke i all_accounts"
-                % (account_match, row.description)
+                % (account_match, row[DESCRIPTION])
             )
             break
 
+        account_name = all_accounts[account_match.casefold()][-1]
+        account_group = all_accounts[account_match.casefold()][0]
+        bank_row_key = get_bank_row_key(account_name, date_payed)
+
+        if bank_row_key in bank_to_invoice_date:
+            continue
+
+        # transaktionstype
+        transaction_type = transaction_types.get(account_group)
+        if not transaction_type:
+            print("Ingen transaktionstype for %s %s" % (account_group, account_name))
+            continue
+        account_groups.append(account_group)
+
+        # date_posted = bank_to_invoice_date[bank_row_key]
+
         # print(date_payed, amount, total)
+    # print("\n".join(sorted(list(set(account_groups)))))
 
 
 if __name__ == "__main__":
