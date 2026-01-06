@@ -3,11 +3,12 @@
   Liabilities:Bank:BankErhverv                                 -38,144.00 DKK
 
 2021-01-25 * "Dankort-køb proshop.dk Nota 48189903" "Dankort-køb proshop.dk Nota 48189903"
-  Expenses:Computer:Proshop                                      2,134.00 DKK
+  Expenses:Computer:Proshop                                      1,707.20 DKK
+  Assets:Moms:KoebMoms                                             426.80 DKK
   Liabilities:Kreditorer                                        -2,134.00 DKK
 
 2021-01-25 * "Dankort-køb proshop.dk Nota 48189903 betalt" "Dankort-køb proshop.dk Nota 48189903 betalt"
-  Liabilities:Kreditorer                                         2,134.00 DKK
+  Liabilities:Kreditorer                                         1,707.20 DKK
   Liabilities:Bank:BankErhverv                                  -2,134.00 DKK
 
 2021-01-20 * "Betalingsservice ATP - SAMLET BETALING Aftalenr. 905240531 betalt" "Betalingsservice ATP - SAMLET BETALING Aftalenr. 905240531 betalt"
@@ -16,18 +17,19 @@
 
 2021-01-20 * "forsikring" "forsikring"
   Expenses:Forsikring:AON                                        5,137.52 DKK
-  Liabilities:Kreditorer                                        -5,137.52 DKK
+  Assets:Moms:KoebMoms                                          -5,137.52 DKK
 
 2021-01-20 * "forsikring betalt" "forsikring betalt"
-  Liabilities:Kreditorer                                         5,137.52 DKK
-  Liabilities:Bank:BankErhverv                                  -5,137.52 DKK
+  Assets:Moms:KoebMoms                                           5,137.52 DKK
+  Liabilities:Kreditorer                                        -5,137.52 DKK
 
 2021-01-20 * "Dankort-køb Punktum dk Nota P9752776" "Dankort-køb Punktum dk Nota P9752776"
-  Expenses:Hosting:Punktum                                          50.00 DKK
+  Expenses:Hosting:Punktum                                          40.00 DKK
+  Assets:Moms:KoebMoms                                              10.00 DKK
   Liabilities:Kreditorer                                           -50.00 DKK
 
 2021-01-20 * "Dankort-køb Punktum dk Nota P9752776 betalt" "Dankort-køb Punktum dk Nota P9752776 betalt"
-  Liabilities:Kreditorer                                            50.00 DKK
+  Liabilities:Kreditorer                                            40.00 DKK
   Liabilities:Bank:BankErhverv                                     -50.00 DKK
 
 2021-01-18 * "AFREGNING TIL TOLD & SKAT betalt" "AFREGNING TIL TOLD & SKAT betalt"
@@ -36,18 +38,19 @@
 
 2021-01-12 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN" "MobilePay køb DAN CATERING V/JØRN PEDERSEN"
   Expenses:Mad:Dancatering                                          30.00 DKK
-  Liabilities:Kreditorer                                           -30.00 DKK
+  Assets:Moms:KoebMoms                                             -30.00 DKK
 
 2021-01-12 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt" "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt"
-  Liabilities:Kreditorer                                            30.00 DKK
-  Liabilities:Bank:BankErhverv                                     -30.00 DKK
+  Assets:Moms:KoebMoms                                              30.00 DKK
+  Liabilities:Kreditorer                                           -30.00 DKK
 
 2021-01-05 * "dustin" "dustin"
-  Expenses:Computer:Dustin                                       2,349.36 DKK
+  Expenses:Computer:Dustin                                       1,879.49 DKK
+  Assets:Moms:KoebMoms                                             469.87 DKK
   Liabilities:Kreditorer                                        -2,349.36 DKK
 
 2021-01-05 * "dustin betalt" "dustin betalt"
-  Liabilities:Kreditorer                                         2,349.36 DKK
+  Liabilities:Kreditorer                                         1,879.49 DKK
   Liabilities:Bank:BankErhverv                                  -2,349.36 DKK
 
 2021-01-05 * "OVERFØRSEL betalt" "OVERFØRSEL betalt"
@@ -55,27 +58,30 @@
   Liabilities:Bank:BankErhverv                                     -25.00 DKK
 
 2021-01-05 * "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         92.82 DKK
+  Expenses:Hosting:Frantech                                         74.26 DKK
+  Assets:Moms:KoebMoms                                              18.56 DKK
   Liabilities:Kreditorer                                           -92.82 DKK
 
 2021-01-05 * "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA betalt"
-  Liabilities:Kreditorer                                            92.82 DKK
+  Liabilities:Kreditorer                                            74.26 DKK
   Liabilities:Bank:BankErhverv                                     -92.82 DKK
 
 2021-01-04 * "Betalingsservice FIBIA P/S Aftalenr. 918707218" "Betalingsservice FIBIA P/S Aftalenr. 918707218"
-  Expenses:Internet:Fibia                                          966.75 DKK
+  Expenses:Internet:Fibia                                          773.40 DKK
+  Assets:Moms:KoebMoms                                             193.35 DKK
   Liabilities:Kreditorer                                          -966.75 DKK
 
 2021-01-04 * "Betalingsservice FIBIA P/S Aftalenr. 918707218 betalt" "Betalingsservice FIBIA P/S Aftalenr. 918707218 betalt"
-  Liabilities:Kreditorer                                           966.75 DKK
+  Liabilities:Kreditorer                                           773.40 DKK
   Liabilities:Bank:BankErhverv                                    -966.75 DKK
 
 2021-01-04 * "Dankort-køb TELMORE A/S Nota C02011BE0CRB" "Dankort-køb TELMORE A/S Nota C02011BE0CRB"
-  Expenses:Telefoni:Telmore                                        238.00 DKK
+  Expenses:Telefoni:Telmore                                        190.40 DKK
+  Assets:Moms:KoebMoms                                              47.60 DKK
   Liabilities:Kreditorer                                          -238.00 DKK
 
 2021-01-04 * "Dankort-køb TELMORE A/S Nota C02011BE0CRB betalt" "Dankort-køb TELMORE A/S Nota C02011BE0CRB betalt"
-  Liabilities:Kreditorer                                           238.00 DKK
+  Liabilities:Kreditorer                                           190.40 DKK
   Liabilities:Bank:BankErhverv                                    -238.00 DKK
 
 2021-01-04 * "løn dec betalt" "løn dec betalt"

@@ -93,7 +93,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
     AMOUNT_WO_VAT,
     VAT,
     AMOUNT,
-    AMOUNT_NEGATED,
+    TOTAL_NEGATED,
     POST_LINK,
     DESCRIPTION,
     TOTAL,
@@ -105,6 +105,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
     TEMPLATE_NAME,
     ACCOUNT2,
     ACCOUNT3,
+    ACCOUNT4,
     TRANSACTION_TYPE,
     TEXT,
     EXTRA_TEXT,
@@ -118,7 +119,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "amount_wo_vat",
     "vat",
     "amount",
-    "amount_negated",
+    "total_negated",
     "post_link",
     "description",
     "total",
@@ -130,6 +131,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "template_name",
     "account2",
     "account3",
+    "account4",
     "transaction_type",
     "text",
     "extra_text",
@@ -185,6 +187,7 @@ specs = OrderedDict(
                     (TEMPLATE_NAME, str),
                     (ACCOUNT2, str),
                     (ACCOUNT3, str),
+                    (ACCOUNT4, str),
                 ]
             ),
         ),
@@ -314,20 +317,21 @@ def main():
         # todo: check for already processed transaction
 
         # todo: negate amount if needed
-        vat_pct = 0.25
-        amount = abs(amount)
-        amount_wo_vat = amount / (1 + vat_pct)
-        vat = amount_wo_vat * vat_pct
-        amount_vat_free = 0  # todo: laes evt. momsfrit beloenb fra mapningsfil
+        vat_fraction = 0.2
+        amount = abs(amount)  # total
+        amount_vat_free = 0  # todo: laes momsfrit beloeb fra mapningsfil som bruger skal aflaese fra faktura
+        amount_with_vat = amount - amount_vat_free  # momsbeløb + moms
+        vat = amount_with_vat * vat_fraction  # moms
+        amount_wo_vat = amount - vat  # total uden moms
         transactions.append(
             {
                 DATE_PAYED: format_date(date_payed),
                 DATE_POSTED: format_date(date_payed),  # todo:
-                AMOUNT: format_money(amount),
-                AMOUNT_NEGATED: format_money(-amount),
+                TOTAL: format_money(amount),
+                TOTAL_NEGATED: format_money(-amount),
                 AMOUNT_WO_VAT: format_money(amount_wo_vat),
+                AMOUNT_WITH_VAT: format_money(amount_with_vat),
                 VAT: format_money(vat),
-                TOTAL: format_money(total),
                 ACCOUNT: account_name,
                 ACCOUNT_GROUP: account_group,
                 TRANSACTION_TYPE: transaction_type,
@@ -335,6 +339,7 @@ def main():
                 EXTRA_TEXT: row[DESCRIPTION],  # todo:
                 ACCOUNT2: transaction_type[ACCOUNT2],
                 ACCOUNT3: transaction_type[ACCOUNT3],
+                ACCOUNT4: transaction_type[ACCOUNT4],
                 CURRENCY: "DKK",  # todo
             }
         )
