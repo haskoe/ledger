@@ -44,7 +44,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
 
 # input filnavne
 (
-    KOEB_MEDMOMS_CSV,
+    UDGIFT_MEDMOMS_CSV,
     UDGIFT_CSV,
     BETALING_CSV,
     SALG_CSV,
@@ -56,7 +56,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
 ) = [
     "%s.csv" % (fn,)
     for fn in (
-        "koeb_medmoms",
+        "udgift_medmoms",
         "udgift",
         "betaling",
         "salg",
@@ -104,7 +104,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
 specs = OrderedDict(
     [
         (
-            KOEB_MEDMOMS_CSV,
+            UDGIFT_MEDMOMS_CSV,
             OrderedDict(
                 [
                     (DATE_POSTED, int),
