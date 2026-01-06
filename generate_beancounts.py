@@ -88,7 +88,10 @@ bank_date_parser = date_parser("%d-%m-%Y")
     DATE_POSTED,
     DATE_PAYED,
     ACCOUNT,
-    AMOUNT_VAT,
+    AMOUNT_WITH_VAT,
+    AMOUNT_VAT_FREE,
+    AMOUNT_WO_VAT,
+    VAT,
     AMOUNT,
     AMOUNT_NEGATED,
     POST_LINK,
@@ -110,7 +113,10 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "date_posted",
     "date_payed",
     "account",
-    "amount_vat",
+    "amount_with_vat",
+    "amount_vat_free",
+    "amount_wo_vat",
+    "vat",
     "amount",
     "amount_negated",
     "post_link",
@@ -132,39 +138,6 @@ bank_date_parser = date_parser("%d-%m-%Y")
 
 specs = OrderedDict(
     [
-        (
-            UDGIFT_MEDMOMS_CSV,
-            OrderedDict(
-                [
-                    (DATE_POSTED, int),
-                    (ACCOUNT, str),
-                    (AMOUNT_VAT, float),
-                    (AMOUNT, float),
-                ]
-            ),
-        ),
-        (
-            UDGIFT_CSV,
-            OrderedDict(
-                [
-                    (DATE_POSTED, int),
-                    (ACCOUNT, str),
-                    (AMOUNT, float),
-                ]
-            ),
-        ),
-        (BETALING_CSV, OrderedDict([(DATE_PAYED, int), (POST_LINK, str)])),
-        (
-            SALG_CSV,
-            OrderedDict(
-                [
-                    (DATE_POSTED, int),
-                    (ACCOUNT, str),
-                    (AMOUNT_VAT, float),
-                    (AMOUNT, float),
-                ]
-            ),
-        ),
         (
             BANK_CSV,
             OrderedDict(
@@ -341,13 +314,19 @@ def main():
         # todo: check for already processed transaction
 
         # todo: negate amount if needed
+        vat_pct = 0.25
         amount = abs(amount)
+        amount_wo_vat = amount / (1 + vat_pct)
+        vat = amount_wo_vat * vat_pct
+        amount_vat_free = 0  # todo: laes evt. momsfrit beloenb fra mapningsfil
         transactions.append(
             {
                 DATE_PAYED: format_date(date_payed),
                 DATE_POSTED: format_date(date_payed),  # todo:
                 AMOUNT: format_money(amount),
                 AMOUNT_NEGATED: format_money(-amount),
+                AMOUNT_WO_VAT: format_money(amount_wo_vat),
+                VAT: format_money(vat),
                 TOTAL: format_money(total),
                 ACCOUNT: account_name,
                 ACCOUNT_GROUP: account_group,
