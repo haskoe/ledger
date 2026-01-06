@@ -3,10 +3,8 @@ import sys
 import pandas as pd
 from os import path
 from beancount import loader
-from types import SimpleNamespace
 from collections import OrderedDict
 from datetime import datetime
-from itertools import groupby
 import re
 from jinja2 import Environment, FileSystemLoader
 
@@ -17,6 +15,10 @@ def write_file(filename, content, encoding="utf-8"):
             f.write("\n".join(content))
         else:
             f.write(content)
+
+
+def format_money(num):
+    return "{:,.2f}".format(num)
 
 
 def date_parser(date_format):
@@ -84,6 +86,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
     ACCOUNT,
     AMOUNT_VAT,
     AMOUNT,
+    AMOUNT_NEGATED,
     POST_LINK,
     DESCRIPTION,
     TOTAL,
@@ -96,12 +99,16 @@ bank_date_parser = date_parser("%d-%m-%Y")
     ACCOUNT2,
     ACCOUNT3,
     TRANSACTION_TYPE,
+    TEXT,
+    EXTRA_TEXT,
+    CURRENCY,
 ) = (
     "date_posted",
     "date_payed",
     "account",
     "amount_vat",
     "amount",
+    "amount_negated",
     "post_link",
     "description",
     "total",
@@ -114,6 +121,9 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "account2",
     "account3",
     "transaction_type",
+    "text",
+    "extra_text",
+    "currency",
 )
 
 specs = OrderedDict(
@@ -265,7 +275,7 @@ def main():
     # load transaction type csv
     transaction_types = dict(
         [
-            (k[ACCOUNT_GROUP], k[TEMPLATE_NAME])
+            (k[ACCOUNT_GROUP], k)
             for k in load_csv(
                 TRANSACTION_TYPE_CSV, specs[TRANSACTION_TYPE_CSV], SEMICOLON
             )
@@ -324,20 +334,32 @@ def main():
             continue
         account_groups.append(account_group)
 
+        # todo: check for already processed transaction
+
+        # todo: negate amount if needed
+        amount = abs(amount)
         transactions.append(
             {
                 DATE_PAYED: date_payed,
-                AMOUNT: amount,
-                TOTAL: total,
-                ACCOUNT_NAME: account_name,
+                DATE_POSTED: date_payed,  # todo:
+                AMOUNT: format_money(amount),
+                AMOUNT_NEGATED: format_money(-amount),
+                TOTAL: format_money(total),
+                ACCOUNT: account_name,
                 ACCOUNT_GROUP: account_group,
                 TRANSACTION_TYPE: transaction_type,
+                TEXT: row[DESCRIPTION],
+                EXTRA_TEXT: row[DESCRIPTION],  # todo:
+                ACCOUNT2: transaction_type[ACCOUNT2],
+                ACCOUNT3: transaction_type[ACCOUNT3],
+                CURRENCY: "DKK",  # todo
             }
         )
 
-        # date_posted = bank_to_invoice_date[bank_row_key]
+    #
+    # date_posted = bank_to_invoice_date[bank_row_key]
 
-        # print(date_payed, amount, total)
+    # print(date_payed, amount, total)
     if errors:
         print("\n".join(errors))
         return
@@ -347,6 +369,13 @@ def main():
         path.join(GENERATED_DIR, "kontoplan.beancount"),
         ["1900-01-01 open %s DKK" % (x[1],) for x in sorted(all_accounts.values())],
     )
+
+    # transaktioner
+    output = []
+    for t in transactions:
+        print(t[TRANSACTION_TYPE][TEMPLATE_NAME])
+        output.append(templates[t[TRANSACTION_TYPE][TEMPLATE_NAME]].render(t))
+    write_file(path.join(GENERATED_DIR, "%s.beancount" % (yr,)), "\n\n".join(output))
 
     # print("\n".join(sorted(list(set(account_groups)))))
 

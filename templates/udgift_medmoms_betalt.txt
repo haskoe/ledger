@@ -1,3 +1,0 @@
-{{ date_payed }} * "{{ text }}" "{{ extra_text}}"
-  {{ to_account.ljust(50) }} {{ amount.rjust(20) }} {{ currency }}
-  {{ from_account.ljust(50) }} {{ -(amount.rjust(20)) }} {{ currency }}
