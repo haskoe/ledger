@@ -21,6 +21,10 @@ def format_money(num):
     return "{:,.2f}".format(num)
 
 
+def format_date(dt):
+    return dt.strftime("%Y-%m-%d")
+
+
 def date_parser(date_format):
     return lambda d: datetime.strptime(d, date_format)
 
@@ -340,8 +344,8 @@ def main():
         amount = abs(amount)
         transactions.append(
             {
-                DATE_PAYED: date_payed,
-                DATE_POSTED: date_payed,  # todo:
+                DATE_PAYED: format_date(date_payed),
+                DATE_POSTED: format_date(date_payed),  # todo:
                 AMOUNT: format_money(amount),
                 AMOUNT_NEGATED: format_money(-amount),
                 TOTAL: format_money(total),
