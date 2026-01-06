@@ -13,9 +13,13 @@ def date_parser(date_format):
     return lambda d: datetime.strptime(d, date_format)
 
 
+ACCOUNT_CSV = "account.csv"
+ACCOUNT_REGEX_CSV = "account_regex.csv"
+
 TAB = "\t"
 COMMA = ","
 DOT = "."
+SEMICOLON = ";"
 try:
     decimal_separator = float("1%s1" % (COMMA,)) == 1.1 and COMMA
 except ValueError:
@@ -141,13 +145,13 @@ specs = OrderedDict(
 
 
 kontoplan, errors, kontoplan_options = loader.load_file("kontoplan.beancount")
-accounts = [account.account for account in kontoplan]
+kontoplan_accounts = [account.account for account in kontoplan]
 
 regnskab, errors, options = loader.load_file("regnskab.beancount")
 links = [link for link in regnskab if link.meta.get("link")]
 
 
-def load_csv(filename, spec, sep=";"):
+def load_csv(filename, spec, sep=SEMICOLON):
     dicts = pd.read_csv(
         filename, names=spec.keys(), sep=sep, encoding="utf-8", dtype=spec
     ).to_dict(orient="records")
@@ -158,20 +162,20 @@ def main():
     yr = len(sys.argv) > 1 and sys.argv[1] or "21"
 
     # load account csv
-    accounts = dict(
+    all_accounts = dict(
         [
-            (x.account_name, x.account_group)
-            for x in load_csv("account.csv", specs[ACCOUNT], TAB)
+            (x.account_name.casefold(), "%s:%s" % (x.account_group, x.account_name))
+            for x in load_csv(ACCOUNT_CSV, specs[ACCOUNT], SEMICOLON)
         ]
     )
 
     account_regexes = [
         (x.account_name, re.compile(x.regex, re.IGNORECASE), x.regex.casefold())
-        for x in load_csv("account_regex.csv", specs[ACCOUNT_REGEX], ";")
+        for x in load_csv(ACCOUNT_REGEX_CSV, specs[ACCOUNT_REGEX], SEMICOLON)
     ]
 
     # load bank csv
-    bank_csv = load_csv(path.join(yr, "aps20%s.csv" % (yr,)), specs[BANK], ";")
+    bank_csv = load_csv(path.join(yr, "aps20%s.csv" % (yr,)), specs[BANK], SEMICOLON)
 
     # process each row in bank_csv
     for row in bank_csv:
@@ -182,16 +186,27 @@ def main():
         total = parse_amount(row.total, DOT)
 
         # match account
-        desc = row.description.lower()
-        account_matches = [
-            (account, x)
-            for account, regex, x in account_regexes
-            if x in desc.casefold()
-        ]
-        if len(account_matches) != 1:
-            print("incorrect matches for %s" % (row.description,), len(account_matches))
+        desc = row.description.casefold()
+        account_matches = [a for a, regex, x in account_regexes if x in desc]
+        if len(account_matches) == 0:
+            print("Ingen matches for %s" % (row.description,), len(account_matches))
             continue
-        account = account_matches[0]
+
+        account_matches = list(set(account_matches))
+        if len(account_matches) > 1:
+            print(
+                "Forskellige konti matcher for %s" % (row.description,), account_matches
+            )
+            continue
+
+        account_match = account_matches.pop()
+        if account_match.casefold() not in all_accounts:
+            print(
+                "Konto %s (matchet fra %s) findes ikke i all_accounts"
+                % (account_match, row.description)
+            )
+            break
+
         # print(date_payed, amount, total)
 
 

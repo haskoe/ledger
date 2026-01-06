@@ -7,7 +7,7 @@ OVERFØRSEL;Loenkoersel
 AFREGNING TIL TOLD & SKAT;LoenSkat
 proshop;Proshop
 Betalingsservice ATP;ATP
-forsikring;Forsikring
+forsikring;AON
 punktum;Punktum
 DAN CATERING;Dancatering
 POLITIKEN;Politiken
@@ -21,9 +21,6 @@ Netto;Netto
 Coop;Coop365
  moms ;Resulterende
 Dankort OK ;OkPlus
-Rente af indestående;
-incorrect matches for Visa/Dankort VELOCONCEPT CYCLING AP, KARLSLUNDE, Nota nr. 65362 0
-incorrect matches for kontaktløs Dankort Veloconcept Cyclin Nota 002001 0
-incorrect matches for moms q3-q4 2020 0
-incorrect matches for moms q1-q2 2020 0
-incorrect matches for kontaktløs Dankort OK Plus Solrød Str Nota 061390 2
+Rente af indestående;Rente
+moms;AfregnetMoms
+VELOCONCEPT;VELOCONCEPT
