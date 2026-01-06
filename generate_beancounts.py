@@ -45,7 +45,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
 # input filnavne
 (
     KOEB_MEDMOMS_CSV,
-    KOEB_UDENMOMS_CSV,
+    UDGIFT_CSV,
     BETALING_CSV,
     SALG_CSV,
     BANK_CSV,
@@ -57,7 +57,7 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "%s.csv" % (fn,)
     for fn in (
         "koeb_medmoms",
-        "koeb_udenmoms",
+        "udgift",
         "betaling",
         "salg",
         "bank",
@@ -115,7 +115,7 @@ specs = OrderedDict(
             ),
         ),
         (
-            KOEB_UDENMOMS_CSV,
+            UDGIFT_CSV,
             OrderedDict(
                 [
                     (DATE_POSTED, int),
@@ -294,8 +294,10 @@ def main():
         if bank_row_key in bank_to_invoice_date:
             continue
 
-        # transaktionstype
-        transaction_type = transaction_types.get(account_group)
+        # transaktionstype hvor der foerst ses om der er en tilknyttet account_group og herefter account:_name
+        transaction_type = transaction_types.get(
+            account_group, transaction_types.get(account_name)
+        )
         if not transaction_type:
             print("Ingen transaktionstype for %s %s" % (account_group, account_name))
             continue

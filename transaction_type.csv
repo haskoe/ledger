@@ -1,12 +1,15 @@
 ﻿Assets:Moms;betaling;BankErhverv
-Expenses:Loen:ATP;
-Expenses:Avis;
-Expenses:Bankkonto;
-Expenses:Computer;
-Expenses:Forsikring;
-Expenses:Hosting;
-Expenses:Internet;
-Expenses:Kontor;
-Expenses:Mad;
-Expenses:Telefoni;
-Liabilities:Kreditorer:Loen;
+Expenses:Loen:LoenSkat;udgift;
+Ingen transaktionstype for Expenses:Loen Expenses:Loen:LoenSkat
+Ingen transaktionstype for Expenses:Computer Expenses:Computer:Proshop
+Ingen transaktionstype for Expenses:Loen Expenses:Loen:ATP
+Ingen transaktionstype for Expenses:Forsikring Expenses:Forsikring:AON
+Ingen transaktionstype for Expenses:Hosting Expenses:Hosting:Punktum
+Ingen transaktionstype for Expenses:Loen Expenses:Loen:LoenSkat
+Ingen transaktionstype for Expenses:Mad Expenses:Mad:Dancatering
+Ingen transaktionstype for Expenses:Computer Expenses:Computer:Dustin
+Ingen transaktionstype for Expenses:Loen Expenses:Loen:LoenKoersel
+Ingen transaktionstype for Expenses:Hosting Expenses:Hosting:Frantech
+Ingen transaktionstype for Expenses:Internet Expenses:Internet:Fibia
+Ingen transaktionstype for Expenses:Telefoni Expenses:Telefoni:Telmore
+Ingen transaktionstype for Expenses:Loen Expenses:Loen:LoenAnsat
