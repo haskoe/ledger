@@ -6,7 +6,7 @@ DUSTIN;Dustin
 OVERFØRSEL;LoenGebyrBetalt
 AFREGNING TIL TOLD & SKAT;LoenSkatBetalt
 proshop;Proshop
-Betalingsservice ATP;ATPBetalt
+Betalingsservice ATP;SkyldigATP
 forsikring;AON
 punktum;Punktum
 DAN CATERING;Dancatering
@@ -19,8 +19,7 @@ ALDI;ALDI
 Rema;Rema1000
 Netto;Netto
 Coop;Coop365
- moms ;Resulterende
+moms ;SkyldigMoms
 Dankort OK ;OkPlus
 Rente af indestående;Rente
-moms;Liabilities:Moms:ResulterendeMoms
 VELOCONCEPT;VELOCONCEPT

@@ -19,7 +19,7 @@ Rema1000;Expenses:Mad
 Netto;Expenses:Mad
 Coop365;Expenses:Mad
 KoebMoms;Assets:Moms
-ResulterendeMoms;Liabilities:Moms
+SkyldigMoms;Liabilities:Moms
 SalgMoms;Liabilities:Moms
 AfregnetMoms;Assets:Moms
 Rente;Expenses:Bank
@@ -29,7 +29,7 @@ ATP;Expenses:Loen
 LoenGebyr;Expenses:Loen
 LoenSkat;Expenses:Loen
 LoenAnsat;Expenses:Loen
-ATPBetalt;Liabilities:ATP
+SkyldigATP;Liabilities:ATP
 LoenSkatBetalt;Liabilities:Skat
 LoenAnsatBetalt;Liabilities:Ansat
 LoenGebyrBetalt;Liabilities:Loen

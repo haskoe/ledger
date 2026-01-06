@@ -270,7 +270,7 @@ def main():
     transactions = []
     for row in bank_csv:
         date_payed = bank_date_parser(row[DATE_PAYED])
-        if date_payed.month > 1:
+        if date_payed.month > 3:
             continue
         amount = parse_amount(row[AMOUNT], DOT)
         total = parse_amount(row[TOTAL], DOT)

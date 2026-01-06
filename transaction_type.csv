@@ -1,9 +1,9 @@
-﻿Liabilities:Moms:ResulterendeMoms;udgift_betalt;Liabilities:Bank:BankErhverv;;
-Expenses:Loen:ATP;udgift;Liabilities:ATP:ATPBetalt;;
-Expenses:Loen:LoenGebyr;udgift;Expenses:LoenGebyrBetalt;;
-Expenses:Loen:LoenSkat;udgift;Liabilities:Loen:LoenSkatBetalt;;
-Expenses:Loen:LoenAnsat;udgift;Liabilities:Loen:LoenAnsatBetalt;;
-Liabilities:ATP:ATPBetalt;udgift_betalt;Liabilities:Bank:BankErhverv;;
+﻿Liabilities:Moms:SkyldigMoms;udgift_betalt;Liabilities:Bank:BankErhverv;;
+Expenses:Loen:ATP;udgift;Liabilities:SkyldigATP;;
+Expenses:Loen:LoenGebyr;udgift;Liabilities:SkyldigGebyrLoen;;
+Expenses:Loen:LoenSkat;udgift;Liabilities:Loen:Skat:SkyldigLoenSkat;;
+Expenses:Loen:LoenAnsat;udgift;Liabilities:Ansat:SkyldigLoen;;
+Liabilities:SkyldigATP;udgift_betalt;Liabilities:Bank:BankErhverv;;
 Liabilities:Loen:LoenGebyrBetalt;udgift_betalt;Liabilities:Bank:BankErhverv;;
 Liabilities:Skat:LoenSkatBetalt;udgift_betalt;Liabilities:Bank:BankErhverv;;
 Liabilities:Ansat:LoenAnsatBetalt;udgift_betalt;Liabilities:Bank:BankErhverv;;
@@ -13,3 +13,7 @@ Expenses:Hosting;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kredito
 Expenses:Forsikring;udgift_med_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Liabilities:Bank:BankErhverv
 Expenses:Internet;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Liabilities:Bank:BankErhverv
 Expenses:Telefoni;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Liabilities:Bank:BankErhverv
+Expenses:Bank;udgift_med_betalt;Liabilities:Kreditorer;Liabilities:Bank:BankErhverv;
+Expenses:Avis;udgift_med_betalt;Liabilities:Kreditorer;Liabilities:Bank:BankErhverv;
+Liabilities:ATP;udgift_betalt;Liabilities:Bank:BankErhverv;;
+Expenses:Kontor;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Liabilities:Bank:BankErhverv
