@@ -21,3 +21,4 @@ Expenses:Kontor;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditor
 Income:Konsulentydelse;salg_betalt;Assets:Debitorer;;
 Expenses:Hardware;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Software;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;
+Income:Salg;salg;Liabilities:Moms:SalgMoms;Assets:Debitorer;

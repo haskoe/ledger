@@ -219,8 +219,8 @@ specs = OrderedDict(
                     (ACCOUNT_NAME, str),
                     (YYMMDD, str),
                     (YYMMDD_TEXT, str),
-                    (HOURS, int),
-                    (SUPPORT_HOURS, int),
+                    (HOURS, float),
+                    (SUPPORT_HOURS, float),
                 ]
             ),
         ),
@@ -231,7 +231,7 @@ specs = OrderedDict(
                     (ACCOUNT_NAME, str),
                     (PRICE_TYPE, str),
                     (YYMMDD, str),
-                    (PRICE, str),
+                    (PRICE, float),
                 ]
             ),
         ),
@@ -414,28 +414,31 @@ def main():
         hour_price = find_price(prices, account_name, "Timepris", yymmdd)
         support_price = find_price(prices, account_name, "Support", yymmdd)
         amount_wo_vat = hours * hour_price + support_hours * support_price
+        # print(hours, support_hours, hour_price, support_price, amount_wo_vat)
         vat = amount_wo_vat * vat_fraction
         amount = amount_wo_vat + vat
-        account_group = "Income:Konsulentydelse"
-        transaction_type = "Salg"
+        account_group = "Income:Salg"
+        account_name = "%s:%s" % (
+            account_group,
+            account_name,
+        )
 
+        transaction_type = transaction_types.get(
+            account_group, transaction_types.get(account_name)
+        )
         transactions.append(
             {
                 DATE_POSTED: format_date(yymmdd),  # todo:
-                TOTAL: format_money(amount),
                 TOTAL_NEGATED: format_money(-amount),
                 AMOUNT_WO_VAT: format_money(amount_wo_vat),
-                AMOUNT_WO_VAT_NEGATED: format_money(-amount_wo_vat),
-                AMOUNT_WITH_VAT: format_money(amount_with_vat),
                 VAT: format_money(vat),
                 ACCOUNT: account_name,
                 ACCOUNT_GROUP: account_group,
                 TRANSACTION_TYPE: transaction_type,
-                TEXT: row[DESCRIPTION],
-                EXTRA_TEXT: row[DESCRIPTION],  # todo:
+                TEXT: yymmdd_text,
                 ACCOUNT2: transaction_type[ACCOUNT2],
                 ACCOUNT3: transaction_type[ACCOUNT3],
-                ACCOUNT4: transaction_type[ACCOUNT4],
+                ACCOUNT4: "",
                 CURRENCY: "DKK",  # todo
             }
         )
