@@ -333,7 +333,7 @@ def main():
     vat_fraction = vat_pct / (1 + vat_pct)
     for row in bank_csv:
         date_payed = bank_date_parser(row[DATE_PAYED])
-        if date_payed.month > 8:
+        if date_payed.month > 12:
             continue
         amount = parse_amount(row[AMOUNT], DOT)
         total = parse_amount(row[TOTAL], DOT)

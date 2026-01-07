@@ -30,6 +30,7 @@ LoenSkat;Expenses:Loen
 LoenAnsat;Expenses:Loen
 SkyldigATP;Liabilities:ATP
 SkyldigSkatAfLoen;Liabilities:Skat
+SkyldigVirksomhedsSkat;Liabilities:Skat
 SkyldigUdbytteSkat;Liabilities:Skat
 SkyldigUdbytte;Liabilities:Ansat
 SkyldigLoen;Liabilities:Ansat
@@ -47,3 +48,5 @@ CIRCLEK;Expenses:Mad
 AXOSOFT;Expenses:Software:UdenMoms
 DKHOSTMASTER;Expenses:Hosting
 Mad;Expenses:Mad
+REVISOR;Expenses:Revisor
+Sponsorater;Expenses:Sponsorater

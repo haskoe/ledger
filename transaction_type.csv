@@ -25,3 +25,5 @@ Expenses:Hardware;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kredit
 Expenses:Software;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Software:UdenMoms;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;
 Income:Salg;salg;Liabilities:Moms:SalgMoms;Assets:Debitorer;
+Expenses:Revisor;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
+Expenses:Sponsorater;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
