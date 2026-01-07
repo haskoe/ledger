@@ -34,6 +34,10 @@ def get_bank_row_key(account_name, date_payed):
     return "%s_%s" % (account_name, date_payed.strftime("%Y%m%d"))
 
 
+def combined_account(account_name, account_group):
+    return "%s:%s" % (account_group, account_name)
+
+
 GENERATED_DIR = "generated"
 TEMPLATE_DIR = "templates"
 TAB = "\t"
@@ -325,30 +329,30 @@ def main():
     account_groups = []
     errors = []
     transactions = []
-    vat_fraction = 0.2
+    vat_pct = 0.25
+    vat_fraction = vat_pct / (1 + vat_pct)
     for row in bank_csv:
         date_payed = bank_date_parser(row[DATE_PAYED])
-        if date_payed.month > 6:
+        if date_payed.month > 8:
             continue
         amount = parse_amount(row[AMOUNT], DOT)
         total = parse_amount(row[TOTAL], DOT)
 
         # match account
         desc = row[DESCRIPTION].casefold()
-        account_matches = [a for a, regex, x in account_regexes if x in desc]
+        account_matches = [
+            (a, srch_str) for a, regex, srch_str in account_regexes if srch_str in desc
+        ]
         if len(account_matches) == 0:
             errors.append("Ingen matches for %s" % (row[DESCRIPTION],))
             continue
 
         account_matches = list(set(account_matches))
         if len(account_matches) > 1:
-            errors.append(
-                "Forskellige konti matcher for %s" % (row[DESCRIPTION],),
-                account_matches,
-            )
-            continue
-
-        account_match = account_matches.pop()
+            # vi tager den med bedste match
+            account_matches.sort(key=lambda x: -len(x[1]))
+            # print(account_matches)
+        account_match = account_matches[0][0]
         if account_match.casefold() not in all_accounts:
             errors.append(
                 "Konto %s (matchet fra %s) findes ikke i all_accounts"
@@ -365,9 +369,15 @@ def main():
 
         # transaktionstype hvor der foerst ses om der er en tilknyttet account_group og herefter account:_name
         transaction_type = transaction_types.get(
-            account_group, transaction_types.get(account_name)
+            account_group,
+            transaction_types.get(account_name),
         )
         if not transaction_type:
+            print(
+                account_group,
+                account_name,
+                combined_account(account_name, account_group),
+            )
             errors.append(
                 "Ingen transaktionstype for %s %s" % (account_group, account_name)
             )
@@ -415,7 +425,7 @@ def main():
         support_price = find_price(prices, account_name, "Support", yymmdd)
         amount_wo_vat = hours * hour_price + support_hours * support_price
         # print(hours, support_hours, hour_price, support_price, amount_wo_vat)
-        vat = amount_wo_vat * vat_fraction
+        vat = amount_wo_vat * vat_pct
         amount = amount_wo_vat + vat
         account_group = "Income:Salg"
         account_name = "%s:%s" % (

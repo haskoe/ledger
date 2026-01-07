@@ -1,3 +1,234 @@
+2021-08-26 * "MobilePay køb Borgervænget Kantine" "MobilePay køb Borgervænget Kantine"
+  Expenses:Mad:Mad                                                  28.00 DKK
+  Liabilities:Kreditorer                                           -28.00 DKK
+
+2021-08-26 * "MobilePay køb Borgervænget Kantine betalt" "MobilePay køb Borgervænget Kantine betalt"
+  Liabilities:Kreditorer                                            28.00 DKK
+  Assets:Bank:BankErhverv                                          -28.00 DKK
+
+2021-08-24 * "kontaktløs Dankort Coop 365 Dildhaven Nota 610742" "kontaktløs Dankort Coop 365 Dildhaven Nota 610742"
+  Expenses:Mad:Coop365                                              60.95 DKK
+  Liabilities:Kreditorer                                           -60.95 DKK
+
+2021-08-24 * "kontaktløs Dankort Coop 365 Dildhaven Nota 610742 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 610742 betalt"
+  Liabilities:Kreditorer                                            60.95 DKK
+  Assets:Bank:BankErhverv                                          -60.95 DKK
+
+2021-08-24 * "Askøe 202011 betalt" "Askøe 202011 betalt"
+  Assets:Debitorer:GOTTIT                                      -93,375.00 DKK
+  Assets:Bank:BankErhverv                                       93,375.00 DKK
+
+2021-08-23 * "Dankort-køb ELGIGANTEN A/S Nota C402614" "Dankort-køb ELGIGANTEN A/S Nota C402614"
+  Expenses:Hardware:ELG                                          1,056.00 DKK
+  Assets:Moms:KoebMoms                                             264.00 DKK
+  Liabilities:Kreditorer                                        -1,320.00 DKK
+
+2021-08-23 * "Dankort-køb ELGIGANTEN A/S Nota C402614 betalt" "Dankort-køb ELGIGANTEN A/S Nota C402614 betalt"
+  Liabilities:Kreditorer                                         1,320.00 DKK
+  Assets:Bank:BankErhverv                                       -1,320.00 DKK
+
+2021-08-23 * "Askøe 202101 betalt" "Askøe 202101 betalt"
+  Assets:Debitorer:GOTTIT                                      -37,125.00 DKK
+  Assets:Bank:BankErhverv                                       37,125.00 DKK
+
+2021-08-20 * "kontaktløs Dankort LIDL Nota 723812" "kontaktløs Dankort LIDL Nota 723812"
+  Expenses:Mad:LIDL                                                 56.90 DKK
+  Liabilities:Kreditorer                                           -56.90 DKK
+
+2021-08-20 * "kontaktløs Dankort LIDL Nota 723812 betalt" "kontaktløs Dankort LIDL Nota 723812 betalt"
+  Liabilities:Kreditorer                                            56.90 DKK
+  Assets:Bank:BankErhverv                                          -56.90 DKK
+
+2021-08-18 * "Dankort-køb ELGIGANTEN A/S Nota C693506" "Dankort-køb ELGIGANTEN A/S Nota C693506"
+  Expenses:Hardware:ELG                                          1,759.20 DKK
+  Assets:Moms:KoebMoms                                             439.80 DKK
+  Liabilities:Kreditorer                                        -2,199.00 DKK
+
+2021-08-18 * "Dankort-køb ELGIGANTEN A/S Nota C693506 betalt" "Dankort-køb ELGIGANTEN A/S Nota C693506 betalt"
+  Liabilities:Kreditorer                                         2,199.00 DKK
+  Assets:Bank:BankErhverv                                       -2,199.00 DKK
+
+2021-08-17 * "kontaktløs Dankort Netto Dildhaven Nota 369175" "kontaktløs Dankort Netto Dildhaven Nota 369175"
+  Expenses:Mad:Netto                                                72.20 DKK
+  Liabilities:Kreditorer                                           -72.20 DKK
+
+2021-08-17 * "kontaktløs Dankort Netto Dildhaven Nota 369175 betalt" "kontaktløs Dankort Netto Dildhaven Nota 369175 betalt"
+  Liabilities:Kreditorer                                            72.20 DKK
+  Assets:Bank:BankErhverv                                          -72.20 DKK
+
+2021-08-13 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN" "MobilePay køb DAN CATERING V/JØRN PEDERSEN"
+  Expenses:Mad:Dancatering                                          60.00 DKK
+  Liabilities:Kreditorer                                           -60.00 DKK
+
+2021-08-13 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt" "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt"
+  Liabilities:Kreditorer                                            60.00 DKK
+  Assets:Bank:BankErhverv                                          -60.00 DKK
+
+2021-08-11 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN" "MobilePay køb DAN CATERING V/JØRN PEDERSEN"
+  Expenses:Mad:Dancatering                                          75.00 DKK
+  Liabilities:Kreditorer                                           -75.00 DKK
+
+2021-08-11 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt" "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt"
+  Liabilities:Kreditorer                                            75.00 DKK
+  Assets:Bank:BankErhverv                                          -75.00 DKK
+
+2021-08-10 * "AFREGNING TIL TOLD & SKAT betalt" "AFREGNING TIL TOLD & SKAT betalt"
+  Liabilities:Skat:SkyldigSkatAfLoen                            19,556.00 DKK
+  Assets:Bank:BankErhverv                                      -19,556.00 DKK
+
+2021-08-10 * "OVERFØRSEL betalt" "OVERFØRSEL betalt"
+  Liabilities:Loen:SkyldigLoenGebyr                                 27.50 DKK
+  Assets:Bank:BankErhverv                                          -27.50 DKK
+
+2021-08-09 * "Betalingsservice ATP LIVSLANG PENSION Aftalenr. 903811345 betalt" "Betalingsservice ATP LIVSLANG PENSION Aftalenr. 903811345 betalt"
+  Liabilities:ATP:SkyldigATP                                     1,136.04 DKK
+  Assets:Bank:BankErhverv                                       -1,136.04 DKK
+
+2021-08-09 * "Dankort-køb politiken.dk Nota CP-02452735" "Dankort-køb politiken.dk Nota CP-02452735"
+  Expenses:Avis:Politiken                                          299.00 DKK
+  Liabilities:Kreditorer                                          -299.00 DKK
+
+2021-08-09 * "Dankort-køb politiken.dk Nota CP-02452735 betalt" "Dankort-køb politiken.dk Nota CP-02452735 betalt"
+  Liabilities:Kreditorer                                           299.00 DKK
+  Assets:Bank:BankErhverv                                         -299.00 DKK
+
+2021-08-06 * "kontaktløs Dankort LIDL Nota 711027" "kontaktløs Dankort LIDL Nota 711027"
+  Expenses:Mad:LIDL                                                 42.95 DKK
+  Liabilities:Kreditorer                                           -42.95 DKK
+
+2021-08-06 * "kontaktløs Dankort LIDL Nota 711027 betalt" "kontaktløs Dankort LIDL Nota 711027 betalt"
+  Liabilities:Kreditorer                                            42.95 DKK
+  Assets:Bank:BankErhverv                                          -42.95 DKK
+
+2021-08-04 * "kontaktløs Dankort LIDL Nota 141171" "kontaktløs Dankort LIDL Nota 141171"
+  Expenses:Mad:LIDL                                                 92.95 DKK
+  Liabilities:Kreditorer                                           -92.95 DKK
+
+2021-08-04 * "kontaktløs Dankort LIDL Nota 141171 betalt" "kontaktløs Dankort LIDL Nota 141171 betalt"
+  Liabilities:Kreditorer                                            92.95 DKK
+  Assets:Bank:BankErhverv                                          -92.95 DKK
+
+2021-08-04 * "Dankort-køb TELMORE A/S Nota C08211HSGDXB" "Dankort-køb TELMORE A/S Nota C08211HSGDXB"
+  Expenses:Telefoni:Telmore                                        278.40 DKK
+  Assets:Moms:KoebMoms                                              69.60 DKK
+  Liabilities:Kreditorer                                          -348.00 DKK
+
+2021-08-04 * "Dankort-køb TELMORE A/S Nota C08211HSGDXB betalt" "Dankort-køb TELMORE A/S Nota C08211HSGDXB betalt"
+  Liabilities:Kreditorer                                           348.00 DKK
+  Assets:Bank:BankErhverv                                         -348.00 DKK
+
+2021-08-03 * "Visa/Dankort USD 15,00 Kurs 637,13 Nota nr. 74399 FRANTECH* FRANTECH 488, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 637,13 Nota nr. 74399 FRANTECH* FRANTECH 488, HTTPSMY.FRA"
+  Expenses:Hosting:UdenMoms:Frantech                                95.57 DKK
+  Liabilities:Kreditorer                                           -95.57 DKK
+
+2021-08-03 * "Visa/Dankort USD 15,00 Kurs 637,13 Nota nr. 74399 FRANTECH* FRANTECH 488, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 637,13 Nota nr. 74399 FRANTECH* FRANTECH 488, HTTPSMY.FRA betalt"
+  Liabilities:Kreditorer                                            95.57 DKK
+  Assets:Bank:BankErhverv                                          -95.57 DKK
+
+2021-08-02 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144"
+  Expenses:Kontor:Naturenergi                                    2,552.03 DKK
+  Assets:Moms:KoebMoms                                             638.01 DKK
+  Liabilities:Kreditorer                                        -3,190.04 DKK
+
+2021-08-02 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt"
+  Liabilities:Kreditorer                                         3,190.04 DKK
+  Assets:Bank:BankErhverv                                       -3,190.04 DKK
+
+2021-07-26 * "udbytteskat betalt" "udbytteskat betalt"
+  Liabilities:Skat:SkyldigUdbytteSkat                           31,627.77 DKK
+  Assets:Bank:BankErhverv                                      -31,627.77 DKK
+
+2021-07-16 * "kontaktløs Dankort Coop 365 Dildhaven Nota 576356" "kontaktløs Dankort Coop 365 Dildhaven Nota 576356"
+  Expenses:Mad:Coop365                                              12.00 DKK
+  Liabilities:Kreditorer                                           -12.00 DKK
+
+2021-07-16 * "kontaktløs Dankort Coop 365 Dildhaven Nota 576356 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 576356 betalt"
+  Liabilities:Kreditorer                                            12.00 DKK
+  Assets:Bank:BankErhverv                                          -12.00 DKK
+
+2021-07-14 * "kontaktløs Dankort Coop 365 Dildhaven Nota 574509" "kontaktløs Dankort Coop 365 Dildhaven Nota 574509"
+  Expenses:Mad:Coop365                                              14.00 DKK
+  Liabilities:Kreditorer                                           -14.00 DKK
+
+2021-07-14 * "kontaktløs Dankort Coop 365 Dildhaven Nota 574509 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 574509 betalt"
+  Liabilities:Kreditorer                                            14.00 DKK
+  Assets:Bank:BankErhverv                                          -14.00 DKK
+
+2021-07-14 * "Betalingsservice ATP - SAMLET BETALING Aftalenr. 905240531 betalt" "Betalingsservice ATP - SAMLET BETALING Aftalenr. 905240531 betalt"
+  Liabilities:ATP:SkyldigATP                                       414.81 DKK
+  Assets:Bank:BankErhverv                                         -414.81 DKK
+
+2021-07-12 * "AFREGNING TIL TOLD & SKAT betalt" "AFREGNING TIL TOLD & SKAT betalt"
+  Liabilities:Skat:SkyldigSkatAfLoen                            19,556.00 DKK
+  Assets:Bank:BankErhverv                                      -19,556.00 DKK
+
+2021-07-12 * "kontaktløs Dankort Netto Dildhaven Nota 339522" "kontaktløs Dankort Netto Dildhaven Nota 339522"
+  Expenses:Mad:Netto                                                85.20 DKK
+  Liabilities:Kreditorer                                           -85.20 DKK
+
+2021-07-12 * "kontaktløs Dankort Netto Dildhaven Nota 339522 betalt" "kontaktløs Dankort Netto Dildhaven Nota 339522 betalt"
+  Liabilities:Kreditorer                                            85.20 DKK
+  Assets:Bank:BankErhverv                                          -85.20 DKK
+
+2021-07-08 * "Betalingsservice DK HOSTMASTER A/S Aftalenr. 937477522" "Betalingsservice DK HOSTMASTER A/S Aftalenr. 937477522"
+  Expenses:Hosting:DKHOSTMASTER                                     47.00 DKK
+  Assets:Moms:KoebMoms                                              11.75 DKK
+  Liabilities:Kreditorer                                           -58.75 DKK
+
+2021-07-08 * "Betalingsservice DK HOSTMASTER A/S Aftalenr. 937477522 betalt" "Betalingsservice DK HOSTMASTER A/S Aftalenr. 937477522 betalt"
+  Liabilities:Kreditorer                                            58.75 DKK
+  Assets:Bank:BankErhverv                                          -58.75 DKK
+
+2021-07-07 * "udbytte 2020 betalt" "udbytte 2020 betalt"
+  Liabilities:Ansat:SkyldigUdbytte                              82,490.00 DKK
+  Assets:Bank:BankErhverv                                      -82,490.00 DKK
+
+2021-07-07 * "løn jun betalt" "løn jun betalt"
+  Liabilities:Ansat:SkyldigLoen                                 31,882.57 DKK
+  Assets:Bank:BankErhverv                                      -31,882.57 DKK
+
+2021-07-07 * "Dankort-køb politiken.dk Nota CP-02232344" "Dankort-køb politiken.dk Nota CP-02232344"
+  Expenses:Avis:Politiken                                          299.00 DKK
+  Liabilities:Kreditorer                                          -299.00 DKK
+
+2021-07-07 * "Dankort-køb politiken.dk Nota CP-02232344 betalt" "Dankort-køb politiken.dk Nota CP-02232344 betalt"
+  Liabilities:Kreditorer                                           299.00 DKK
+  Assets:Bank:BankErhverv                                         -299.00 DKK
+
+2021-07-06 * "OVERFØRSEL betalt" "OVERFØRSEL betalt"
+  Liabilities:Loen:SkyldigLoenGebyr                                 27.50 DKK
+  Assets:Bank:BankErhverv                                          -27.50 DKK
+
+2021-07-05 * "Visa/Dankort USD 15,00 Kurs 637,66 Nota nr. 20273 FRANTECH* FRANTECH 475, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 637,66 Nota nr. 20273 FRANTECH* FRANTECH 475, HTTPSMY.FRA"
+  Expenses:Hosting:UdenMoms:Frantech                                95.65 DKK
+  Liabilities:Kreditorer                                           -95.65 DKK
+
+2021-07-05 * "Visa/Dankort USD 15,00 Kurs 637,66 Nota nr. 20273 FRANTECH* FRANTECH 475, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 637,66 Nota nr. 20273 FRANTECH* FRANTECH 475, HTTPSMY.FRA betalt"
+  Liabilities:Kreditorer                                            95.65 DKK
+  Assets:Bank:BankErhverv                                          -95.65 DKK
+
+2021-07-05 * "Dankort-køb TELMORE A/S Nota C07211GVQCAB" "Dankort-køb TELMORE A/S Nota C07211GVQCAB"
+  Expenses:Telefoni:Telmore                                        278.40 DKK
+  Assets:Moms:KoebMoms                                              69.60 DKK
+  Liabilities:Kreditorer                                          -348.00 DKK
+
+2021-07-05 * "Dankort-køb TELMORE A/S Nota C07211GVQCAB betalt" "Dankort-køb TELMORE A/S Nota C07211GVQCAB betalt"
+  Liabilities:Kreditorer                                           348.00 DKK
+  Assets:Bank:BankErhverv                                         -348.00 DKK
+
+2021-07-01 * "Betalingsservice FIBIA P/S Aftalenr. 918707218" "Betalingsservice FIBIA P/S Aftalenr. 918707218"
+  Expenses:Internet:Fibia                                          773.40 DKK
+  Assets:Moms:KoebMoms                                             193.35 DKK
+  Liabilities:Kreditorer                                          -966.75 DKK
+
+2021-07-01 * "Betalingsservice FIBIA P/S Aftalenr. 918707218 betalt" "Betalingsservice FIBIA P/S Aftalenr. 918707218 betalt"
+  Liabilities:Kreditorer                                           966.75 DKK
+  Assets:Bank:BankErhverv                                         -966.75 DKK
+
+2021-07-01 * "f.nr. 202103 betalt" "f.nr. 202103 betalt"
+  Assets:Debitorer:GOTTIT                                     -118,125.00 DKK
+  Assets:Bank:BankErhverv                                      118,125.00 DKK
+
 2021-06-30 * "Rente af indestående betalt" "Rente af indestående betalt"
   Assets:Bank:Rente                                              1,358.83 DKK
   Income:Renter:Indtaegt                                        -1,358.83 DKK
@@ -8,59 +239,59 @@
 
 2021-06-30 * "kontaktløs Dankort Bageriet Hjortevæn Nota 176671" "kontaktløs Dankort Bageriet Hjortevæn Nota 176671"
   Expenses:Mad:BagerietHjortev                                      35.00 DKK
-  Assets:Moms:KoebMoms                                             -35.00 DKK
+  Liabilities:Kreditorer                                           -35.00 DKK
 
 2021-06-30 * "kontaktløs Dankort Bageriet Hjortevæn Nota 176671 betalt" "kontaktløs Dankort Bageriet Hjortevæn Nota 176671 betalt"
-  Assets:Moms:KoebMoms                                              35.00 DKK
-  Liabilities:Kreditorer                                           -35.00 DKK
+  Liabilities:Kreditorer                                            35.00 DKK
+  Assets:Bank:BankErhverv                                          -35.00 DKK
 
 2021-06-25 * "kontaktløs Dankort Tank Kai Dige Bach Nota 538345" "kontaktløs Dankort Tank Kai Dige Bach Nota 538345"
   Expenses:Mad:KDB                                                  21.50 DKK
-  Assets:Moms:KoebMoms                                             -21.50 DKK
+  Liabilities:Kreditorer                                           -21.50 DKK
 
 2021-06-25 * "kontaktløs Dankort Tank Kai Dige Bach Nota 538345 betalt" "kontaktløs Dankort Tank Kai Dige Bach Nota 538345 betalt"
-  Assets:Moms:KoebMoms                                              21.50 DKK
-  Liabilities:Kreditorer                                           -21.50 DKK
+  Liabilities:Kreditorer                                            21.50 DKK
+  Assets:Bank:BankErhverv                                          -21.50 DKK
 
 2021-06-25 * "kontaktløs Dankort LIDL Nota 674835" "kontaktløs Dankort LIDL Nota 674835"
   Expenses:Mad:LIDL                                                 63.00 DKK
-  Assets:Moms:KoebMoms                                             -63.00 DKK
+  Liabilities:Kreditorer                                           -63.00 DKK
 
 2021-06-25 * "kontaktløs Dankort LIDL Nota 674835 betalt" "kontaktløs Dankort LIDL Nota 674835 betalt"
-  Assets:Moms:KoebMoms                                              63.00 DKK
-  Liabilities:Kreditorer                                           -63.00 DKK
+  Liabilities:Kreditorer                                            63.00 DKK
+  Assets:Bank:BankErhverv                                          -63.00 DKK
 
 2021-06-23 * "kontaktløs Dankort OK Plus Solrød Str Nota 126877" "kontaktløs Dankort OK Plus Solrød Str Nota 126877"
   Expenses:Mad:OkPlus                                               10.00 DKK
-  Assets:Moms:KoebMoms                                             -10.00 DKK
+  Liabilities:Kreditorer                                           -10.00 DKK
 
 2021-06-23 * "kontaktløs Dankort OK Plus Solrød Str Nota 126877 betalt" "kontaktløs Dankort OK Plus Solrød Str Nota 126877 betalt"
-  Assets:Moms:KoebMoms                                              10.00 DKK
-  Liabilities:Kreditorer                                           -10.00 DKK
+  Liabilities:Kreditorer                                            10.00 DKK
+  Assets:Bank:BankErhverv                                          -10.00 DKK
 
 2021-06-21 * "kontaktløs Dankort LIDL Nota 112548" "kontaktløs Dankort LIDL Nota 112548"
   Expenses:Mad:LIDL                                                 65.90 DKK
-  Assets:Moms:KoebMoms                                             -65.90 DKK
+  Liabilities:Kreditorer                                           -65.90 DKK
 
 2021-06-21 * "kontaktløs Dankort LIDL Nota 112548 betalt" "kontaktløs Dankort LIDL Nota 112548 betalt"
-  Assets:Moms:KoebMoms                                              65.90 DKK
-  Liabilities:Kreditorer                                           -65.90 DKK
+  Liabilities:Kreditorer                                            65.90 DKK
+  Assets:Bank:BankErhverv                                          -65.90 DKK
 
 2021-06-16 * "kontaktløs Dankort Coop 365 Dildhaven Nota 549996" "kontaktløs Dankort Coop 365 Dildhaven Nota 549996"
   Expenses:Mad:Coop365                                              14.00 DKK
-  Assets:Moms:KoebMoms                                             -14.00 DKK
+  Liabilities:Kreditorer                                           -14.00 DKK
 
 2021-06-16 * "kontaktløs Dankort Coop 365 Dildhaven Nota 549996 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 549996 betalt"
-  Assets:Moms:KoebMoms                                              14.00 DKK
-  Liabilities:Kreditorer                                           -14.00 DKK
+  Liabilities:Kreditorer                                            14.00 DKK
+  Assets:Bank:BankErhverv                                          -14.00 DKK
 
 2021-06-14 * "kontaktløs Dankort LIDL Nota 725000" "kontaktløs Dankort LIDL Nota 725000"
   Expenses:Mad:LIDL                                                 47.95 DKK
-  Assets:Moms:KoebMoms                                             -47.95 DKK
+  Liabilities:Kreditorer                                           -47.95 DKK
 
 2021-06-14 * "kontaktløs Dankort LIDL Nota 725000 betalt" "kontaktløs Dankort LIDL Nota 725000 betalt"
-  Assets:Moms:KoebMoms                                              47.95 DKK
-  Liabilities:Kreditorer                                           -47.95 DKK
+  Liabilities:Kreditorer                                            47.95 DKK
+  Assets:Bank:BankErhverv                                          -47.95 DKK
 
 2021-06-07 * "Dankort-køb politiken.dk Nota CP-02034100" "Dankort-køb politiken.dk Nota CP-02034100"
   Expenses:Avis:Politiken                                          299.00 DKK
@@ -81,15 +312,14 @@
 
 2021-06-03 * "kontaktløs Dankort LIDL Nota 092415" "kontaktløs Dankort LIDL Nota 092415"
   Expenses:Mad:LIDL                                                 59.91 DKK
-  Assets:Moms:KoebMoms                                             -59.91 DKK
-
-2021-06-03 * "kontaktløs Dankort LIDL Nota 092415 betalt" "kontaktløs Dankort LIDL Nota 092415 betalt"
-  Assets:Moms:KoebMoms                                              59.91 DKK
   Liabilities:Kreditorer                                           -59.91 DKK
 
+2021-06-03 * "kontaktløs Dankort LIDL Nota 092415 betalt" "kontaktløs Dankort LIDL Nota 092415 betalt"
+  Liabilities:Kreditorer                                            59.91 DKK
+  Assets:Bank:BankErhverv                                          -59.91 DKK
+
 2021-06-03 * "Visa/Dankort USD 15,00 Kurs 618,20 Nota nr. 64135 FRANTECH* FRANTECH 465, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 618,20 Nota nr. 64135 FRANTECH* FRANTECH 465, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         74.18 DKK
-  Assets:Moms:KoebMoms                                              18.55 DKK
+  Expenses:Hosting:UdenMoms:Frantech                                92.73 DKK
   Liabilities:Kreditorer                                           -92.73 DKK
 
 2021-06-03 * "Visa/Dankort USD 15,00 Kurs 618,20 Nota nr. 64135 FRANTECH* FRANTECH 465, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 618,20 Nota nr. 64135 FRANTECH* FRANTECH 465, HTTPSMY.FRA betalt"
@@ -98,11 +328,11 @@
 
 2021-06-02 * "kontaktløs Dankort LIDL Nota 345982" "kontaktløs Dankort LIDL Nota 345982"
   Expenses:Mad:LIDL                                                 60.75 DKK
-  Assets:Moms:KoebMoms                                             -60.75 DKK
+  Liabilities:Kreditorer                                           -60.75 DKK
 
 2021-06-02 * "kontaktløs Dankort LIDL Nota 345982 betalt" "kontaktløs Dankort LIDL Nota 345982 betalt"
-  Assets:Moms:KoebMoms                                              60.75 DKK
-  Liabilities:Kreditorer                                           -60.75 DKK
+  Liabilities:Kreditorer                                            60.75 DKK
+  Assets:Bank:BankErhverv                                          -60.75 DKK
 
 2021-06-01 * "løn mar-maj betalt" "løn mar-maj betalt"
   Liabilities:Ansat:SkyldigLoen                                 90,927.39 DKK
@@ -118,11 +348,11 @@
 
 2021-05-25 * "kontaktløs Dankort Coop 365 Dildhaven Nota 528027" "kontaktløs Dankort Coop 365 Dildhaven Nota 528027"
   Expenses:Mad:Coop365                                              73.95 DKK
-  Assets:Moms:KoebMoms                                             -73.95 DKK
+  Liabilities:Kreditorer                                           -73.95 DKK
 
 2021-05-25 * "kontaktløs Dankort Coop 365 Dildhaven Nota 528027 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 528027 betalt"
-  Assets:Moms:KoebMoms                                              73.95 DKK
-  Liabilities:Kreditorer                                           -73.95 DKK
+  Liabilities:Kreditorer                                            73.95 DKK
+  Assets:Bank:BankErhverv                                          -73.95 DKK
 
 2021-05-20 * "Dankort-køb ONE.COM A/S Nota 145398411" "Dankort-køb ONE.COM A/S Nota 145398411"
   Expenses:Hosting:ONECOM                                          374.40 DKK
@@ -135,19 +365,19 @@
 
 2021-05-19 * "kontaktløs Dankort OK Plus Solrød Str Nota 107335" "kontaktløs Dankort OK Plus Solrød Str Nota 107335"
   Expenses:Mad:OkPlus                                               10.00 DKK
-  Assets:Moms:KoebMoms                                             -10.00 DKK
+  Liabilities:Kreditorer                                           -10.00 DKK
 
 2021-05-19 * "kontaktløs Dankort OK Plus Solrød Str Nota 107335 betalt" "kontaktløs Dankort OK Plus Solrød Str Nota 107335 betalt"
-  Assets:Moms:KoebMoms                                              10.00 DKK
-  Liabilities:Kreditorer                                           -10.00 DKK
+  Liabilities:Kreditorer                                            10.00 DKK
+  Assets:Bank:BankErhverv                                          -10.00 DKK
 
 2021-05-18 * "kontaktløs Dankort LIDL Nota 079033" "kontaktløs Dankort LIDL Nota 079033"
   Expenses:Mad:LIDL                                                 90.90 DKK
-  Assets:Moms:KoebMoms                                             -90.90 DKK
+  Liabilities:Kreditorer                                           -90.90 DKK
 
 2021-05-18 * "kontaktløs Dankort LIDL Nota 079033 betalt" "kontaktløs Dankort LIDL Nota 079033 betalt"
-  Assets:Moms:KoebMoms                                              90.90 DKK
-  Liabilities:Kreditorer                                           -90.90 DKK
+  Liabilities:Kreditorer                                            90.90 DKK
+  Assets:Bank:BankErhverv                                          -90.90 DKK
 
 2021-05-11 * "OVERFØRSEL betalt" "OVERFØRSEL betalt"
   Liabilities:Loen:SkyldigLoenGebyr                                 25.00 DKK
@@ -155,15 +385,15 @@
 
 2021-05-11 * "kontaktløs Dankort REMA 1000 Ballerup Nota 706703" "kontaktløs Dankort REMA 1000 Ballerup Nota 706703"
   Expenses:Mad:Rema1000                                             79.95 DKK
-  Assets:Moms:KoebMoms                                             -79.95 DKK
-
-2021-05-11 * "kontaktløs Dankort REMA 1000 Ballerup Nota 706703 betalt" "kontaktløs Dankort REMA 1000 Ballerup Nota 706703 betalt"
-  Assets:Moms:KoebMoms                                              79.95 DKK
   Liabilities:Kreditorer                                           -79.95 DKK
 
+2021-05-11 * "kontaktløs Dankort REMA 1000 Ballerup Nota 706703 betalt" "kontaktløs Dankort REMA 1000 Ballerup Nota 706703 betalt"
+  Liabilities:Kreditorer                                            79.95 DKK
+  Assets:Bank:BankErhverv                                          -79.95 DKK
+
 2021-05-11 * "Gottlieb IT ApS betalt" "Gottlieb IT ApS betalt"
-  Income:Konsulentydelse:GOTTIT                                -33,750.00 DKK
-  Assets:Debitorer                                              33,750.00 DKK
+  Assets:Debitorer:GOTTIT                                      -33,750.00 DKK
+  Assets:Bank:BankErhverv                                       33,750.00 DKK
 
 2021-05-10 * "Dankort-køb BilligToner.dk ApS Nota 000212805" "Dankort-køb BilligToner.dk ApS Nota 000212805"
   Expenses:Hardware:BilligToner                                    196.80 DKK
@@ -197,15 +427,14 @@
 
 2021-05-04 * "kontaktløs Dankort Coop 365 Dildhaven Nota 501508" "kontaktløs Dankort Coop 365 Dildhaven Nota 501508"
   Expenses:Mad:Coop365                                              60.90 DKK
-  Assets:Moms:KoebMoms                                             -60.90 DKK
-
-2021-05-04 * "kontaktløs Dankort Coop 365 Dildhaven Nota 501508 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 501508 betalt"
-  Assets:Moms:KoebMoms                                              60.90 DKK
   Liabilities:Kreditorer                                           -60.90 DKK
 
+2021-05-04 * "kontaktløs Dankort Coop 365 Dildhaven Nota 501508 betalt" "kontaktløs Dankort Coop 365 Dildhaven Nota 501508 betalt"
+  Liabilities:Kreditorer                                            60.90 DKK
+  Assets:Bank:BankErhverv                                          -60.90 DKK
+
 2021-05-04 * "Visa/Dankort USD 15,00 Kurs 628,20 Nota nr. 57474 FRANTECH* FRANTECH 454, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 628,20 Nota nr. 57474 FRANTECH* FRANTECH 454, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         75.38 DKK
-  Assets:Moms:KoebMoms                                              18.85 DKK
+  Expenses:Hosting:UdenMoms:Frantech                                94.23 DKK
   Liabilities:Kreditorer                                           -94.23 DKK
 
 2021-05-04 * "Visa/Dankort USD 15,00 Kurs 628,20 Nota nr. 57474 FRANTECH* FRANTECH 454, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 628,20 Nota nr. 57474 FRANTECH* FRANTECH 454, HTTPSMY.FRA betalt"
@@ -222,7 +451,7 @@
   Assets:Bank:BankErhverv                                         -348.00 DKK
 
 2021-05-03 * "Visa/Dankort MICROSOFT MPN PC, 8006427676, Nota nr. 77408" "Visa/Dankort MICROSOFT MPN PC, 8006427676, Nota nr. 77408"
-  Expenses:Software:MICROSOFT                                    2,800.00 DKK
+  Expenses:Software:UdenMoms:MICROSOFT                           2,800.00 DKK
   Liabilities:Kreditorer                                        -2,800.00 DKK
 
 2021-05-03 * "Visa/Dankort MICROSOFT MPN PC, 8006427676, Nota nr. 77408 betalt" "Visa/Dankort MICROSOFT MPN PC, 8006427676, Nota nr. 77408 betalt"
@@ -240,51 +469,51 @@
 
 2021-04-27 * "kontaktløs Dankort Netto Dildhaven Nota 727926" "kontaktløs Dankort Netto Dildhaven Nota 727926"
   Expenses:Mad:Netto                                                62.45 DKK
-  Assets:Moms:KoebMoms                                             -62.45 DKK
+  Liabilities:Kreditorer                                           -62.45 DKK
 
 2021-04-27 * "kontaktløs Dankort Netto Dildhaven Nota 727926 betalt" "kontaktløs Dankort Netto Dildhaven Nota 727926 betalt"
-  Assets:Moms:KoebMoms                                              62.45 DKK
-  Liabilities:Kreditorer                                           -62.45 DKK
+  Liabilities:Kreditorer                                            62.45 DKK
+  Assets:Bank:BankErhverv                                          -62.45 DKK
 
 2021-04-26 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN" "MobilePay køb DAN CATERING V/JØRN PEDERSEN"
   Expenses:Mad:Dancatering                                          45.00 DKK
-  Assets:Moms:KoebMoms                                             -45.00 DKK
+  Liabilities:Kreditorer                                           -45.00 DKK
 
 2021-04-26 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt" "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt"
-  Assets:Moms:KoebMoms                                              45.00 DKK
-  Liabilities:Kreditorer                                           -45.00 DKK
+  Liabilities:Kreditorer                                            45.00 DKK
+  Assets:Bank:BankErhverv                                          -45.00 DKK
 
 2021-04-21 * "kontaktløs Dankort Netto Trylleskoven Nota 743791" "kontaktløs Dankort Netto Trylleskoven Nota 743791"
   Expenses:Mad:Netto                                                77.80 DKK
-  Assets:Moms:KoebMoms                                             -77.80 DKK
+  Liabilities:Kreditorer                                           -77.80 DKK
 
 2021-04-21 * "kontaktløs Dankort Netto Trylleskoven Nota 743791 betalt" "kontaktløs Dankort Netto Trylleskoven Nota 743791 betalt"
-  Assets:Moms:KoebMoms                                              77.80 DKK
-  Liabilities:Kreditorer                                           -77.80 DKK
+  Liabilities:Kreditorer                                            77.80 DKK
+  Assets:Bank:BankErhverv                                          -77.80 DKK
 
 2021-04-21 * "kontaktløs Dankort LIDL Nota 697162" "kontaktløs Dankort LIDL Nota 697162"
   Expenses:Mad:LIDL                                                119.11 DKK
-  Assets:Moms:KoebMoms                                            -119.11 DKK
+  Liabilities:Kreditorer                                          -119.11 DKK
 
 2021-04-21 * "kontaktløs Dankort LIDL Nota 697162 betalt" "kontaktløs Dankort LIDL Nota 697162 betalt"
-  Assets:Moms:KoebMoms                                             119.11 DKK
-  Liabilities:Kreditorer                                          -119.11 DKK
+  Liabilities:Kreditorer                                           119.11 DKK
+  Assets:Bank:BankErhverv                                         -119.11 DKK
 
 2021-04-20 * "Visa/Dankort Itacho, Solrod Strand, Nota nr. 83996" "Visa/Dankort Itacho, Solrod Strand, Nota nr. 83996"
   Expenses:Mad:ITACHO                                              583.00 DKK
-  Assets:Moms:KoebMoms                                            -583.00 DKK
+  Liabilities:Kreditorer                                          -583.00 DKK
 
 2021-04-20 * "Visa/Dankort Itacho, Solrod Strand, Nota nr. 83996 betalt" "Visa/Dankort Itacho, Solrod Strand, Nota nr. 83996 betalt"
-  Assets:Moms:KoebMoms                                             583.00 DKK
-  Liabilities:Kreditorer                                          -583.00 DKK
+  Liabilities:Kreditorer                                           583.00 DKK
+  Assets:Bank:BankErhverv                                         -583.00 DKK
 
 2021-04-14 * "kontaktløs Dankort LIDL Nota 622758" "kontaktløs Dankort LIDL Nota 622758"
   Expenses:Mad:LIDL                                                483.00 DKK
-  Assets:Moms:KoebMoms                                            -483.00 DKK
+  Liabilities:Kreditorer                                          -483.00 DKK
 
 2021-04-14 * "kontaktløs Dankort LIDL Nota 622758 betalt" "kontaktløs Dankort LIDL Nota 622758 betalt"
-  Assets:Moms:KoebMoms                                             483.00 DKK
-  Liabilities:Kreditorer                                          -483.00 DKK
+  Liabilities:Kreditorer                                           483.00 DKK
+  Assets:Bank:BankErhverv                                         -483.00 DKK
 
 2021-04-14 * "Betalingsservice ATP - SAMLET BETALING Aftalenr. 905240531 betalt" "Betalingsservice ATP - SAMLET BETALING Aftalenr. 905240531 betalt"
   Liabilities:ATP:SkyldigATP                                       539.00 DKK
@@ -296,11 +525,11 @@
 
 2021-04-12 * "Dankort CIRCLE K SØNDRE R. Nota Z901733" "Dankort CIRCLE K SØNDRE R. Nota Z901733"
   Expenses:Mad:CIRCLEK                                             181.83 DKK
-  Assets:Moms:KoebMoms                                            -181.83 DKK
+  Liabilities:Kreditorer                                          -181.83 DKK
 
 2021-04-12 * "Dankort CIRCLE K SØNDRE R. Nota Z901733 betalt" "Dankort CIRCLE K SØNDRE R. Nota Z901733 betalt"
-  Assets:Moms:KoebMoms                                             181.83 DKK
-  Liabilities:Kreditorer                                          -181.83 DKK
+  Liabilities:Kreditorer                                           181.83 DKK
+  Assets:Bank:BankErhverv                                         -181.83 DKK
 
 2021-04-12 * "Dankort-køb ELGIGANTEN A/S Nota C868018" "Dankort-køb ELGIGANTEN A/S Nota C868018"
   Expenses:Hardware:ELG                                          4,039.20 DKK
@@ -313,19 +542,19 @@
 
 2021-04-12 * "kontaktløs Dankort REMA 1000, 863 Bal Nota 330797" "kontaktløs Dankort REMA 1000, 863 Bal Nota 330797"
   Expenses:Mad:Rema1000                                            127.70 DKK
-  Assets:Moms:KoebMoms                                            -127.70 DKK
+  Liabilities:Kreditorer                                          -127.70 DKK
 
 2021-04-12 * "kontaktløs Dankort REMA 1000, 863 Bal Nota 330797 betalt" "kontaktløs Dankort REMA 1000, 863 Bal Nota 330797 betalt"
-  Assets:Moms:KoebMoms                                             127.70 DKK
-  Liabilities:Kreditorer                                          -127.70 DKK
+  Liabilities:Kreditorer                                           127.70 DKK
+  Assets:Bank:BankErhverv                                         -127.70 DKK
 
 2021-04-07 * "kontaktløs Dankort LIDL Nota 616982" "kontaktløs Dankort LIDL Nota 616982"
   Expenses:Mad:LIDL                                                103.60 DKK
-  Assets:Moms:KoebMoms                                            -103.60 DKK
+  Liabilities:Kreditorer                                          -103.60 DKK
 
 2021-04-07 * "kontaktløs Dankort LIDL Nota 616982 betalt" "kontaktløs Dankort LIDL Nota 616982 betalt"
-  Assets:Moms:KoebMoms                                             103.60 DKK
-  Liabilities:Kreditorer                                          -103.60 DKK
+  Liabilities:Kreditorer                                           103.60 DKK
+  Assets:Bank:BankErhverv                                         -103.60 DKK
 
 2021-04-07 * "Dankort-køb POLITIKEN Nota C217816" "Dankort-køb POLITIKEN Nota C217816"
   Expenses:Avis:Politiken                                          299.00 DKK
@@ -336,7 +565,7 @@
   Assets:Bank:BankErhverv                                         -299.00 DKK
 
 2021-04-07 * "Visa/Dankort USD 49,00 Kurs 643,30 Nota nr. 52383 AXOSOFT GITKRAKEN, HTTPSWWW.GITK" "Visa/Dankort USD 49,00 Kurs 643,30 Nota nr. 52383 AXOSOFT GITKRAKEN, HTTPSWWW.GITK"
-  Expenses:Software:AXOSOFT                                        315.22 DKK
+  Expenses:Software:UdenMoms:AXOSOFT                               315.22 DKK
   Liabilities:Kreditorer                                          -315.22 DKK
 
 2021-04-07 * "Visa/Dankort USD 49,00 Kurs 643,30 Nota nr. 52383 AXOSOFT GITKRAKEN, HTTPSWWW.GITK betalt" "Visa/Dankort USD 49,00 Kurs 643,30 Nota nr. 52383 AXOSOFT GITKRAKEN, HTTPSWWW.GITK betalt"
@@ -344,8 +573,7 @@
   Assets:Bank:BankErhverv                                         -315.22 DKK
 
 2021-04-07 * "Visa/Dankort USD 15,00 Kurs 644,66 Nota nr. 63083 FRANTECH* FRANTECH 444, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 644,66 Nota nr. 63083 FRANTECH* FRANTECH 444, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         77.36 DKK
-  Assets:Moms:KoebMoms                                              19.34 DKK
+  Expenses:Hosting:UdenMoms:Frantech                                96.70 DKK
   Liabilities:Kreditorer                                           -96.70 DKK
 
 2021-04-07 * "Visa/Dankort USD 15,00 Kurs 644,66 Nota nr. 63083 FRANTECH* FRANTECH 444, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 644,66 Nota nr. 63083 FRANTECH* FRANTECH 444, HTTPSMY.FRA betalt"
@@ -354,19 +582,19 @@
 
 2021-04-06 * "kontaktløs Dankort ALDI Øst 083 Nota 200385" "kontaktløs Dankort ALDI Øst 083 Nota 200385"
   Expenses:Mad:ALDI                                                 63.90 DKK
-  Assets:Moms:KoebMoms                                             -63.90 DKK
+  Liabilities:Kreditorer                                           -63.90 DKK
 
 2021-04-06 * "kontaktløs Dankort ALDI Øst 083 Nota 200385 betalt" "kontaktløs Dankort ALDI Øst 083 Nota 200385 betalt"
-  Assets:Moms:KoebMoms                                              63.90 DKK
-  Liabilities:Kreditorer                                           -63.90 DKK
+  Liabilities:Kreditorer                                            63.90 DKK
+  Assets:Bank:BankErhverv                                          -63.90 DKK
 
 2021-04-06 * "kontaktløs Dankort LIDL Nota 335028" "kontaktløs Dankort LIDL Nota 335028"
   Expenses:Mad:LIDL                                                288.20 DKK
-  Assets:Moms:KoebMoms                                            -288.20 DKK
+  Liabilities:Kreditorer                                          -288.20 DKK
 
 2021-04-06 * "kontaktløs Dankort LIDL Nota 335028 betalt" "kontaktløs Dankort LIDL Nota 335028 betalt"
-  Assets:Moms:KoebMoms                                             288.20 DKK
-  Liabilities:Kreditorer                                          -288.20 DKK
+  Liabilities:Kreditorer                                           288.20 DKK
+  Assets:Bank:BankErhverv                                         -288.20 DKK
 
 2021-04-06 * "Betalingsservice FIBIA P/S Aftalenr. 918707218" "Betalingsservice FIBIA P/S Aftalenr. 918707218"
   Expenses:Internet:Fibia                                          773.40 DKK
@@ -379,11 +607,11 @@
 
 2021-04-06 * "Dankort CIRCLE K LYNGBYGÅR Nota Z229791" "Dankort CIRCLE K LYNGBYGÅR Nota Z229791"
   Expenses:Mad:CIRCLEK                                             311.72 DKK
-  Assets:Moms:KoebMoms                                            -311.72 DKK
+  Liabilities:Kreditorer                                          -311.72 DKK
 
 2021-04-06 * "Dankort CIRCLE K LYNGBYGÅR Nota Z229791 betalt" "Dankort CIRCLE K LYNGBYGÅR Nota Z229791 betalt"
-  Assets:Moms:KoebMoms                                             311.72 DKK
-  Liabilities:Kreditorer                                          -311.72 DKK
+  Liabilities:Kreditorer                                           311.72 DKK
+  Assets:Bank:BankErhverv                                         -311.72 DKK
 
 2021-04-06 * "Dankort-køb TELMORE A/S Nota C04211E6KEFB" "Dankort-køb TELMORE A/S Nota C04211E6KEFB"
   Expenses:Telefoni:Telmore                                        270.40 DKK
@@ -396,27 +624,27 @@
 
 2021-04-06 * "Dankort ALDI Øst 083 Nota 450097" "Dankort ALDI Øst 083 Nota 450097"
   Expenses:Mad:ALDI                                                 95.20 DKK
-  Assets:Moms:KoebMoms                                             -95.20 DKK
+  Liabilities:Kreditorer                                           -95.20 DKK
 
 2021-04-06 * "Dankort ALDI Øst 083 Nota 450097 betalt" "Dankort ALDI Øst 083 Nota 450097 betalt"
-  Assets:Moms:KoebMoms                                              95.20 DKK
-  Liabilities:Kreditorer                                           -95.20 DKK
+  Liabilities:Kreditorer                                            95.20 DKK
+  Assets:Bank:BankErhverv                                          -95.20 DKK
 
 2021-04-06 * "kontaktløs Dankort ALDI Øst 083 Nota 449245" "kontaktløs Dankort ALDI Øst 083 Nota 449245"
   Expenses:Mad:ALDI                                                 61.20 DKK
-  Assets:Moms:KoebMoms                                             -61.20 DKK
+  Liabilities:Kreditorer                                           -61.20 DKK
 
 2021-04-06 * "kontaktløs Dankort ALDI Øst 083 Nota 449245 betalt" "kontaktløs Dankort ALDI Øst 083 Nota 449245 betalt"
-  Assets:Moms:KoebMoms                                              61.20 DKK
-  Liabilities:Kreditorer                                           -61.20 DKK
+  Liabilities:Kreditorer                                            61.20 DKK
+  Assets:Bank:BankErhverv                                          -61.20 DKK
 
 2021-04-06 * "kontaktløs Dankort Netto Solrød Nota 199609" "kontaktløs Dankort Netto Solrød Nota 199609"
   Expenses:Mad:Netto                                                96.45 DKK
-  Assets:Moms:KoebMoms                                             -96.45 DKK
+  Liabilities:Kreditorer                                           -96.45 DKK
 
 2021-04-06 * "kontaktløs Dankort Netto Solrød Nota 199609 betalt" "kontaktløs Dankort Netto Solrød Nota 199609 betalt"
-  Assets:Moms:KoebMoms                                              96.45 DKK
-  Liabilities:Kreditorer                                           -96.45 DKK
+  Liabilities:Kreditorer                                            96.45 DKK
+  Assets:Bank:BankErhverv                                          -96.45 DKK
 
 2021-03-31 * "Rente af indestående betalt" "Rente af indestående betalt"
   Assets:Bank:Rente                                              1,690.33 DKK
@@ -428,131 +656,131 @@
 
 2021-03-31 * "kontaktløs Dankort LIDL Nota 614382" "kontaktløs Dankort LIDL Nota 614382"
   Expenses:Mad:LIDL                                                204.61 DKK
-  Assets:Moms:KoebMoms                                            -204.61 DKK
+  Liabilities:Kreditorer                                          -204.61 DKK
 
 2021-03-31 * "kontaktløs Dankort LIDL Nota 614382 betalt" "kontaktløs Dankort LIDL Nota 614382 betalt"
-  Assets:Moms:KoebMoms                                             204.61 DKK
-  Liabilities:Kreditorer                                          -204.61 DKK
+  Liabilities:Kreditorer                                           204.61 DKK
+  Assets:Bank:BankErhverv                                         -204.61 DKK
 
 2021-03-30 * "Visa/Dankort VELOCONCEPT CYCLING AP, KARLSLUNDE, Nota nr. 65362" "Visa/Dankort VELOCONCEPT CYCLING AP, KARLSLUNDE, Nota nr. 65362"
   Expenses:Mad:VELOCONCEPT                                         435.00 DKK
-  Assets:Moms:KoebMoms                                            -435.00 DKK
+  Liabilities:Kreditorer                                          -435.00 DKK
 
 2021-03-30 * "Visa/Dankort VELOCONCEPT CYCLING AP, KARLSLUNDE, Nota nr. 65362 betalt" "Visa/Dankort VELOCONCEPT CYCLING AP, KARLSLUNDE, Nota nr. 65362 betalt"
-  Assets:Moms:KoebMoms                                             435.00 DKK
-  Liabilities:Kreditorer                                          -435.00 DKK
+  Liabilities:Kreditorer                                           435.00 DKK
+  Assets:Bank:BankErhverv                                         -435.00 DKK
 
 2021-03-29 * "kontaktløs Dankort Rema 1000 Strøby E Nota 830557" "kontaktløs Dankort Rema 1000 Strøby E Nota 830557"
   Expenses:Mad:Rema1000                                            155.90 DKK
-  Assets:Moms:KoebMoms                                            -155.90 DKK
+  Liabilities:Kreditorer                                          -155.90 DKK
 
 2021-03-29 * "kontaktløs Dankort Rema 1000 Strøby E Nota 830557 betalt" "kontaktløs Dankort Rema 1000 Strøby E Nota 830557 betalt"
-  Assets:Moms:KoebMoms                                             155.90 DKK
-  Liabilities:Kreditorer                                          -155.90 DKK
+  Liabilities:Kreditorer                                           155.90 DKK
+  Assets:Bank:BankErhverv                                         -155.90 DKK
 
 2021-03-29 * "kontaktløs Dankort ALDI Øst 083 Nota 192525" "kontaktløs Dankort ALDI Øst 083 Nota 192525"
   Expenses:Mad:ALDI                                                 50.20 DKK
-  Assets:Moms:KoebMoms                                             -50.20 DKK
+  Liabilities:Kreditorer                                           -50.20 DKK
 
 2021-03-29 * "kontaktløs Dankort ALDI Øst 083 Nota 192525 betalt" "kontaktløs Dankort ALDI Øst 083 Nota 192525 betalt"
-  Assets:Moms:KoebMoms                                              50.20 DKK
-  Liabilities:Kreditorer                                           -50.20 DKK
+  Liabilities:Kreditorer                                            50.20 DKK
+  Assets:Bank:BankErhverv                                          -50.20 DKK
 
 2021-03-26 * "kontaktløs Dankort LIDL Nota 610047" "kontaktløs Dankort LIDL Nota 610047"
   Expenses:Mad:LIDL                                                150.20 DKK
-  Assets:Moms:KoebMoms                                            -150.20 DKK
+  Liabilities:Kreditorer                                          -150.20 DKK
 
 2021-03-26 * "kontaktløs Dankort LIDL Nota 610047 betalt" "kontaktløs Dankort LIDL Nota 610047 betalt"
-  Assets:Moms:KoebMoms                                             150.20 DKK
-  Liabilities:Kreditorer                                          -150.20 DKK
+  Liabilities:Kreditorer                                           150.20 DKK
+  Assets:Bank:BankErhverv                                         -150.20 DKK
 
 2021-03-26 * "kontaktløs Dankort Coop 365 Solrød Nota 313053" "kontaktløs Dankort Coop 365 Solrød Nota 313053"
   Expenses:Mad:Coop365                                              73.90 DKK
-  Assets:Moms:KoebMoms                                             -73.90 DKK
+  Liabilities:Kreditorer                                           -73.90 DKK
 
 2021-03-26 * "kontaktløs Dankort Coop 365 Solrød Nota 313053 betalt" "kontaktløs Dankort Coop 365 Solrød Nota 313053 betalt"
-  Assets:Moms:KoebMoms                                              73.90 DKK
-  Liabilities:Kreditorer                                           -73.90 DKK
+  Liabilities:Kreditorer                                            73.90 DKK
+  Assets:Bank:BankErhverv                                          -73.90 DKK
 
 2021-03-25 * "kontaktløs Dankort LIDL Nota 608945" "kontaktløs Dankort LIDL Nota 608945"
   Expenses:Mad:LIDL                                                130.50 DKK
-  Assets:Moms:KoebMoms                                            -130.50 DKK
+  Liabilities:Kreditorer                                          -130.50 DKK
 
 2021-03-25 * "kontaktløs Dankort LIDL Nota 608945 betalt" "kontaktløs Dankort LIDL Nota 608945 betalt"
-  Assets:Moms:KoebMoms                                             130.50 DKK
-  Liabilities:Kreditorer                                          -130.50 DKK
+  Liabilities:Kreditorer                                           130.50 DKK
+  Assets:Bank:BankErhverv                                         -130.50 DKK
 
 2021-03-25 * "kontaktløs Dankort Netto Solrød Nota 583205" "kontaktløs Dankort Netto Solrød Nota 583205"
   Expenses:Mad:Netto                                                54.50 DKK
-  Assets:Moms:KoebMoms                                             -54.50 DKK
+  Liabilities:Kreditorer                                           -54.50 DKK
 
 2021-03-25 * "kontaktløs Dankort Netto Solrød Nota 583205 betalt" "kontaktløs Dankort Netto Solrød Nota 583205 betalt"
-  Assets:Moms:KoebMoms                                              54.50 DKK
-  Liabilities:Kreditorer                                           -54.50 DKK
+  Liabilities:Kreditorer                                            54.50 DKK
+  Assets:Bank:BankErhverv                                          -54.50 DKK
 
 2021-03-22 * "kontaktløs Dankort LIDL Nota 606545" "kontaktløs Dankort LIDL Nota 606545"
   Expenses:Mad:LIDL                                                174.98 DKK
-  Assets:Moms:KoebMoms                                            -174.98 DKK
+  Liabilities:Kreditorer                                          -174.98 DKK
 
 2021-03-22 * "kontaktløs Dankort LIDL Nota 606545 betalt" "kontaktløs Dankort LIDL Nota 606545 betalt"
-  Assets:Moms:KoebMoms                                             174.98 DKK
-  Liabilities:Kreditorer                                          -174.98 DKK
+  Liabilities:Kreditorer                                           174.98 DKK
+  Assets:Bank:BankErhverv                                         -174.98 DKK
 
 2021-03-22 * "kontaktløs Dankort Coop 365 Solrød Nota 202541" "kontaktløs Dankort Coop 365 Solrød Nota 202541"
   Expenses:Mad:Coop365                                              39.40 DKK
-  Assets:Moms:KoebMoms                                             -39.40 DKK
+  Liabilities:Kreditorer                                           -39.40 DKK
 
 2021-03-22 * "kontaktløs Dankort Coop 365 Solrød Nota 202541 betalt" "kontaktløs Dankort Coop 365 Solrød Nota 202541 betalt"
-  Assets:Moms:KoebMoms                                              39.40 DKK
-  Liabilities:Kreditorer                                           -39.40 DKK
+  Liabilities:Kreditorer                                            39.40 DKK
+  Assets:Bank:BankErhverv                                          -39.40 DKK
 
 2021-03-19 * "kontaktløs Dankort ALDI Øst 083 Nota 441122" "kontaktløs Dankort ALDI Øst 083 Nota 441122"
   Expenses:Mad:ALDI                                                 17.93 DKK
-  Assets:Moms:KoebMoms                                             -17.93 DKK
+  Liabilities:Kreditorer                                           -17.93 DKK
 
 2021-03-19 * "kontaktløs Dankort ALDI Øst 083 Nota 441122 betalt" "kontaktløs Dankort ALDI Øst 083 Nota 441122 betalt"
-  Assets:Moms:KoebMoms                                              17.93 DKK
-  Liabilities:Kreditorer                                           -17.93 DKK
+  Liabilities:Kreditorer                                            17.93 DKK
+  Assets:Bank:BankErhverv                                          -17.93 DKK
 
 2021-03-19 * "kontaktløs Dankort LIDL Nota 604058" "kontaktløs Dankort LIDL Nota 604058"
   Expenses:Mad:LIDL                                                168.75 DKK
-  Assets:Moms:KoebMoms                                            -168.75 DKK
+  Liabilities:Kreditorer                                          -168.75 DKK
 
 2021-03-19 * "kontaktløs Dankort LIDL Nota 604058 betalt" "kontaktløs Dankort LIDL Nota 604058 betalt"
-  Assets:Moms:KoebMoms                                             168.75 DKK
-  Liabilities:Kreditorer                                          -168.75 DKK
+  Liabilities:Kreditorer                                           168.75 DKK
+  Assets:Bank:BankErhverv                                         -168.75 DKK
 
 2021-03-19 * "Dankort OK Solrød Strand Nota 048240" "Dankort OK Solrød Strand Nota 048240"
   Expenses:Mad:OkPlus                                              178.76 DKK
-  Assets:Moms:KoebMoms                                            -178.76 DKK
+  Liabilities:Kreditorer                                          -178.76 DKK
 
 2021-03-19 * "Dankort OK Solrød Strand Nota 048240 betalt" "Dankort OK Solrød Strand Nota 048240 betalt"
-  Assets:Moms:KoebMoms                                             178.76 DKK
-  Liabilities:Kreditorer                                          -178.76 DKK
+  Liabilities:Kreditorer                                           178.76 DKK
+  Assets:Bank:BankErhverv                                         -178.76 DKK
 
 2021-03-17 * "kontaktløs Dankort Veloconcept Cyclin Nota 002001" "kontaktløs Dankort Veloconcept Cyclin Nota 002001"
   Expenses:Mad:VELOCONCEPT                                       1,035.00 DKK
-  Assets:Moms:KoebMoms                                          -1,035.00 DKK
+  Liabilities:Kreditorer                                        -1,035.00 DKK
 
 2021-03-17 * "kontaktløs Dankort Veloconcept Cyclin Nota 002001 betalt" "kontaktløs Dankort Veloconcept Cyclin Nota 002001 betalt"
-  Assets:Moms:KoebMoms                                           1,035.00 DKK
-  Liabilities:Kreditorer                                        -1,035.00 DKK
+  Liabilities:Kreditorer                                         1,035.00 DKK
+  Assets:Bank:BankErhverv                                       -1,035.00 DKK
 
 2021-03-17 * "kontaktløs Dankort ALDI Øst 083 Nota 185481" "kontaktløs Dankort ALDI Øst 083 Nota 185481"
   Expenses:Mad:ALDI                                                 99.75 DKK
-  Assets:Moms:KoebMoms                                             -99.75 DKK
+  Liabilities:Kreditorer                                           -99.75 DKK
 
 2021-03-17 * "kontaktløs Dankort ALDI Øst 083 Nota 185481 betalt" "kontaktløs Dankort ALDI Øst 083 Nota 185481 betalt"
-  Assets:Moms:KoebMoms                                              99.75 DKK
-  Liabilities:Kreditorer                                           -99.75 DKK
+  Liabilities:Kreditorer                                            99.75 DKK
+  Assets:Bank:BankErhverv                                          -99.75 DKK
 
 2021-03-11 * "kontaktløs Dankort LIDL Nota 138125" "kontaktløs Dankort LIDL Nota 138125"
   Expenses:Mad:LIDL                                                108.58 DKK
-  Assets:Moms:KoebMoms                                            -108.58 DKK
+  Liabilities:Kreditorer                                          -108.58 DKK
 
 2021-03-11 * "kontaktløs Dankort LIDL Nota 138125 betalt" "kontaktløs Dankort LIDL Nota 138125 betalt"
-  Assets:Moms:KoebMoms                                             108.58 DKK
-  Liabilities:Kreditorer                                          -108.58 DKK
+  Liabilities:Kreditorer                                           108.58 DKK
+  Assets:Bank:BankErhverv                                         -108.58 DKK
 
 2021-03-10 * "AFREGNING TIL TOLD & SKAT betalt" "AFREGNING TIL TOLD & SKAT betalt"
   Liabilities:Skat:SkyldigSkatAfLoen                            39,113.00 DKK
@@ -576,8 +804,7 @@
   Assets:Bank:BankErhverv                                         -367.00 DKK
 
 2021-03-03 * "Visa/Dankort USD 15,00 Kurs 627,60 Nota nr. 92500 FRANTECH* FRANTECH 435, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 627,60 Nota nr. 92500 FRANTECH* FRANTECH 435, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         75.31 DKK
-  Assets:Moms:KoebMoms                                              18.83 DKK
+  Expenses:Hosting:UdenMoms:Frantech                                94.14 DKK
   Liabilities:Kreditorer                                           -94.14 DKK
 
 2021-03-03 * "Visa/Dankort USD 15,00 Kurs 627,60 Nota nr. 92500 FRANTECH* FRANTECH 435, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 627,60 Nota nr. 92500 FRANTECH* FRANTECH 435, HTTPSMY.FRA betalt"
@@ -610,11 +837,11 @@
 
 2021-02-10 * "kontaktløs Dankort OK Plus Solrød Str Nota 061390" "kontaktløs Dankort OK Plus Solrød Str Nota 061390"
   Expenses:Mad:OkPlus                                               10.00 DKK
-  Assets:Moms:KoebMoms                                             -10.00 DKK
+  Liabilities:Kreditorer                                           -10.00 DKK
 
 2021-02-10 * "kontaktløs Dankort OK Plus Solrød Str Nota 061390 betalt" "kontaktløs Dankort OK Plus Solrød Str Nota 061390 betalt"
-  Assets:Moms:KoebMoms                                              10.00 DKK
-  Liabilities:Kreditorer                                           -10.00 DKK
+  Liabilities:Kreditorer                                            10.00 DKK
+  Assets:Bank:BankErhverv                                          -10.00 DKK
 
 2021-02-09 * "Dankort-køb POLITIKEN Nota C145621" "Dankort-køb POLITIKEN Nota C145621"
   Expenses:Avis:Politiken                                          299.00 DKK
@@ -638,8 +865,7 @@
   Assets:Bank:BankErhverv                                         -309.00 DKK
 
 2021-02-03 * "Visa/Dankort USD 15,00 Kurs 626,33 Nota nr. 76391 FRANTECH* FRANTECH 425, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 626,33 Nota nr. 76391 FRANTECH* FRANTECH 425, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         75.16 DKK
-  Assets:Moms:KoebMoms                                              18.79 DKK
+  Expenses:Hosting:UdenMoms:Frantech                                93.95 DKK
   Liabilities:Kreditorer                                           -93.95 DKK
 
 2021-02-03 * "Visa/Dankort USD 15,00 Kurs 626,33 Nota nr. 76391 FRANTECH* FRANTECH 425, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 626,33 Nota nr. 76391 FRANTECH* FRANTECH 425, HTTPSMY.FRA betalt"
@@ -674,11 +900,11 @@
 
 2021-01-20 * "forsikring" "forsikring"
   Expenses:Forsikring:AON                                        5,137.52 DKK
-  Assets:Moms:KoebMoms                                          -5,137.52 DKK
+  Liabilities:Kreditorer                                        -5,137.52 DKK
 
 2021-01-20 * "forsikring betalt" "forsikring betalt"
-  Assets:Moms:KoebMoms                                           5,137.52 DKK
-  Liabilities:Kreditorer                                        -5,137.52 DKK
+  Liabilities:Kreditorer                                         5,137.52 DKK
+  Assets:Bank:BankErhverv                                       -5,137.52 DKK
 
 2021-01-20 * "Dankort-køb Punktum dk Nota P9752776" "Dankort-køb Punktum dk Nota P9752776"
   Expenses:Hosting:Punktum                                          40.00 DKK
@@ -695,11 +921,11 @@
 
 2021-01-12 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN" "MobilePay køb DAN CATERING V/JØRN PEDERSEN"
   Expenses:Mad:Dancatering                                          30.00 DKK
-  Assets:Moms:KoebMoms                                             -30.00 DKK
+  Liabilities:Kreditorer                                           -30.00 DKK
 
 2021-01-12 * "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt" "MobilePay køb DAN CATERING V/JØRN PEDERSEN betalt"
-  Assets:Moms:KoebMoms                                              30.00 DKK
-  Liabilities:Kreditorer                                           -30.00 DKK
+  Liabilities:Kreditorer                                            30.00 DKK
+  Assets:Bank:BankErhverv                                          -30.00 DKK
 
 2021-01-05 * "dustin" "dustin"
   Expenses:Computer:Dustin                                       1,879.49 DKK
@@ -715,8 +941,7 @@
   Assets:Bank:BankErhverv                                          -25.00 DKK
 
 2021-01-05 * "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA" "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA"
-  Expenses:Hosting:Frantech                                         74.26 DKK
-  Assets:Moms:KoebMoms                                              18.56 DKK
+  Expenses:Hosting:UdenMoms:Frantech                                92.82 DKK
   Liabilities:Kreditorer                                           -92.82 DKK
 
 2021-01-05 * "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA betalt" "Visa/Dankort USD 15,00 Kurs 618,80 Nota nr. 10505 FRANTECH* FRANTECH 416, HTTPSMY.FRA betalt"
@@ -746,51 +971,51 @@
   Assets:Bank:BankErhverv                                      -29,903.57 DKK
 
 2021-01-31 * "jan" ""
-  Income:Salg:GOTTIT                                            27,000.00 DKK
-  Liabilities:Moms:SalgMoms                                      5,400.00 DKK
-  Assets:Debitorer                                             -32,400.00 DKK
+  Income:Salg:GOTTIT                                            29,700.00 DKK
+  Liabilities:Moms:SalgMoms                                      7,425.00 DKK
+  Assets:Debitorer                                             -37,125.00 DKK
 
 2021-04-30 * "feb-apr" ""
-  Income:Salg:GOTTIT                                            29,700.00 DKK
-  Liabilities:Moms:SalgMoms                                      5,940.00 DKK
-  Assets:Debitorer                                             -35,640.00 DKK
+  Income:Salg:GOTTIT                                            27,000.00 DKK
+  Liabilities:Moms:SalgMoms                                      6,750.00 DKK
+  Assets:Debitorer                                             -33,750.00 DKK
 
 2021-05-31 * "maj" ""
   Income:Salg:GOTTIT                                            94,500.00 DKK
-  Liabilities:Moms:SalgMoms                                     18,900.00 DKK
-  Assets:Debitorer                                            -113,400.00 DKK
+  Liabilities:Moms:SalgMoms                                     23,625.00 DKK
+  Assets:Debitorer                                            -118,125.00 DKK
 
 2021-06-30 * "jun" ""
   Income:Salg:GOTTIT                                            79,200.00 DKK
-  Liabilities:Moms:SalgMoms                                     15,840.00 DKK
-  Assets:Debitorer                                             -95,040.00 DKK
+  Liabilities:Moms:SalgMoms                                     19,800.00 DKK
+  Assets:Debitorer                                             -99,000.00 DKK
 
 2021-07-31 * "jul" ""
   Income:Salg:GOTTIT                                            41,000.00 DKK
-  Liabilities:Moms:SalgMoms                                      8,200.00 DKK
-  Assets:Debitorer                                             -49,200.00 DKK
+  Liabilities:Moms:SalgMoms                                     10,250.00 DKK
+  Assets:Debitorer                                             -51,250.00 DKK
 
 2021-08-31 * "aug" ""
   Income:Salg:GOTTIT                                            66,600.00 DKK
-  Liabilities:Moms:SalgMoms                                     13,320.00 DKK
-  Assets:Debitorer                                             -79,920.00 DKK
+  Liabilities:Moms:SalgMoms                                     16,650.00 DKK
+  Assets:Debitorer                                             -83,250.00 DKK
 
 2021-09-30 * "sep" ""
   Income:Salg:GOTTIT                                            81,000.00 DKK
-  Liabilities:Moms:SalgMoms                                     16,200.00 DKK
-  Assets:Debitorer                                             -97,200.00 DKK
+  Liabilities:Moms:SalgMoms                                     20,250.00 DKK
+  Assets:Debitorer                                            -101,250.00 DKK
 
 2021-10-31 * "okt" ""
   Income:Salg:GOTTIT                                            75,600.00 DKK
-  Liabilities:Moms:SalgMoms                                     15,120.00 DKK
-  Assets:Debitorer                                             -90,720.00 DKK
+  Liabilities:Moms:SalgMoms                                     18,900.00 DKK
+  Assets:Debitorer                                             -94,500.00 DKK
 
 2021-11-30 * "nov" ""
   Income:Salg:GOTTIT                                            57,600.00 DKK
-  Liabilities:Moms:SalgMoms                                     11,520.00 DKK
-  Assets:Debitorer                                             -69,120.00 DKK
+  Liabilities:Moms:SalgMoms                                     14,400.00 DKK
+  Assets:Debitorer                                             -72,000.00 DKK
 
 2021-12-31 * "dec" ""
   Income:Salg:GOTTIT                                            66,600.00 DKK
-  Liabilities:Moms:SalgMoms                                     13,320.00 DKK
-  Assets:Debitorer                                             -79,920.00 DKK
+  Liabilities:Moms:SalgMoms                                     16,650.00 DKK
+  Assets:Debitorer                                             -83,250.00 DKK
