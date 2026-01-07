@@ -7,6 +7,7 @@ from collections import OrderedDict
 from datetime import datetime
 import re
 from jinja2 import Environment, FileSystemLoader
+from collections import defaultdict
 
 
 def write_file(filename, content, encoding="utf-8"):
@@ -68,6 +69,8 @@ bank_date_parser = date_parser("%d-%m-%Y")
     ACCOUNT_REGEX_CSV,
     BANK_TO_INVOICE_DATE_CSV,
     TRANSACTION_TYPE_CSV,
+    SALG_TXT,
+    PRICES_CSV,
 ) = [
     "%s.csv" % (fn,)
     for fn in (
@@ -80,6 +83,8 @@ bank_date_parser = date_parser("%d-%m-%Y")
         "account_regex",
         "bank_to_invoice_date",
         "transaction_type",
+        "salg.txt",
+        "prices",
     )
 ]
 
@@ -111,6 +116,13 @@ bank_date_parser = date_parser("%d-%m-%Y")
     TEXT,
     EXTRA_TEXT,
     CURRENCY,
+    YYMM,
+    YYMMDD,
+    YYMMDD_TEXT,
+    HOURS,
+    SUPPORT_HOURS,
+    PRICE_TYPE,
+    PRICE,
 ) = (
     "date_posted",
     "date_payed",
@@ -138,6 +150,13 @@ bank_date_parser = date_parser("%d-%m-%Y")
     "text",
     "extra_text",
     "currency",
+    "yymm",
+    "yymmdd",
+    "yymmdd_text",
+    "hours",
+    "support_hours",
+    "price_type",
+    "price",
 )
 
 specs = OrderedDict(
@@ -193,6 +212,29 @@ specs = OrderedDict(
                 ]
             ),
         ),
+        (
+            SALG_TXT,
+            OrderedDict(
+                [
+                    (ACCOUNT_NAME, str),
+                    (YYMMDD, str),
+                    (YYMMDD_TEXT, str),
+                    (HOURS, int),
+                    (SUPPORT_HOURS, int),
+                ]
+            ),
+        ),
+        (
+            PRICES_CSV,
+            OrderedDict(
+                [
+                    (ACCOUNT_NAME, str),
+                    (PRICE_TYPE, str),
+                    (YYMMDD, str),
+                    (PRICE, str),
+                ]
+            ),
+        ),
     ]
 )
 
@@ -202,6 +244,11 @@ kontoplan_accounts = [account.account for account in kontoplan]
 
 regnskab, errors, options = loader.load_file("regnskab.beancount")
 links = [link for link in regnskab if link.meta.get("link")]
+
+
+def find_price(price_dict, account_name, price_type, dt):
+    matches_reversed = reversed(price_dict[account_name][price_type])
+    return next((price for from_date, price in matches_reversed if from_date <= dt))
 
 
 def load_csv(filename, spec, sep=SEMICOLON):
@@ -254,6 +301,16 @@ def main():
         path.join(yr, "aps20%s.csv" % (yr,)), specs[BANK_CSV], SEMICOLON
     )
 
+    prices = defaultdict(lambda: defaultdict(list))
+    for row in load_csv(PRICES_CSV, specs[PRICES_CSV], SEMICOLON):
+        prices[row[ACCOUNT_NAME]][row[PRICE_TYPE]].append(
+            (datetime.strptime(row[YYMMDD], "%y%m%d"), row[PRICE])
+        )
+    prices = {k: dict(v) for k, v in prices.items()}
+
+    # load salg csv
+    salg = load_csv(path.join(yr, "salg.txt"), specs[SALG_TXT], SEMICOLON)
+
     # load transaction type csv
     transaction_types = dict(
         [
@@ -268,6 +325,7 @@ def main():
     account_groups = []
     errors = []
     transactions = []
+    vat_fraction = 0.2
     for row in bank_csv:
         date_payed = bank_date_parser(row[DATE_PAYED])
         if date_payed.month > 6:
@@ -319,7 +377,6 @@ def main():
         # todo: check for already processed transaction
 
         # todo: negate amount if needed
-        vat_fraction = 0.2
         amount = abs(amount)  # total
         amount_vat_free = 0  # todo: laes momsfrit beloeb fra mapningsfil som bruger skal aflaese fra faktura
         amount_with_vat = amount - amount_vat_free  # momsbeløb + moms
@@ -329,6 +386,42 @@ def main():
             {
                 DATE_PAYED: format_date(date_payed),
                 DATE_POSTED: format_date(date_payed),  # todo:
+                TOTAL: format_money(amount),
+                TOTAL_NEGATED: format_money(-amount),
+                AMOUNT_WO_VAT: format_money(amount_wo_vat),
+                AMOUNT_WO_VAT_NEGATED: format_money(-amount_wo_vat),
+                AMOUNT_WITH_VAT: format_money(amount_with_vat),
+                VAT: format_money(vat),
+                ACCOUNT: account_name,
+                ACCOUNT_GROUP: account_group,
+                TRANSACTION_TYPE: transaction_type,
+                TEXT: row[DESCRIPTION],
+                EXTRA_TEXT: row[DESCRIPTION],  # todo:
+                ACCOUNT2: transaction_type[ACCOUNT2],
+                ACCOUNT3: transaction_type[ACCOUNT3],
+                ACCOUNT4: transaction_type[ACCOUNT4],
+                CURRENCY: "DKK",  # todo
+            }
+        )
+
+    for row in salg:
+        account_name = row[ACCOUNT_NAME]
+        yymmdd = datetime.strptime(row[YYMMDD], "%y%m%d")
+        yymmdd_text = row[YYMMDD_TEXT]
+        hours = row[HOURS]
+        support_hours = row[SUPPORT_HOURS]
+
+        hour_price = find_price(prices, account_name, "Timepris", yymmdd)
+        support_price = find_price(prices, account_name, "Support", yymmdd)
+        amount_wo_vat = hours * hour_price + support_hours * support_price
+        vat = amount_wo_vat * vat_fraction
+        amount = amount_wo_vat + vat
+        account_group = "Income:Konsulentydelse"
+        transaction_type = "Salg"
+
+        transactions.append(
+            {
+                DATE_POSTED: format_date(yymmdd),  # todo:
                 TOTAL: format_money(amount),
                 TOTAL_NEGATED: format_money(-amount),
                 AMOUNT_WO_VAT: format_money(amount_wo_vat),
