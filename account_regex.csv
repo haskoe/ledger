@@ -1,10 +1,10 @@
-﻿løn;LoenAnsatBetalt
+﻿løn;SkyldigLoen
 TELMORE;Telmore
 FIBIA;Fibia
 FRANTECH;Frantech
 DUSTIN;Dustin
-OVERFØRSEL;LoenGebyrBetalt
-AFREGNING TIL TOLD & SKAT;LoenSkatBetalt
+OVERFØRSEL;SkyldigLoenGebyr
+AFREGNING TIL TOLD & SKAT;SkyldigSkatAfLoen
 proshop;Proshop
 Betalingsservice ATP;SkyldigATP
 forsikring;AON
@@ -23,3 +23,13 @@ moms ;SkyldigMoms
 Dankort OK ;OkPlus
 Rente af indestående;Rente
 VELOCONCEPT;VELOCONCEPT
+Bageriet Hjortevæn;BagerietHjortev
+Kai Dige Bach;KDB
+ONE.COM;ONECOM
+Gottlieb IT ApS;GOTTIT
+BilligToner.dk;BilligToner
+ELGIGANTEN;ELG
+MICROSOFT MPN PC;MICROSOFT
+Itacho;ITACHO
+CIRCLE K;CIRCLEK
+AXOSOFT;AXOSOFT
