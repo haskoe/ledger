@@ -126,8 +126,7 @@
   Assets:Bank:BankErhverv                                          -95.57 DKK
 
 2021-08-02 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144"
-  Expenses:Kontor:Naturenergi                                    2,552.03 DKK
-  Assets:Moms:KoebMoms                                             638.01 DKK
+  Expenses:Mad:Naturenergi                                       3,190.04 DKK
   Liabilities:Kreditorer                                        -3,190.04 DKK
 
 2021-08-02 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt"
@@ -459,8 +458,7 @@
   Assets:Bank:BankErhverv                                       -2,800.00 DKK
 
 2021-05-03 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144"
-  Expenses:Kontor:Naturenergi                                    1,769.94 DKK
-  Assets:Moms:KoebMoms                                             442.49 DKK
+  Expenses:Mad:Naturenergi                                       2,212.43 DKK
   Liabilities:Kreditorer                                        -2,212.43 DKK
 
 2021-05-03 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt"
@@ -873,8 +871,7 @@
   Assets:Bank:BankErhverv                                          -93.95 DKK
 
 2021-02-01 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144"
-  Expenses:Kontor:Naturenergi                                    1,833.78 DKK
-  Assets:Moms:KoebMoms                                             458.45 DKK
+  Expenses:Mad:Naturenergi                                       2,292.23 DKK
   Liabilities:Kreditorer                                        -2,292.23 DKK
 
 2021-02-01 * "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt" "Betalingsservice ENERGISELSKABET NATUR-ENERGI A/S Aftalenr. 917338144 betalt"

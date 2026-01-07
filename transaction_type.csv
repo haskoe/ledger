@@ -19,6 +19,7 @@ Expenses:Finansielt:Gebyrer;udgift;Assets:Bank:BankErhverv;;
 Expenses:Avis;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;
 Liabilities:ATP;udgift_betalt;Assets:Bank:BankErhverv;;
 Expenses:Kontor;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
+Expenses:Kontor:UdenMoms;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;
 Assets:Debitorer;salg_betalt;Assets:Bank:BankErhverv;;
 Expenses:Hardware;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Software;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
