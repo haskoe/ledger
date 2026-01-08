@@ -267,9 +267,7 @@ def load_csv(filename, spec, sep=SEMICOLON, rel_path="."):
     # return [SimpleNamespace(**row) for row in dicts]
 
 
-def main():
-    company_name = len(sys.argv) > 1 and sys.argv[1] or "firma"
-    yr = len(sys.argv) > 2 and sys.argv[2] or "21"
+def run_afstem(company_name="firma", yr="21"):
     root = "."
 
     company_path = path.join(root, company_name)
@@ -506,4 +504,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    company_name = len(sys.argv) > 1 and sys.argv[1] or "firma"
+    yr = len(sys.argv) > 2 and sys.argv[2] or "21"
+    run_afstem(company_name, yr)
