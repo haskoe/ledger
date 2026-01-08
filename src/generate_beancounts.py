@@ -255,22 +255,34 @@ def find_price(price_dict, account_name, price_type, dt):
     return next((price for from_date, price in matches_reversed if from_date <= dt))
 
 
-def load_csv(filename, spec, sep=SEMICOLON):
+def load_csv(filename, spec, sep=SEMICOLON, rel_path="."):
     dicts = pd.read_csv(
-        filename, names=spec.keys(), sep=sep, encoding="utf-8", dtype=spec
+        path.join(rel_path, filename),
+        names=spec.keys(),
+        sep=sep,
+        encoding="utf-8",
+        dtype=spec,
     ).to_dict(orient="records")
     return dicts
     # return [SimpleNamespace(**row) for row in dicts]
 
 
 def main():
-    yr = len(sys.argv) > 1 and sys.argv[1] or "21"
+    company_name = len(sys.argv) > 1 and sys.argv[1] or "firma"
+    yr = len(sys.argv) > 2 and sys.argv[2] or "21"
+    root = "."
+    company_path = path.join(root, company_name)
 
-    jinja_env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
+    company_period_path = lambda fn: path.join(company_path, yr, fn)
+    company_metadata_path = lambda fn: path.join(company_path, "stamdata", fn)
+    metadata_path = lambda fn: path.join(root, fn)
+    templates_path = path.join(root, "templates")
+
+    jinja_env = Environment(loader=FileSystemLoader(templates_path))
     templates = dict(
         [
             (fn.split(".")[0], jinja_env.get_template(fn))
-            for fn in os.listdir(TEMPLATE_DIR)
+            for fn in os.listdir(templates_path)
         ]
     )  # load account csv
     all_accounts = dict(
@@ -279,13 +291,19 @@ def main():
                 x[ACCOUNT_NAME].casefold(),
                 (x[ACCOUNT_GROUP], "%s:%s" % (x[ACCOUNT_GROUP], x[ACCOUNT_NAME])),
             )
-            for x in load_csv(ACCOUNT_CSV, specs[ACCOUNT_CSV], SEMICOLON)
+            for x in load_csv(
+                company_metadata_path(ACCOUNT_CSV), specs[ACCOUNT_CSV], SEMICOLON
+            )
         ]
     )
 
     account_regexes = [
         (x[ACCOUNT_NAME], re.compile(x[REGEX], re.IGNORECASE), x[REGEX].casefold())
-        for x in load_csv(ACCOUNT_REGEX_CSV, specs[ACCOUNT_REGEX_CSV], SEMICOLON)
+        for x in load_csv(
+            company_metadata_path(ACCOUNT_REGEX_CSV),
+            specs[ACCOUNT_REGEX_CSV],
+            SEMICOLON,
+        )
     ]
 
     # load mapning fra bank til faktureringsdato
@@ -293,7 +311,7 @@ def main():
         [
             (k[DATE_PAYED_KEY], k[DATE_POSTED_KEY])
             for k in load_csv(
-                BANK_TO_INVOICE_DATE_CSV,
+                company_period_path(BANK_TO_INVOICE_DATE_CSV),
                 specs[BANK_TO_INVOICE_DATE_CSV],
                 SEMICOLON,
             )
@@ -302,18 +320,20 @@ def main():
 
     # load bank csv
     bank_csv = load_csv(
-        path.join(yr, "aps20%s.csv" % (yr,)), specs[BANK_CSV], SEMICOLON
+        company_period_path("aps20%s.csv" % (yr,)), specs[BANK_CSV], SEMICOLON
     )
 
     prices = defaultdict(lambda: defaultdict(list))
-    for row in load_csv(PRICES_CSV, specs[PRICES_CSV], SEMICOLON):
+    for row in load_csv(
+        company_metadata_path(PRICES_CSV), specs[PRICES_CSV], SEMICOLON
+    ):
         prices[row[ACCOUNT_NAME]][row[PRICE_TYPE]].append(
             (datetime.strptime(row[YYMMDD], "%y%m%d"), row[PRICE])
         )
     prices = {k: dict(v) for k, v in prices.items()}
 
     # load salg csv
-    salg = load_csv(path.join(yr, "salg.txt"), specs[SALG_TXT], SEMICOLON)
+    salg = load_csv(company_period_path("salg.txt"), specs[SALG_TXT], SEMICOLON)
 
     # load transaction type csv
     transaction_types = dict(
@@ -473,11 +493,11 @@ def main():
             if a and isinstance(a, str)
         ]
         # print(kontoplan_accounts)
-    write_file(path.join(GENERATED_DIR, "%s.beancount" % (yr,)), "\n\n".join(output))
+    write_file(company_period_path("%s.beancount" % (yr,)), "\n\n".join(output))
 
     # opdater kontoplan fil
     write_file(
-        path.join(GENERATED_DIR, "kontoplan.beancount"),
+        company_period_path("kontoplan.beancount"),
         ["1900-01-01 open %s DKK" % (x,) for x in sorted(set(kontoplan_accounts))],
     )
 
