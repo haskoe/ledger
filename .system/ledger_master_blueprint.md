@@ -71,6 +71,8 @@ ellers opdateres beancount fil med de nødvendige posteringer:
 - generering af årsafslutningsrapport.
 Brugeren kan herefter godkende lukningen og beancount filerne committes til versionskontrol
 
+Umiddelbart tænkes det at afstemning og opdatering af løn/salg samles i en kørsel.
+
 
 # 3. ARKITEKTUR OG FILSTRUKTUR
 Systemet skal være opbygget i følgende struktur:
@@ -91,7 +93,16 @@ Systemet skal være opbygget i følgende struktur:
 
 
 # 4. MODUL-SPECIFIKATIONER
-Der skal laves et eller flere python scripts i src, som giver al funktionalit omtalt i afsnit 3.
+Der skal laves et eller flere python scripts i src, som giver al funktionalitet omtalt i afsnit 3.
+
+Lige nu ligger generer beancount funktionalitet i /generate_beancounts.py.
+Det skal flyttes til src/ og der main.py skal opdateres så det er main.py der kaldes med argumenter og kalder videre til generate_beancounts.py hvis beancount filer skal opdateres.
+Det vil være godt om der er et python modul for hver python argument type: 
+- afstem,
+- godkend (både afstem og luk af regnskabsperiode))
+- luk af momsperiode,
+- status
+Modulet src/driver/connector.py skal altid bruges når der skal køres beancount queries fra python koden.
 
 # 5. INSTALLATION OG AFHÆNGIGHEDER
 Systemet installeres og køres via `uv` pakkehåndtering. Brug IKKE `uvx`.
