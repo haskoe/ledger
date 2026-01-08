@@ -1,6 +1,6 @@
 import os
 from beancount import loader
-from beancount.query import query
+from beanquery import query
 from beancount.parser import printer
 
 
@@ -32,80 +32,16 @@ class BeancountConnector:
             printer.print_entry(entry, file=f)
         self.refresh()  # Opdater hukommelsen efter skrivning
 
-    def get_moms_status(self):
-        """Hjælpefunktion til lynhurtigt momstjek."""
-        q = "SELECT account, sum(position) WHERE account ~ 'Moms' GROUP BY 1"
-        return self.execute(q)
+    def account_in_period(self, account, start_date=None, end_date=None):
+        q = f"SELECT date, units(position) WHERE account ~ '{account}' ORDER BY date ASC"
+        print(q)
+        res = [(d, float(amount.number)) for d, amount in self.execute(q)]
+        print(res)
+        if start_date:
+            res = [x for x in res if x[0] >= start_date]
+        if end_date:
+            res = [x for x in res if x[0] <= end_date]
+        return res
 
-
-from beancount import loader
-from beancount.core import realization, data, amount
-from decimal import Decimal
-import datetime
-
-
-def generate_moms_closing(filename, start_date, end_date):
-    # 1. Indlæs regnskabet direkte via Beancount API
-    entries, errors, options = loader.load_file(filename)
-
-    # 2. Filtrér entries efter periode og "realisér" kontotræet
-    filtered_entries = [
-        e for e in entries if hasattr(e, "date") and start_date <= e.date <= end_date
-    ]
-    tree = realization.realize(filtered_entries)
-
-    moms_postings = []
-    total_netto = Decimal("0.00")
-
-    # 3. Find alle konti der indeholder "Moms"
-    for acc_name in realization.iter_usernames(tree):
-        if "Moms" in acc_name and "Afregning" not in acc_name:
-            acc_node = realization.get_node(tree, acc_name)
-            balance = realization.compute_balance(acc_node)
-
-            # Hent saldoen for DKK (Inventory -> Amount)
-            if not balance.is_empty():
-                pos = balance.get_currency_units("DKK")
-                amt = pos.number
-
-                # Vi skal "nulstille" kontoen (vende fortegnet)
-                moms_postings.append(
-                    data.Posting(
-                        acc_name, amount.Amount(-amt, "DKK"), None, None, None, None
-                    )
-                )
-                total_netto += amt
-
-    # 4. Generér selve transaktionen som et objekt
-    closing_txn = data.Transaction(
-        meta={"source": "auto-script"},
-        date=end_date,
-        flag="*",
-        payee="SKAT",
-        narration=f"Momslukning {start_date} til {end_date}",
-        tags=frozenset(),
-        links=frozenset(),
-        postings=[
-            *moms_postings,
-            data.Posting(
-                "Liabilities:Moms:Afregning",
-                amount.Amount(-total_netto, "DKK"),
-                None,
-                None,
-                None,
-                None,
-            ),
-        ],
-    )
-
-    # 5. Print som færdig Beancount-kode
-    from beancount.parser import printer
-
-    printer.print_entry(closing_txn)
-
-
-if __name__ == "__main__":
-    # Kør for 1. halvår
-    generate_moms_closing(
-        "regnskab.beancount", datetime.date(2026, 1, 1), datetime.date(2026, 6, 30)
-    )
+    def get_moms_status(self, start_date, end_date):
+        return self.account_in_period("SkyldigMoms", start_date, end_date)

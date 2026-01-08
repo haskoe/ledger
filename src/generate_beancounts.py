@@ -201,6 +201,10 @@ specs = OrderedDict(
                 [
                     (DATE_PAYED_KEY, str),
                     (DATE_POSTED_KEY, str),
+                    (DATE_POSTED_KEY, str),
+                    (DATE_POSTED_KEY, str),
+                    (DATE_POSTED_KEY, str),
+                    (DATE_POSTED_KEY, str),
                 ]
             ),
         ),
