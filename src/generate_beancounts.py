@@ -271,8 +271,8 @@ def main():
     company_name = len(sys.argv) > 1 and sys.argv[1] or "firma"
     yr = len(sys.argv) > 2 and sys.argv[2] or "21"
     root = "."
-    company_path = path.join(root, company_name)
 
+    company_path = path.join(root, company_name)
     company_period_path = lambda fn: path.join(company_path, yr, fn)
     company_metadata_path = lambda fn: path.join(company_path, "stamdata", fn)
     metadata_path = lambda fn: path.join(root, fn)
@@ -493,11 +493,14 @@ def main():
             if a and isinstance(a, str)
         ]
         # print(kontoplan_accounts)
-    write_file(company_period_path("%s.beancount" % (yr,)), "\n\n".join(output))
+    write_file(
+        path.join(company_path, "generated", "%s.beancount" % (yr,)),
+        "\n\n".join(output),
+    )
 
     # opdater kontoplan fil
     write_file(
-        company_period_path("kontoplan.beancount"),
+        path.join(company_path, "kontoplan.beancount"),
         ["1900-01-01 open %s DKK" % (x,) for x in sorted(set(kontoplan_accounts))],
     )
 
