@@ -276,7 +276,7 @@ def main():
     company_period_path = lambda fn: path.join(company_path, yr, fn)
     company_metadata_path = lambda fn: path.join(company_path, "stamdata", fn)
     metadata_path = lambda fn: path.join(root, fn)
-    templates_path = path.join(root, "templates")
+    templates_path = path.join(root, TEMPLATE_DIR)
 
     jinja_env = Environment(loader=FileSystemLoader(templates_path))
     templates = dict(
@@ -494,7 +494,7 @@ def main():
         ]
         # print(kontoplan_accounts)
     write_file(
-        path.join(company_path, "generated", "%s.beancount" % (yr,)),
+        path.join(company_path, GENERATED_DIR, "%s.beancount" % (yr,)),
         "\n\n".join(output),
     )
 
