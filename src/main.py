@@ -40,14 +40,20 @@ def main():
 
     args = parser.parse_args()
 
+    from context import LedgerContext
+
+    ctx = LedgerContext(
+        company_name=args.firma, period=args.periode, enddate=args.enddate
+    )
+
     if args.command == "afstem":
-        handle_afstem(args.firma, args.periode, args.enddate)
+        handle_afstem(ctx)
     elif args.command == "godkend":
-        handle_godkend(args.firma, args.periode, args.enddate)
+        handle_godkend(ctx)
     elif args.command == "moms-luk":
-        handle_moms_luk(args.firma, args.periode, args.enddate)
+        handle_moms_luk(ctx)
     elif args.command == "status":
-        handle_status(args.firma, args.periode, args.enddate)
+        handle_status(ctx)
     else:
         parser.print_help()
 

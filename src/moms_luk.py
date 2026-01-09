@@ -5,13 +5,15 @@ from datetime import date
 from driver.connector import BeancountConnector
 
 
-def handle_moms_luk(firma, periode, enddate):
-    print(f"Moms-lukning for {firma} (periode {periode}, enddate {enddate})")
+def handle_moms_luk(ctx):
+    print(
+        f"Moms-lukning for {ctx.company_name} (periode {ctx.period}, enddate {ctx.enddate})"
+    )
     bc = BeancountConnector(path.join("firma", "regnskab.beancount"))
     SKYLDIG_MOMS = "Liabilities:Moms:SkyldigMoms"
 
     # vi skal checke at der ikke er aabne SKYLDIG_MOMS transaktioner
-    ms = bc.account_in_period(SKYLDIG_MOMS, date(1900, 1, 1), enddate)
+    ms = bc.account_in_period(SKYLDIG_MOMS, date(1900, 1, 1), ctx.enddate)
     print(sum([amount for acc, amount in ms]))
     if sum([amount for acc, amount in ms]) != 0:
         raise ValueError("Der er aabne SKYLDIG_MOMS transaktioner")

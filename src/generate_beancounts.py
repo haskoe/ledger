@@ -1,5 +1,5 @@
 import os
-import sys
+
 import pandas as pd
 from os import path
 from beancount import loader
@@ -8,14 +8,6 @@ from datetime import datetime
 import re
 from jinja2 import Environment, FileSystemLoader
 from collections import defaultdict
-
-
-def write_file(filename, content, encoding="utf-8"):
-    with open(filename, "w", encoding=encoding) as f:
-        if isinstance(content, list):
-            f.write("\n".join(content))
-        else:
-            f.write(content)
 
 
 def format_money(num):
@@ -38,8 +30,6 @@ def combined_account(account_name, account_group):
     return "%s:%s" % (account_group, account_name)
 
 
-GENERATED_DIR = "generated"
-TEMPLATE_DIR = "templates"
 TAB = "\t"
 COMMA = ","
 DOT = "."
@@ -271,20 +261,20 @@ def load_csv(filename, spec, sep=SEMICOLON, rel_path="."):
     # return [SimpleNamespace(**row) for row in dicts]
 
 
-def run_afstem(company_name, yr):
-    root = "."
+def run_afstem(ctx):
+    # root = "."
 
-    company_path = path.join(root, company_name)
-    company_period_path = lambda fn: path.join(company_path, yr, fn)
-    company_metadata_path = lambda fn: path.join(company_path, "stamdata", fn)
-    metadata_path = lambda fn: path.join(root, fn)
-    templates_path = path.join(root, TEMPLATE_DIR)
+    # company_path = ctx.company_path
+    # company_period_path = ctx.company_period_path
+    # company_metadata_path = ctx.company_metadata_path
+    # metadata_path = lambda fn: path.join(ctx.root_path, fn)
+    # templates_path = ctx.templates_path
 
-    jinja_env = Environment(loader=FileSystemLoader(templates_path))
+    jinja_env = Environment(loader=FileSystemLoader(ctx.templates_path))
     templates = dict(
         [
             (fn.split(".")[0], jinja_env.get_template(fn))
-            for fn in os.listdir(templates_path)
+            for fn in os.listdir(ctx.templates_path)
         ]
     )  # load account csv
     all_accounts = dict(
@@ -294,7 +284,7 @@ def run_afstem(company_name, yr):
                 (x[ACCOUNT_GROUP], "%s:%s" % (x[ACCOUNT_GROUP], x[ACCOUNT_NAME])),
             )
             for x in load_csv(
-                company_metadata_path(ACCOUNT_CSV), specs[ACCOUNT_CSV], SEMICOLON
+                ctx.company_metadata_path(ACCOUNT_CSV), specs[ACCOUNT_CSV], SEMICOLON
             )
         ]
     )
@@ -302,7 +292,7 @@ def run_afstem(company_name, yr):
     account_regexes = [
         (x[ACCOUNT_NAME], re.compile(x[REGEX], re.IGNORECASE), x[REGEX].casefold())
         for x in load_csv(
-            company_metadata_path(ACCOUNT_REGEX_CSV),
+            ctx.company_metadata_path(ACCOUNT_REGEX_CSV),
             specs[ACCOUNT_REGEX_CSV],
             SEMICOLON,
         )
@@ -313,7 +303,7 @@ def run_afstem(company_name, yr):
         [
             (k[DATE_PAYED_KEY], k[DATE_POSTED_KEY])
             for k in load_csv(
-                company_period_path(BANK_TO_INVOICE_DATE_CSV),
+                ctx.company_period_path(BANK_TO_INVOICE_DATE_CSV),
                 specs[BANK_TO_INVOICE_DATE_CSV],
                 SEMICOLON,
             )
@@ -321,11 +311,11 @@ def run_afstem(company_name, yr):
     )
 
     # load bank csv
-    bank_csv = load_csv(company_period_path("bank.csv"), specs[BANK_CSV], SEMICOLON)
+    bank_csv = load_csv(ctx.company_period_path("bank.csv"), specs[BANK_CSV], SEMICOLON)
 
     prices = defaultdict(lambda: defaultdict(list))
     for row in load_csv(
-        company_metadata_path(PRICES_CSV), specs[PRICES_CSV], SEMICOLON
+        ctx.company_metadata_path(PRICES_CSV), specs[PRICES_CSV], SEMICOLON
     ):
         prices[row[ACCOUNT_NAME]][row[PRICE_TYPE]].append(
             (datetime.strptime(row[YYMMDD], "%y%m%d"), row[PRICE])
@@ -333,7 +323,7 @@ def run_afstem(company_name, yr):
     prices = {k: dict(v) for k, v in prices.items()}
 
     # load salg csv
-    salg = load_csv(company_period_path("salg.txt"), specs[SALG_TXT], SEMICOLON)
+    salg = load_csv(ctx.company_period_path("salg.txt"), specs[SALG_TXT], SEMICOLON)
 
     # load transaction type csv
     transaction_types = dict(
@@ -459,9 +449,12 @@ def run_afstem(company_name, yr):
         transactions.append(
             {
                 DATE_POSTED: format_date(yymmdd),  # todo:
+                TOTAL: format_money(amount),
                 TOTAL_NEGATED: format_money(-amount),
                 AMOUNT_WO_VAT: format_money(amount_wo_vat),
+                AMOUNT_WO_VAT_NEGATED: format_money(-amount_wo_vat),
                 VAT: format_money(vat),
+                "vat_negated": format_money(-vat),
                 ACCOUNT: account_name,
                 ACCOUNT_GROUP: account_group,
                 TRANSACTION_TYPE: transaction_type,
@@ -493,13 +486,9 @@ def run_afstem(company_name, yr):
             if a and isinstance(a, str)
         ]
         # print(kontoplan_accounts)
-    write_file(
-        path.join(company_path, GENERATED_DIR, "%s.beancount" % (yr,)),
-        "\n\n".join(output),
-    )
+    ctx.write_period_file("\n\n".join(output))
 
     # opdater kontoplan fil
-    write_file(
-        path.join(company_path, "kontoplan.beancount"),
+    ctx.write_company_kontoplan_file(
         ["1900-01-01 open %s DKK" % (x,) for x in sorted(set(kontoplan_accounts))],
     )
