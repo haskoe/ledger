@@ -1,4 +1,4 @@
 {{ date_posted }} * "{{ text }}" "{{ extra_text}}"
-  {{ account.ljust(50) }} {{ amount_wo_vat.rjust(20) }} {{ currency }}
-  {{ account2.ljust(50) }} {{ vat.rjust(20) }} {{ currency }}
-  {{ account3.ljust(50) }} {{ total_negated.rjust(20) }} {{ currency }}
+  {{ account.ljust(50) }} {{ amount_wo_vat_negated.rjust(20) }} {{ currency }}
+  {{ account2.ljust(50) }} {{ vat_negated.rjust(20) }} {{ currency }}
+  {{ account3.ljust(50) }} {{ total.rjust(20) }} {{ currency }}

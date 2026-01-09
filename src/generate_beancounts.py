@@ -271,7 +271,7 @@ def load_csv(filename, spec, sep=SEMICOLON, rel_path="."):
     # return [SimpleNamespace(**row) for row in dicts]
 
 
-def run_afstem(company_name="firma", yr="21"):
+def run_afstem(company_name, yr):
     root = "."
 
     company_path = path.join(root, company_name)
@@ -321,9 +321,7 @@ def run_afstem(company_name="firma", yr="21"):
     )
 
     # load bank csv
-    bank_csv = load_csv(
-        company_period_path("aps20%s.csv" % (yr,)), specs[BANK_CSV], SEMICOLON
-    )
+    bank_csv = load_csv(company_period_path("bank.csv"), specs[BANK_CSV], SEMICOLON)
 
     prices = defaultdict(lambda: defaultdict(list))
     for row in load_csv(
@@ -505,9 +503,3 @@ def run_afstem(company_name="firma", yr="21"):
         path.join(company_path, "kontoplan.beancount"),
         ["1900-01-01 open %s DKK" % (x,) for x in sorted(set(kontoplan_accounts))],
     )
-
-
-if __name__ == "__main__":
-    company_name = len(sys.argv) > 1 and sys.argv[1] or "firma"
-    yr = len(sys.argv) > 2 and sys.argv[2] or "21"
-    run_afstem(company_name, yr)

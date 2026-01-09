@@ -4,6 +4,9 @@ option "operating_currency" "DKK"
 
 include "kontoplan.beancount"
 
+; start på periode transaktioner
+include "start/*.beancount"
+
 ; generated: kontoplan og yearly transactions
 include "generated/*.beancount"
 

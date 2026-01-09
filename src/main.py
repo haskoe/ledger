@@ -12,7 +12,10 @@ def main():
         "--firma", default="firma", help="Navn på firmaet (default: 'firma')"
     )
     parent_parser.add_argument(
-        "--periode", default="21", help="Regnskabsperiode/år (default: '21')"
+        "--periode", default="2021", help="Regnskabsperiode/år (default: '2021')"
+    )
+    parent_parser.add_argument(
+        "--enddate", help="Slutdato for perioden (format: YYYY-MM-DD)"
     )
 
     parser = argparse.ArgumentParser(description="Ledger CLI - Dansk Bogføringssystem")
@@ -38,13 +41,13 @@ def main():
     args = parser.parse_args()
 
     if args.command == "afstem":
-        handle_afstem(args.firma, args.periode)
+        handle_afstem(args.firma, args.periode, args.enddate)
     elif args.command == "godkend":
-        handle_godkend(args.firma, args.periode)
+        handle_godkend(args.firma, args.periode, args.enddate)
     elif args.command == "moms-luk":
-        handle_moms_luk(args.firma, args.periode)
+        handle_moms_luk(args.firma, args.periode, args.enddate)
     elif args.command == "status":
-        handle_status(args.firma, args.periode)
+        handle_status(args.firma, args.periode, args.enddate)
     else:
         parser.print_help()
 
