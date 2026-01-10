@@ -34,9 +34,7 @@ class BeancountConnector:
 
     def account_in_period(self, account, start_date=None, end_date=None):
         q = f"SELECT date, units(position) WHERE account ~ '{account}' ORDER BY date ASC"
-        print(q)
         res = [(d, float(amount.number)) for d, amount in self.execute(q)]
-        print(res)
         if start_date:
             res = [x for x in res if x[0] >= start_date]
         if end_date:
