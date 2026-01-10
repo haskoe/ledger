@@ -1,10 +1,12 @@
 ; moms fra 2021
-2020-06-30 * "Momsafregning" "Lukning af moms H1 2026 52.718"
-  Assets:Moms:KoebMoms                  0.00 DKK 
-  Liabilities:Moms:SalgMoms         52718.00 DKK
+2021-01-01 * "Momsafregning" "Skyldig moms overført fra 2020"
+  Equity:Opening-Balances           52718.00 DKK
   Liabilities:Moms:SkyldigMoms     -52718.00 DKK
 
-2021-06-30 * "Momsafregning" "Lukning af moms H2 2026 73077"
-  Assets:Moms:KoebMoms                  0.00 DKK 
-  Liabilities:Moms:SalgMoms         73077.00 DKK
+2021-01-01 * "Momsafregning" "Skyldig moms overført fra 2020"
+  Equity:Opening-Balances           73077.00 DKK
   Liabilities:Moms:SkyldigMoms     -73077.00 DKK
+
+2021-01-01 * "Bank saldo" "overført fra 2020"
+  Equity:Opening-Balances        -1279251.00 DKK
+  Assets:Bank:BankErhverv         1279251.09 DKK

@@ -40,7 +40,7 @@ def run_afstem(ctx):
 
         account_name = ctx.all_accounts[account_match.casefold()][-1]
         account_group = ctx.all_accounts[account_match.casefold()][0]
-        bank_row_key = util.get_bank_row_key(account_name, bank_transaction.date_payed)
+        bank_row_key = util.get_bank_row_key(account_name, bank_transaction.date_posted)
 
         if bank_row_key in ctx.bank_to_invoice_date:
             continue
@@ -69,83 +69,11 @@ def run_afstem(ctx):
             bank_transaction.set_vat(const.VAT_PCT, 0)
         bank_transaction.set_account(account_name)
 
-        # todo: negate amount if needed
-        # amount = abs(bank_transaction.amount)  # total
-        # amount_vat_free = 0  # todo: laes momsfrit beloeb fra mapningsfil som bruger skal aflaese fra faktura
-        # amount_with_vat = amount - amount_vat_free  # momsbeløb + moms
-        # vat = amount_with_vat * const.VAT_FRACTION
-        # amount_wo_vat = amount - vat  # total uden moms
         transactions.append(bank_transaction)
 
-        #     {
-        #         const.DATE_PAYED: util.format_date(bank_transaction.date_payed),
-        #         const.DATE_POSTED: util.format_date(
-        #             bank_transaction.date_payed
-        #         ),  # todo:
-        #         const.TOTAL: util.format_money(amount),
-        #         const.TOTAL_NEGATED: util.format_money(-amount),
-        #         const.AMOUNT_WO_VAT: util.format_money(amount_wo_vat),
-        #         const.AMOUNT_WO_VAT_NEGATED: util.format_money(-amount_wo_vat),
-        #         const.AMOUNT_WITH_VAT: util.format_money(amount_with_vat),
-        #         const.VAT: util.format_money(vat),
-        #         const.ACCOUNT: account_name,
-        #         const.ACCOUNT_GROUP: account_group,
-        #         const.TRANSACTION_TYPE: transaction_type,
-        #         const.TEXT: bank_transaction.description,
-        #         const.EXTRA_TEXT: bank_transaction.description,  # todo:
-        #         const.ACCOUNT2: transaction_type[const.ACCOUNT2],
-        #         const.ACCOUNT3: transaction_type[const.ACCOUNT3],
-        #         const.ACCOUNT4: transaction_type[const.ACCOUNT4],
-        #         const.CURRENCY: "DKK",  # todo
-        #     }
-        # )
+    salg = Transaction.from_salg_csv(ctx.salg, ctx)
+    transactions += salg
 
-    # for row in ctx.salg:
-    #     account_name = row[const.ACCOUNT_NAME]
-    #     yymmdd = datetime.strptime(row[const.YYMMDD], "%y%m%d")
-    #     yymmdd_text = row[const.YYMMDD_TEXT]
-    #     hours = row[const.HOURS]
-    #     support_hours = row[const.SUPPORT_HOURS]
-
-    #     hour_price = find_price(ctx.prices, account_name, "Timepris", yymmdd)
-    #     support_price = find_price(ctx.prices, account_name, "Support", yymmdd)
-    #     amount_wo_vat = hours * hour_price + support_hours * support_price
-    #     # print(hours, support_hours, hour_price, support_price, amount_wo_vat)
-    #     vat = amount_wo_vat * const.VAT_FRACTION
-    #     amount = amount_wo_vat + vat
-    #     account_group = "Income:Salg"
-    #     account_name = "%s:%s" % (
-    #         account_group,
-    #         account_name,
-    #     )
-
-    #     transaction_type = ctx.transaction_types.get(
-    #         account_group, ctx.transaction_types.get(account_name)
-    #     )
-    #     transactions.append(
-    #         {
-    #             const.DATE_POSTED: util.format_date(yymmdd),  # todo:
-    #             const.TOTAL: util.format_money(amount),
-    #             const.TOTAL_NEGATED: util.format_money(-amount),
-    #             const.AMOUNT_WO_VAT: util.format_money(amount_wo_vat),
-    #             const.AMOUNT_WO_VAT_NEGATED: util.format_money(-amount_wo_vat),
-    #             const.VAT: util.format_money(vat),
-    #             const.VAT_NEGATED: util.format_money(-vat),
-    #             const.ACCOUNT: account_name,
-    #             const.ACCOUNT_GROUP: account_group,
-    #             const.TRANSACTION_TYPE: transaction_type,
-    #             const.TEXT: yymmdd_text,
-    #             const.ACCOUNT2: transaction_type[const.ACCOUNT2],
-    #             const.ACCOUNT3: transaction_type[const.ACCOUNT3],
-    #             const.ACCOUNT4: "",
-    #             const.CURRENCY: "DKK",  # todo
-    #         }
-    #     )
-
-    #
-    # date_posted = bank_to_invoice_date[bank_row_key]
-
-    # print(date_payed, amount, total)
     if errors:
         print("\n".join(errors))
         return
@@ -161,6 +89,8 @@ def run_afstem(ctx):
         kontoplan_accounts += t.all_accounts
         # print(kontoplan_accounts)
     ctx.write_period_file("\n\n".join(output))
+
+    kontoplan_accounts += [v[1] for v in ctx.all_accounts.values()]
 
     # opdater kontoplan fil
     ctx.write_company_kontoplan_file(

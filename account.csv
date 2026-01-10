@@ -1,4 +1,6 @@
-﻿Gottit;Assets:Debitorer
+﻿SkyldigMoms;Liabilities:Dummy
+
+Gottit;Assets:Debitorer
 Politiken;Expenses:Avis
 Telmore;Expenses:Telefoni
 Fibia;Expenses:Internet
@@ -17,7 +19,9 @@ GebyrBank;Expenses:Finansielt:Gebyrer
 Rema1000;Expenses:Mad
 Netto;Expenses:Mad
 Coop365;Expenses:Mad
-AfregnetMoms;Assets:Moms
+KoebMoms;Assets:Moms
+SkyldigMoms;Liabilities:Moms
+SalgMoms;Liabilities:Moms
 Rente;Assets:Bank
 BankErhverv;Assets:Bank
 AON;Expenses:Forsikring

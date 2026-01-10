@@ -15,8 +15,25 @@ def date_parser(date_format):
     return lambda d: datetime.strptime(d, date_format)
 
 
-def get_bank_row_key(account_name, date_payed):
-    return "%s_%s" % (account_name, date_payed.strftime("%Y%m%d"))
+def parse_date(dt):
+    if dt is None:
+        return None
+
+    if isinstance(dt, datetime):
+        return dt
+
+    if not isinstance(dt, str):
+        return None
+
+    if isinstance(dt, str):
+        try:
+            return datetime.strptime(dt, "%Y%m%d").date()
+        except ValueError:
+            return datetime.strptime(dt, "%Y-%m-%d").date()
+
+
+def get_bank_row_key(account_name, date_posted):
+    return "%s_%s" % (account_name, date_posted.strftime("%Y%m%d"))
 
 
 def combined_account(account_name, account_group):

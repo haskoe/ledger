@@ -14,7 +14,7 @@ Expenses:Hosting;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kredito
 Expenses:Forsikring;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Internet;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Telefoni;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
-Assets:Bank:Rente;indtaegt;Income:Renter:Indtaegt;;
+Income:Renter;indtaegt;Assets:Bank:BankErhverv;;
 Expenses:Finansielt:Gebyrer;udgift;Assets:Bank:BankErhverv;;
 Expenses:Avis;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;
 Liabilities:ATP;udgift_betalt;Assets:Bank:BankErhverv;;

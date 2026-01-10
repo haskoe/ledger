@@ -12,7 +12,7 @@ LIDL;Expenses:Mad
 ALDI;Expenses:Mad
 Naturenergi;Expenses:Kontor:UdenMoms
 OkPlus;Expenses:Mad
-Rente;Assets:Bank
+RenteIndtaegt;Income:Renter
 GebyrBank;Expenses:Finansielt:Gebyrer
 Rema1000;Expenses:Mad
 Netto;Expenses:Mad
@@ -21,7 +21,6 @@ KoebMoms;Assets:Moms
 SkyldigMoms;Liabilities:Moms
 SalgMoms;Liabilities:Moms
 AfregnetMoms;Assets:Moms
-Rente;Assets:Bank
 BankErhverv;Assets:Bank
 AON;Expenses:Forsikring
 ATP;Expenses:Loen

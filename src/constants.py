@@ -11,9 +11,10 @@ COMMA = ","
 DOT = "."
 SEMICOLON = ";"
 
+INCOME_SALG = "Income:Salg"
+
 # CSV column names
 DATE_POSTED = "date_posted"
-DATE_PAYED = "date_payed"
 ACCOUNT = "account"
 AMOUNT_WITH_VAT = "amount_with_vat"
 AMOUNT_VAT_FREE = "amount_vat_free"
@@ -28,7 +29,6 @@ TOTAL = "total"
 ACCOUNT_NAME = "account_name"
 ACCOUNT_GROUP = "account_group"
 REGEX = "regex"
-DATE_PAYED_KEY = "date_payed_key"
 DATE_POSTED_KEY = "date_posted_key"
 TEMPLATE_NAME = "template_name"
 ACCOUNT2 = "account2"
@@ -84,7 +84,7 @@ CSV_SPECS = OrderedDict(
             BANK_CSV,
             OrderedDict(
                 [
-                    (DATE_PAYED, str),
+                    (DATE_POSTED, str),
                     ("dummy", str),
                     (DESCRIPTION, str),
                     (AMOUNT, str),
@@ -114,7 +114,7 @@ CSV_SPECS = OrderedDict(
             BANK_TO_INVOICE_DATE_CSV,
             OrderedDict(
                 [
-                    (DATE_PAYED_KEY, str),
+                    (DATE_POSTED_KEY, str),
                     (DATE_POSTED_KEY, str),
                     (DATE_POSTED_KEY, str),
                     (DATE_POSTED_KEY, str),

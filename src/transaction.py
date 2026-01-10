@@ -7,27 +7,26 @@ import util
 
 @dataclass
 class Transaction:
-    date_payed: datetime
+    date_posted: datetime
     description: str
     amount: float
     total: float
+    account_name: str
 
     def __post_init__(self):
+        self.amount = abs(self.amount)
         self.amount_vat_liable = 0
         self.amount_vat_non_liable = self.amount
         self.vat_pct = 0
-        if isinstance(self.date_payed, str):
-            try:
-                self.date_payed = datetime.strptime(self.date_payed, "%Y%m%d").date()
-            except ValueError:
-                self.date_payed = datetime.strptime(self.date_payed, "%Y-%m-%d").date()
+        self.date_posted = util.parse_date(self.date_posted)
 
     def set_transaction_type(self, transaction_type):
         self.transaction_type = transaction_type
 
     def set_vat(self, vat_pct, amount_vat_non_liable):
         self.amount_vat_non_liable = amount_vat_non_liable
-        self.amount_vat_liable = self.amount - amount_vat_non_liable
+        amount_vat_liable_including_vat = self.amount - self.amount_vat_liable
+        self.amount_vat_liable = amount_vat_liable_including_vat / (1 + vat_pct)
         self.vat_pct = vat_pct
 
     def set_account(self, account_name):
@@ -66,14 +65,15 @@ class Transaction:
             const.AMOUNT_WO_VAT: util.format_money(self.amount_wo_vat),
             const.VAT: util.format_money(self.vat),
             const.CURRENCY: "DKK",  # todo
-            const.TEXT: self.description,
+            const.TEXT: self.transaction_type[const.TEMPLATE_NAME],
             const.EXTRA_TEXT: self.description,  # todo:
             const.CURRENCY: "DKK",  # todo
-            const.DATE_PAYED: util.format_date(self.date_payed),
-            const.DATE_POSTED: util.format_date(self.date_payed),
-            # "date_payed": self.date_payed,
+            const.DATE_POSTED: util.format_date(self.date_posted),
+            const.AMOUNT_WO_VAT_NEGATED: util.format_money(-self.amount_wo_vat),
+            const.VAT_NEGATED: util.format_money(-self.vat),
+            # "date_posted": self.date_posted,
             # todo
-            # "date_payed": self.date_payed,
+            # "date_posted": self.date_posted,
             # "description": self.description,
             # "amount": self.amount,
             # "total": self.total,
@@ -91,19 +91,47 @@ class Transaction:
     def from_bank_csv(rows):
         result = []
         for row in rows:
-            date_payed = util.bank_date_parser(row[const.DATE_PAYED])
-            if date_payed.month > 12:
-                continue
-
             result.append(
                 Transaction(
-                    date_payed=date_payed,
+                    date_posted=util.bank_date_parser(row[const.DATE_POSTED]),
                     description=row[const.DESCRIPTION],
                     amount=util.parse_amount(row[const.AMOUNT], const.DOT),
-                    total=util.parse_amount(row[const.TOTAL], const.DOT),
+                    total=0,
+                    account_name=None,
                 )
             )
 
+        return result
+
+    @staticmethod
+    def from_salg_csv(rows, ctx):
+        result = []
+        for row in rows:
+            account_name = row[const.ACCOUNT_NAME]
+            yymmdd = datetime.strptime(row[const.YYMMDD], "%y%m%d")
+            yymmdd_text = row[const.YYMMDD_TEXT]
+            hours = row[const.HOURS]
+            support_hours = row[const.SUPPORT_HOURS]
+
+            hour_price = ctx.find_price(account_name, "Timepris", yymmdd)
+            support_price = ctx.find_price(account_name, "Support", yymmdd)
+            amount_wo_vat = hours * hour_price + support_hours * support_price
+            price_text = f"Timer: {hours} * {hour_price} = {hours * hour_price}"
+            if support_hours > 0:
+                price_text += f". Support: {support_hours} * {support_price} = {support_hours * support_price}"
+
+            print(price_text)
+
+            trans = Transaction(
+                date_posted=yymmdd,
+                description=f"Salg {account_name}. Periode {yymmdd_text}. {price_text}",
+                amount=amount_wo_vat * (1 + const.VAT_PCT),
+                total=0,
+                account_name=f"{const.INCOME_SALG}:{account_name}",
+            )
+            trans.set_transaction_type(ctx.transaction_types.get(const.INCOME_SALG))
+            trans.set_vat(const.VAT_PCT, 0)
+            result.append(trans)
         return result
 
     @cached_property

@@ -11,11 +11,6 @@ import util
 from functools import cached_property
 
 
-def find_price(price_dict, account_name, price_type, dt):
-    matches_reversed = reversed(price_dict[account_name][price_type])
-    return next((price for from_date, price in matches_reversed if from_date <= dt))
-
-
 @dataclass
 class LedgerContext:
     company_name: str
@@ -101,7 +96,7 @@ class LedgerContext:
         return util.csv_to_dict(
             self.company_period_path(const.BANK_TO_INVOICE_DATE_CSV),
             const.CSV_SPECS[const.BANK_TO_INVOICE_DATE_CSV],
-            lambda x: (x[const.DATE_PAYED_KEY], x[const.DATE_POSTED_KEY]),
+            lambda x: (x[const.date_posted_KEY], x[const.DATE_POSTED_KEY]),
         )
 
     @cached_property
@@ -112,15 +107,16 @@ class LedgerContext:
 
     @cached_property
     def prices(self):
-        _prices = defaultdict(lambda: defaultdict(list))
+        prices = defaultdict(lambda: defaultdict(list))
         for row in util.load_csv(
             self.company_metadata_path(const.PRICES_CSV),
             const.CSV_SPECS[const.PRICES_CSV],
         ):
-            _prices[row[const.ACCOUNT_NAME]][row[const.PRICE_TYPE]].append(
+            prices[row[const.ACCOUNT_NAME]][row[const.PRICE_TYPE]].append(
                 (datetime.strptime(row[const.YYMMDD], "%y%m%d"), row[const.PRICE])
             )
-        return {k: dict(v) for k, v in _prices.items()}
+        # return {k: dict(v) for k, v in _prices.items()}
+        return prices
 
     @cached_property
     def salg(self):
@@ -139,3 +135,7 @@ class LedgerContext:
                 )
             ]
         )
+
+    def find_price(self, account_name, price_type, dt):
+        matches_reversed = reversed(self.prices[account_name][price_type])
+        return next((price for from_date, price in matches_reversed if from_date <= dt))
