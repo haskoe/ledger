@@ -96,7 +96,7 @@ class Transaction:
                     date_posted=util.bank_date_parser(row[const.DATE_POSTED]),
                     description=row[const.DESCRIPTION],
                     amount=util.parse_amount(row[const.AMOUNT], const.DOT),
-                    total=0,
+                    total=util.parse_amount(row[const.TOTAL], const.DOT),
                     account_name=None,
                 )
             )

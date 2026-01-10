@@ -1,4 +1,5 @@
 import argparse
+from opdater import handle_opdater
 from afstem import handle_afstem
 from godkend import handle_godkend
 from moms_luk import handle_moms_luk
@@ -21,12 +22,20 @@ def main():
     parser = argparse.ArgumentParser(description="Ledger CLI - Dansk Bogføringssystem")
     subparsers = parser.add_subparsers(dest="command", help="Tilgængelige kommandoer")
 
+    # Subcommand: opdater
+    subparsers.add_parser(
+        "opdater",
+        parents=[parent_parser],
+        help="Opdater beancount filer",
+    )
+
     # Subcommand: afstem
     subparsers.add_parser(
         "afstem",
         parents=[parent_parser],
-        help="Afstem bankkonto og generer beancount filer",
+        help="Check at saldo på bankkontoer stemmer med beancount transaktioner",
     )
+
     # Subcommand: godkend
     subparsers.add_parser(
         "godkend", parents=[parent_parser], help="Godkend afstemning eller lukning"
@@ -54,6 +63,8 @@ def main():
         handle_moms_luk(ctx)
     elif args.command == "status":
         handle_status(ctx)
+    elif args.command == "opdater":
+        handle_opdater(ctx)
     else:
         parser.print_help()
 

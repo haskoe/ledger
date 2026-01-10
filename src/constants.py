@@ -12,6 +12,7 @@ DOT = "."
 SEMICOLON = ";"
 
 INCOME_SALG = "Income:Salg"
+BANK_ERHVERV = "Assets:Bank:BankErhverv"
 
 # CSV column names
 DATE_POSTED = "date_posted"

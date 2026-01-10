@@ -32,14 +32,31 @@ class BeancountConnector:
             printer.print_entry(entry, file=f)
         self.refresh()  # Opdater hukommelsen efter skrivning
 
-    def account_in_period(self, account, start_date=None, end_date=None):
-        q = f"SELECT date, units(position) WHERE account ~ '{account}' ORDER BY date ASC"
-        res = [(d, float(amount.number)) for d, amount in self.execute(q)]
+    def _in_period(self, qry, converter=None, start_date=None, end_date=None):
+        res = [(d, amount) for d, amount in self.execute(qry)]
+        if converter:
+            res = [(d, converter(amount)) for d, amount in res]
         if start_date:
             res = [x for x in res if x[0] >= start_date]
         if end_date:
             res = [x for x in res if x[0] <= end_date]
         return res
+
+    def account_in_period(self, account, start_date, end_date):
+        return self._in_period(
+            f"SELECT date, units(position) WHERE account ~ '{account}' ORDER BY date ASC",
+            None,
+            start_date=None,
+            end_date=None,
+        )
+
+    def account_balance_in_period(self, account, start_date, end_date):
+        return self._in_period(
+            f"SELECT date, units(balance) WHERE account ~ '{account}' ORDER BY date ASC",
+            lambda x: x.get_only_position().units.number,
+            start_date=None,
+            end_date=None,
+        )
 
     def get_moms_status(self, start_date, end_date):
         return self.account_in_period("SkyldigMoms", start_date, end_date)

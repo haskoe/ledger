@@ -1,13 +1,13 @@
-# from beancount import loader
-# from context import *
+from transaction import Transaction
 import constants as const
 import util
-from transaction import Transaction
-
-# links = [link for link in regnskab if link.meta.get("link")]
 
 
-def run_afstem(ctx):
+def handle_opdater(ctx):
+    print(
+        f"opdatering for {ctx.company_name} (periode {ctx.period}, enddate {ctx.enddate})"
+    )
+
     # process each row in bank_csv
     account_groups = []
     errors = []

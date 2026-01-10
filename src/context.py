@@ -101,8 +101,10 @@ class LedgerContext:
 
     @cached_property
     def bank_csv(self):
-        return util.load_csv(
-            self.company_period_path("bank.csv"), const.CSV_SPECS[const.BANK_CSV]
+        return reversed(
+            util.load_csv(
+                self.company_period_path("bank.csv"), const.CSV_SPECS[const.BANK_CSV]
+            )
         )
 
     @cached_property
