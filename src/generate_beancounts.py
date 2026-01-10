@@ -2,6 +2,7 @@ from beancount import loader
 from context import *
 import constants as const
 import util
+from transaction import Transaction
 
 # links = [link for link in regnskab if link.meta.get("link")]
 
@@ -10,23 +11,18 @@ def run_afstem(ctx):
     # process each row in bank_csv
     account_groups = []
     errors = []
+    bank_transactions = Transaction.from_bank_csv(ctx.bank_csv)
     transactions = []
-    for row in ctx.bank_csv:
-        date_payed = util.bank_date_parser(row[const.DATE_PAYED])
-        if date_payed.month > 12:
-            continue
-        amount = util.parse_amount(row[const.AMOUNT], const.DOT)
-        total = util.parse_amount(row[const.TOTAL], const.DOT)
-
+    for bank_transaction in bank_transactions:
         # match account
-        desc = row[const.DESCRIPTION].casefold()
+        desc = bank_transaction.description.casefold()
         account_matches = [
             (a, srch_str)
             for a, regex, srch_str in ctx.account_regexes
             if srch_str in desc
         ]
         if len(account_matches) == 0:
-            errors.append("Ingen matches for %s" % (row[const.DESCRIPTION],))
+            errors.append("Ingen matches for %s" % (desc,))
             continue
 
         account_matches = list(set(account_matches))
@@ -38,13 +34,13 @@ def run_afstem(ctx):
         if account_match.casefold() not in ctx.all_accounts:
             errors.append(
                 "Konto %s (matchet fra %s) findes ikke i ctx.all_accounts"
-                % (account_match, row[const.DESCRIPTION])
+                % (account_match, desc)
             )
             continue
 
         account_name = ctx.all_accounts[account_match.casefold()][-1]
         account_group = ctx.all_accounts[account_match.casefold()][0]
-        bank_row_key = util.get_bank_row_key(account_name, date_payed)
+        bank_row_key = util.get_bank_row_key(account_name, bank_transaction.date_payed)
 
         if bank_row_key in ctx.bank_to_invoice_date:
             continue
@@ -69,15 +65,17 @@ def run_afstem(ctx):
         # todo: check for already processed transaction
 
         # todo: negate amount if needed
-        amount = abs(amount)  # total
+        amount = abs(bank_transaction.amount)  # total
         amount_vat_free = 0  # todo: laes momsfrit beloeb fra mapningsfil som bruger skal aflaese fra faktura
         amount_with_vat = amount - amount_vat_free  # momsbeløb + moms
         vat = amount_with_vat * const.VAT_FRACTION
         amount_wo_vat = amount - vat  # total uden moms
         transactions.append(
             {
-                const.DATE_PAYED: util.format_date(date_payed),
-                const.DATE_POSTED: util.format_date(date_payed),  # todo:
+                const.DATE_PAYED: util.format_date(bank_transaction.date_payed),
+                const.DATE_POSTED: util.format_date(
+                    bank_transaction.date_payed
+                ),  # todo:
                 const.TOTAL: util.format_money(amount),
                 const.TOTAL_NEGATED: util.format_money(-amount),
                 const.AMOUNT_WO_VAT: util.format_money(amount_wo_vat),
@@ -87,8 +85,8 @@ def run_afstem(ctx):
                 const.ACCOUNT: account_name,
                 const.ACCOUNT_GROUP: account_group,
                 const.TRANSACTION_TYPE: transaction_type,
-                const.TEXT: row[const.DESCRIPTION],
-                const.EXTRA_TEXT: row[const.DESCRIPTION],  # todo:
+                const.TEXT: bank_transaction.description,
+                const.EXTRA_TEXT: bank_transaction.description,  # todo:
                 const.ACCOUNT2: transaction_type[const.ACCOUNT2],
                 const.ACCOUNT3: transaction_type[const.ACCOUNT3],
                 const.ACCOUNT4: transaction_type[const.ACCOUNT4],
