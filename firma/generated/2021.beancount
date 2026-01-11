@@ -1,6 +1,6 @@
 2021-12-31 * "indtaegt betalt" "Rente af indestående betalt"
-  Income:Renter:RenteIndtaegt                                   -1,701.45 DKK
-  Assets:Bank:BankErhverv                                        1,701.45 DKK
+  Income:Renter:RenteIndtaegt                                    1,701.45 DKK
+  Assets:Bank:BankErhverv                                       -1,701.45 DKK
 
 2021-12-30 * "udgift betalt" "Gebyr betalt"
   Expenses:Finansielt:Gebyrer:GebyrBank                            850.50 DKK
@@ -340,8 +340,8 @@
   Assets:Bank:BankErhverv                                         -966.75 DKK
 
 2021-09-30 * "indtaegt betalt" "Rente af indestående betalt"
-  Income:Renter:RenteIndtaegt                                   -1,318.72 DKK
-  Assets:Bank:BankErhverv                                        1,318.72 DKK
+  Income:Renter:RenteIndtaegt                                    1,318.72 DKK
+  Assets:Bank:BankErhverv                                       -1,318.72 DKK
 
 2021-09-30 * "udgift betalt" "Gebyr betalt"
   Expenses:Finansielt:Gebyrer:GebyrBank                            850.50 DKK
@@ -676,8 +676,8 @@
   Assets:Bank:BankErhverv                                      118,125.00 DKK
 
 2021-06-30 * "indtaegt betalt" "Rente af indestående betalt"
-  Income:Renter:RenteIndtaegt                                   -1,358.83 DKK
-  Assets:Bank:BankErhverv                                        1,358.83 DKK
+  Income:Renter:RenteIndtaegt                                    1,358.83 DKK
+  Assets:Bank:BankErhverv                                       -1,358.83 DKK
 
 2021-06-30 * "udgift betalt" "Gebyr betalt"
   Expenses:Finansielt:Gebyrer:GebyrBank                            850.00 DKK
@@ -1092,8 +1092,8 @@
   Assets:Bank:BankErhverv                                          -96.45 DKK
 
 2021-03-31 * "indtaegt betalt" "Rente af indestående betalt"
-  Income:Renter:RenteIndtaegt                                   -1,690.33 DKK
-  Assets:Bank:BankErhverv                                        1,690.33 DKK
+  Income:Renter:RenteIndtaegt                                    1,690.33 DKK
+  Assets:Bank:BankErhverv                                       -1,690.33 DKK
 
 2021-03-31 * "udgift betalt" "Gebyr betalt"
   Expenses:Finansielt:Gebyrer:GebyrBank                            852.00 DKK

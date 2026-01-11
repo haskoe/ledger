@@ -8,15 +8,16 @@ import util
 @dataclass
 class Transaction:
     date_posted: datetime
+    date_payed: datetime
     description: str
     amount: float
     total: float
     account_name: str
 
     def __post_init__(self):
-        self.amount = abs(self.amount)
+        self.amount_abs = abs(self.amount)
         self.amount_vat_liable = 0
-        self.amount_vat_non_liable = self.amount
+        self.amount_vat_non_liable = self.amount_abs
         self.vat_pct = 0
         self.date_posted = util.parse_date(self.date_posted)
 
@@ -55,22 +56,23 @@ class Transaction:
 
     @cached_property
     def as_dict(self):
+        sign = 1 if self.amount > 0 else -1
         return {
-            const.TOTAL: util.format_money(self.amount),
-            const.TOTAL_NEGATED: util.format_money(-self.amount),
+            const.TOTAL: util.format_money(sign * self.amount),
+            const.TOTAL_NEGATED: util.format_money(-sign * self.amount),
             const.ACCOUNT: self.account_name,
             const.ACCOUNT2: self.transaction_type[const.ACCOUNT2],
             const.ACCOUNT3: self.transaction_type[const.ACCOUNT3],
             const.ACCOUNT4: self.transaction_type[const.ACCOUNT4],
-            const.AMOUNT_WO_VAT: util.format_money(self.amount_wo_vat),
-            const.VAT: util.format_money(self.vat),
+            const.AMOUNT_WO_VAT: util.format_money(sign * self.amount_wo_vat),
+            const.VAT: util.format_money(sign * self.vat),
             const.CURRENCY: "DKK",  # todo
             const.TEXT: self.transaction_type[const.TEMPLATE_NAME],
             const.EXTRA_TEXT: self.description,  # todo:
             const.CURRENCY: "DKK",  # todo
             const.DATE_POSTED: util.format_date(self.date_posted),
-            const.AMOUNT_WO_VAT_NEGATED: util.format_money(-self.amount_wo_vat),
-            const.VAT_NEGATED: util.format_money(-self.vat),
+            const.AMOUNT_WO_VAT_NEGATED: util.format_money(-sign * self.amount_wo_vat),
+            const.VAT_NEGATED: util.format_money(-sign * self.vat),
             # "date_posted": self.date_posted,
             # todo
             # "date_posted": self.date_posted,
@@ -91,9 +93,11 @@ class Transaction:
     def from_bank_csv(rows):
         result = []
         for row in rows:
+            dt = util.bank_date_parser(row[const.DATE_POSTED])
             result.append(
                 Transaction(
-                    date_posted=util.bank_date_parser(row[const.DATE_POSTED]),
+                    date_posted=dt,
+                    date_payed=dt,
                     description=row[const.DESCRIPTION],
                     amount=util.parse_amount(row[const.AMOUNT], const.DOT),
                     total=util.parse_amount(row[const.TOTAL], const.DOT),
@@ -124,6 +128,7 @@ class Transaction:
 
             trans = Transaction(
                 date_posted=yymmdd,
+                date_payed=yymmdd,
                 description=f"Salg {account_name}. Periode {yymmdd_text}. {price_text}",
                 amount=amount_wo_vat * (1 + const.VAT_PCT),
                 total=0,

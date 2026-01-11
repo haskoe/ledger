@@ -13,7 +13,7 @@ def handle_opdater(ctx):
     errors = []
     bank_transactions = Transaction.from_bank_csv(ctx.bank_csv)
     transactions = []
-    for bank_transaction in bank_transactions:
+    for bank_transaction in reversed(bank_transactions):
         # match account
         desc = bank_transaction.description.casefold()
         account_matches = [
