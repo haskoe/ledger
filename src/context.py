@@ -115,6 +115,12 @@ class LedgerContext:
         )
 
     @cached_property
+    def loen_csv(self):
+        return util.load_csv(
+            self.company_period_path("loen.txt"), const.CSV_SPECS[const.LOEN_CSV]
+        )
+
+    @cached_property
     def prices(self):
         prices = defaultdict(lambda: defaultdict(list))
         for row in util.load_csv(

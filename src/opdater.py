@@ -91,6 +91,63 @@ def handle_opdater(ctx):
         # print(kontoplan_accounts)
     ctx.write_period_file("\n\n".join(output))
 
+    loen_output = []
+    loen_template = ctx.templates[const.TEMPLATE_LOEN]
+    for row in ctx.loen_csv:
+        date_posted = row[const.DATE_POSTED]
+        period_txt = row[const.PERIOD_TXT]
+        udbetaling = row[const.TIL_UDBETALING]
+        atp = row[const.ATP]
+        skat = row[const.A_SKAT]
+        am_bidrag_mv = row[const.AM_BIDRAG_MV]
+        
+        template_input = {
+            date_posted: util.format_date(date_posted),   
+            period_txt: period_txt,
+            udbetaling: util.format_money(udbetaling),
+            udbetaling_negated: util.format_money(-udbetaling),
+            atp: util.format_money(atp),
+            atp_negated: util.format_money(-atp),
+            skat: util.format_money(skat+am_bidrag_mv),
+            skat_negated: util.format_money(-(skat+am_bidrag_mv))
+            gebyr: "25.00",
+            gebyr_negated: "-25.00",
+        }
+        loen_output
+         loen_ansat_negated: loen_ansat_negated,
+         am_bidrag_mv: am_bidrag_mv,
+        }
+        loen_output.append(
+            
+        )   
+
+            
+  Expenses:Loen:ATP                            {{ atp.rjust(20) }} {{ currency }}
+  Liabilities:ATP:SkyldigATP                   {{ atp_negated.rjust(20) }} {{ currency }}
+
+  Expenses:Loen:LoenGebyr                      {{ loen_gebyr.rjust(20) }} {{ currency }}
+  Liabilities:Loen:SkyldigLoenGebyr            {{ loen_gebyr_negated.rjust(20) }} {{ currency }}
+  
+  Expenses:Loen:LoenSkat                       {{ loen_skat.rjust(20) }} {{ currency }}
+  Liabilities:Skat:SkyldigSkatAfLoen           {{ loen_skat_negated.rjust(20) }} {{ currency }}
+  
+  Expenses:Loen:LoenAnsat                      {{ loen_ansat.rjust(20) }} {{ currency }}
+  Liabilities:Ansat:SkyldigLoenAnsat           {{ loen_ansat_negated.rjust(20) }} {{ currency }}
+            
+
+            trans = Transaction(
+                date_posted=date_posted,
+                date_payed=date_posted,
+                description=f"Salg {account_name}. Periode {yymmdd_text}. {price_text}",
+                amount=amount_wo_vat * (1 + const.VAT_PCT),
+                total=0,
+                account_name=f"{const.INCOME_SALG}:{account_name}",
+            )
+            trans.set_transaction_type(ctx.transaction_types.get(const.INCOME_SALG))
+            trans.set_vat(const.VAT_PCT, 0)
+            result.append(trans)
+        return result
+
     kontoplan_accounts += [v[1] for v in ctx.all_accounts.values()]
 
     # opdater kontoplan fil

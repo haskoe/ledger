@@ -51,6 +51,14 @@ PRICE_TYPE = "price_type"
 PRICE = "price"
 VAT_NEGATED = "vat_negated"
 
+AM_INDKOMST = "am_indkomst"
+TIL_UDBETALING = "til_udbetaling"
+ATP = "atp"
+A_SKAT = "a_skat"
+AM_BIDRAG_MV = "am_bidrag_mv"
+LOEN_GEBYR = "loen_gebyr"
+KM = "km"
+
 # input filnavne
 (
     UDGIFT_MEDMOMS_CSV,
@@ -170,16 +178,20 @@ CSV_SPECS = OrderedDict(
                 [
                     (DATE_POSTED, str),
                     (PERIOD_TXT, str),
-                    (PRICE_TYPE, str),
-                    (YYMMDD, str),
-                    (PRICE, str),
+                    (AM_INDKOMST, str),
+                    (TIL_UDBETALING, str),
+                    (ATP, str),
+                    (A_SKAT, str),
+                    (AM_BIDRAG_MV, str),
+                    (LOEN_GEBYR, str),
+                    (KM, str),
                 ]
             ),
         ),
     ]
 )
-#0226	jan-feb	98694	59852.62	189.34	31233	7880	1	460.96
+# 0226	jan-feb	98694	59852.62	189.34	31233	7880	1	460.96
 
-                d,txt,la,udb,atp,skat,am,gebyr,trans = [l[0], l[1]] + list(map(float,l[2:]))
+#                 d,txt,la,udb,atp,skat,am,gebyr,trans = [l[0], l[1]] + list(map(float,l[2:]))
 
-;98694;59852.62;189.34;31233;7880;1;460.96
+# ;98694;59852.62;189.34;31233;7880;1;460.96

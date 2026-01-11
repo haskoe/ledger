@@ -1,0 +1,12 @@
+{{ date_posted }} * "Løn {{ period }}" "Løn {{ period }}"
+  Expenses:Loen:ATP                            {{ atp.rjust(20) }} {{ currency }}
+  Liabilities:ATP:SkyldigATP                   {{ atp_negated.rjust(20) }} {{ currency }}
+
+  Expenses:Loen:LoenGebyr                      {{ gebyr.rjust(20) }} {{ currency }}
+  Liabilities:Loen:SkyldigLoenGebyr            {{ gebyr_negated.rjust(20) }} {{ currency }}
+  
+  Expenses:Loen:LoenSkat                       {{ skat.rjust(20) }} {{ currency }}
+  Liabilities:Skat:SkyldigSkatAfLoen           {{ skat_negated.rjust(20) }} {{ currency }}
+  
+  Expenses:Loen:LoenAnsat                      {{ udbetaling.rjust(20) }} {{ currency }}
+  Liabilities:Ansat:SkyldigLoenAnsat           {{ udbetaling_negated.rjust(20) }} {{ currency }}
