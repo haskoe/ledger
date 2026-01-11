@@ -22,7 +22,7 @@ def last_day_of_month(dt):
 
 
 def format_money(num):
-    return "{:,.2f}".format(num)
+    return f"{num:.2f}"
 
 
 def format_date(dt):
@@ -99,7 +99,15 @@ def csv_to_dict(filename, spec, transformer):
 
 
 def write_file(filename, content, encoding="utf-8"):
-    with open(filename, "w", encoding=encoding) as f:
+    _write_file(filename, content, encoding=encoding)
+
+
+def append_file(filename, content, encoding="utf-8"):
+    _write_file(filename, content, encoding=encoding, mode="a")
+
+
+def _write_file(filename, content, encoding="utf-8", mode="w"):
+    with open(filename, mode, encoding=encoding) as f:
         if isinstance(content, list):
             f.write("\n".join(content))
         else:

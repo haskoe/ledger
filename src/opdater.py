@@ -67,7 +67,8 @@ def handle_opdater(ctx):
 
         if bank_transaction.is_vat:
             bank_transaction.set_vat(const.VAT_PCT, 0)
-        bank_transaction.set_account("%s:%s" % (account_group, account_name))
+        bank_transaction.set_account(account_name)
+        # bank_transaction.set_account("%s:%s" % (account_group, account_name))
 
         transactions.append(bank_transaction)
 

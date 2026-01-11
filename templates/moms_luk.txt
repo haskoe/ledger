@@ -1,4 +1,5 @@
 {{ date_posted }} * "Momsafregning" "Lukning af moms {{ period }}"
-  {{ account.ljust(50) }} {{ koebmoms.rjust(20) }} {{ currency }}
-  {{ account2.ljust(50) }} {{ salgmoms.rjust(20) }} {{ currency }}
-  {{ account3.ljust(50) }} {{ skyldigmoms.rjust(20) }} {{ currency }}
+  {{ koebmoms_account.ljust(50) }} {{ koebmoms.rjust(20) }} {{ currency }}
+  {{ salgmoms_account.ljust(50) }} {{ salgmoms.rjust(20) }} {{ currency }}
+  {{ skyldigmoms_account.ljust(50) }} {{ skyldigmoms.rjust(20) }} {{ currency }}
+  {{ afrunding_account.ljust(50) }} {{ afrunding.rjust(20) }} {{ currency }}

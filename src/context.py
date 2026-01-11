@@ -50,6 +50,12 @@ class LedgerContext:
             content,
         )
 
+    def append_generated_file(self, prefix, content) -> None:
+        util.append_file(
+            path.join(self.company_generated_path, "%s.beancount" % (prefix,)),
+            content,
+        )
+
     def write_company_kontoplan_file(self, content) -> None:
         util.write_file(path.join(self.company_path, "kontoplan.beancount"), content)
 

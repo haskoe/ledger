@@ -10,3 +10,7 @@
 2021-01-01 * "Bank saldo" "overført fra 2020"
   Equity:Opening-Balances        -1279251.09 DKK
   Assets:Bank:BankErhverv         1279251.09 DKK
+
+2021-06-30 * "Momsafregning" "Korrektion for for lidt betalt moms H1 2021"
+  Assets:Moms:KoebMoms                891.00 DKK
+  Equity:Afrunding                   -891.00 DKK
