@@ -11,6 +11,18 @@
   Equity:Opening-Balances        -1279251.09 DKK
   Assets:Bank:BankErhverv         1279251.09 DKK
 
+2021-01-01 * "Startsaldo" "Debitorer overført fra 2020"
+  Assets:Debitorer:GOTTIT           93375.00 DKK
+  Equity:Opening-Balances          -93375.00 DKK
+
 2021-06-30 * "Momsafregning" "Korrektion for for lidt betalt moms H1 2021"
   Assets:Moms:KoebMoms                891.00 DKK
   Equity:Afrunding                   -891.00 DKK
+
+2021-01-01 * "Overført fra 2020" "Skyldige lønninger til ansatte"
+  Equity:Opening-Balances           29903.57 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat     -29903.57 DKK
+
+2021-01-01 * "Overført fra 2020" "Skyldig løn gebyr"
+  Equity:Opening-Balances              25.00 DKK
+  Liabilities:Loen:SkyldigLoenGebyr   -25.00 DKK

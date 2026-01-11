@@ -44,7 +44,7 @@ EXTRA_TEXT = "extra_text"
 CURRENCY = "currency"
 YYMM = "yymm"
 YYMMDD = "yymmdd"
-YYMMDD_TEXT = "yymmdd_text"
+PERIOD_TXT = "period_txt"
 HOURS = "hours"
 SUPPORT_HOURS = "support_hours"
 PRICE_TYPE = "price_type"
@@ -64,6 +64,7 @@ VAT_NEGATED = "vat_negated"
     TRANSACTION_TYPE_CSV,
     SALG_TXT,
     PRICES_CSV,
+    LOEN_CSV,
 ) = [
     "%s.csv" % (fn,)
     for fn in (
@@ -78,6 +79,7 @@ VAT_NEGATED = "vat_negated"
         "transaction_type",
         "salg.txt",
         "prices",
+        "loen",
     )
 ]
 
@@ -145,7 +147,7 @@ CSV_SPECS = OrderedDict(
                 [
                     (ACCOUNT_NAME, str),
                     (YYMMDD, str),
-                    (YYMMDD_TEXT, str),
+                    (PERIOD_TXT, str),
                     (HOURS, float),
                     (SUPPORT_HOURS, float),
                 ]
@@ -162,5 +164,22 @@ CSV_SPECS = OrderedDict(
                 ]
             ),
         ),
+        (
+            LOEN_CSV,
+            OrderedDict(
+                [
+                    (DATE_POSTED, str),
+                    (PERIOD_TXT, str),
+                    (PRICE_TYPE, str),
+                    (YYMMDD, str),
+                    (PRICE, str),
+                ]
+            ),
+        ),
     ]
 )
+#0226	jan-feb	98694	59852.62	189.34	31233	7880	1	460.96
+
+                d,txt,la,udb,atp,skat,am,gebyr,trans = [l[0], l[1]] + list(map(float,l[2:]))
+
+;98694;59852.62;189.34;31233;7880;1;460.96

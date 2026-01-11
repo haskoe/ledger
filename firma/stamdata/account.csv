@@ -34,7 +34,7 @@ SkyldigSkatAfLoen;Liabilities:Skat
 AcontoSkat;Assets:Skat
 SkyldigUdbytteSkat;Liabilities:Skat
 SkyldigUdbytte;Liabilities:Ansat
-SkyldigLoen;Liabilities:Ansat
+SkyldigLoenAnsat;Liabilities:Ansat
 SkyldigLoenGebyr;Liabilities:Loen
 Kreditorer;Liabilities
 BagerietHjortev;Expenses:Mad

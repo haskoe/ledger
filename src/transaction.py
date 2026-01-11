@@ -116,7 +116,7 @@ class Transaction:
         for row in rows:
             account_name = row[const.ACCOUNT_NAME]
             yymmdd = datetime.strptime(row[const.YYMMDD], "%y%m%d")
-            yymmdd_text = row[const.YYMMDD_TEXT]
+            yymmdd_text = row[const.PERIOD_TXT]
             hours = Decimal(row[const.HOURS])
             support_hours = Decimal(row[const.SUPPORT_HOURS])
 

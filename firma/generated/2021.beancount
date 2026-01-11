@@ -11,11 +11,11 @@
   Assets:Bank:BankErhverv                                          -27.50 DKK
 
 2021-12-29 * "udgift_betalt betalt" "løn dec betalt"
-  Liabilities:Ansat:SkyldigLoen                                  31356.25 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             31356.25 DKK
   Assets:Bank:BankErhverv                                       -31356.25 DKK
 
 2021-12-29 * "udgift_betalt betalt" "løn okt-nov betalt"
-  Liabilities:Ansat:SkyldigLoen                                  64105.38 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             64105.38 DKK
   Assets:Bank:BankErhverv                                       -64105.38 DKK
 
 2021-12-20 * "udgift_med_betalt" "kontaktløs Dankort Netto Dildhaven Nota 473701"
@@ -311,15 +311,15 @@
   Assets:Bank:BankErhverv                                       101250.00 DKK
 
 2021-10-01 * "udgift_betalt betalt" "løn sep betalt"
-  Liabilities:Ansat:SkyldigLoen                                  29959.61 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             29959.61 DKK
   Assets:Bank:BankErhverv                                       -29959.61 DKK
 
 2021-10-01 * "udgift_betalt betalt" "løn aug betalt"
-  Liabilities:Ansat:SkyldigLoen                                  31672.73 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             31672.73 DKK
   Assets:Bank:BankErhverv                                       -31672.73 DKK
 
 2021-10-01 * "udgift_betalt betalt" "løn juli betalt"
-  Liabilities:Ansat:SkyldigLoen                                  30207.29 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             30207.29 DKK
   Assets:Bank:BankErhverv                                       -30207.29 DKK
 
 2021-10-01 * "udgift_med_betalt" "kontaktløs Dankort LIDL Nota 761893"
@@ -630,7 +630,7 @@
   Assets:Bank:BankErhverv                                       -82490.00 DKK
 
 2021-07-07 * "udgift_betalt betalt" "løn jun betalt"
-  Liabilities:Ansat:SkyldigLoen                                  31882.57 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             31882.57 DKK
   Assets:Bank:BankErhverv                                       -31882.57 DKK
 
 2021-07-07 * "udgift_med_betalt" "Dankort-køb politiken.dk Nota CP-02232344"
@@ -781,7 +781,7 @@
   Assets:Bank:BankErhverv                                          -60.75 DKK
 
 2021-06-01 * "udgift_betalt betalt" "løn mar-maj betalt"
-  Liabilities:Ansat:SkyldigLoen                                  90927.39 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             90927.39 DKK
   Assets:Bank:BankErhverv                                       -90927.39 DKK
 
 2021-06-01 * "udgift_betalt betalt" "OVERFØRSEL betalt"
@@ -1257,7 +1257,7 @@
   Assets:Bank:BankErhverv                                          -94.14 DKK
 
 2021-03-02 * "udgift_betalt betalt" "løn jan-feb betalt"
-  Liabilities:Ansat:SkyldigLoen                                  59852.62 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             59852.62 DKK
   Assets:Bank:BankErhverv                                       -59852.62 DKK
 
 2021-03-02 * "udgift_betalt betalt" "moms q3-q4 2020 betalt"
@@ -1411,7 +1411,7 @@
   Assets:Bank:BankErhverv                                         -238.00 DKK
 
 2021-01-04 * "udgift_betalt betalt" "løn dec betalt"
-  Liabilities:Ansat:SkyldigLoen                                  29903.57 DKK
+  Liabilities:Ansat:SkyldigLoenAnsat                             29903.57 DKK
   Assets:Bank:BankErhverv                                       -29903.57 DKK
 
 2021-01-31 * "salg" "Salg GOTTIT. Periode jan. Timer: 33 * 900 = 29700"
