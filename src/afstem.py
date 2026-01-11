@@ -31,11 +31,11 @@ def handle_afstem(ctx):
             (d, b, bank_transactions[util.format_date(d)].total)
             for d, b in transactions[1:]
             if util.format_date(d) in bank_transactions
-            and bank_transactions[util.format_date(d)].total != float(b)
+            and bank_transactions[util.format_date(d)].total != b
         ),
         None,
     )
     if not first_diff:
         print("Bank stemmer med regnskab")
         return
-    print(first_diff, first_diff[2] - float(first_diff[1]))
+    print(first_diff, first_diff[2] - first_diff[1])

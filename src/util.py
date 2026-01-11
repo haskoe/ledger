@@ -1,6 +1,24 @@
 import pandas as pd
 from datetime import datetime
 import constants as const
+from dateutil.relativedelta import relativedelta
+from decimal import Decimal, ROUND_HALF_UP
+
+
+def afrund_decimal(dec):
+    return dec.quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+
+
+def add_months(dt, months):
+    return dt + relativedelta(months=months)
+
+
+def first_day_of_month(dt):
+    return dt.replace(day=1)
+
+
+def last_day_of_month(dt):
+    return first_day_of_month(add_months(dt, 1)) - relativedelta(days=1)
 
 
 def format_money(num):
@@ -50,7 +68,7 @@ opposite_decimal_separator = (
 
 
 def parse_amount(amount, thousand_separator):
-    return float(
+    return Decimal(
         amount.replace(thousand_separator, "").replace(
             thousand_separator == const.DOT and const.COMMA or const.DOT,
             decimal_separator,

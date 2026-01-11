@@ -9,6 +9,7 @@ from driver.connector import BeancountConnector
 import constants as const
 import util
 from functools import cached_property
+from decimal import Decimal
 
 
 @dataclass
@@ -115,7 +116,10 @@ class LedgerContext:
             const.CSV_SPECS[const.PRICES_CSV],
         ):
             prices[row[const.ACCOUNT_NAME]][row[const.PRICE_TYPE]].append(
-                (datetime.strptime(row[const.YYMMDD], "%y%m%d"), row[const.PRICE])
+                (
+                    datetime.strptime(row[const.YYMMDD], "%y%m%d"),
+                    Decimal(row[const.PRICE]),
+                )
             )
         # return {k: dict(v) for k, v in _prices.items()}
         return prices

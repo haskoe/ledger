@@ -3,6 +3,7 @@ from datetime import datetime
 from functools import cached_property
 import constants as const
 import util
+from decimal import Decimal
 
 
 @dataclass
@@ -116,11 +117,12 @@ class Transaction:
             account_name = row[const.ACCOUNT_NAME]
             yymmdd = datetime.strptime(row[const.YYMMDD], "%y%m%d")
             yymmdd_text = row[const.YYMMDD_TEXT]
-            hours = row[const.HOURS]
-            support_hours = row[const.SUPPORT_HOURS]
+            hours = Decimal(row[const.HOURS])
+            support_hours = Decimal(row[const.SUPPORT_HOURS])
 
             hour_price = ctx.find_price(account_name, "Timepris", yymmdd)
             support_price = ctx.find_price(account_name, "Support", yymmdd)
+            print(hours, hour_price, support_hours, support_price)
             amount_wo_vat = hours * hour_price + support_hours * support_price
             price_text = f"Timer: {hours} * {hour_price} = {hours * hour_price}"
             if support_hours > 0:

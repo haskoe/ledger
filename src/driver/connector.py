@@ -45,9 +45,14 @@ class BeancountConnector:
     def account_in_period(self, account, start_date, end_date):
         return self._in_period(
             f"SELECT date, units(position) WHERE account ~ '{account}' ORDER BY date ASC",
-            lambda x: float(x.number),
-            start_date=None,
-            end_date=None,
+            lambda x: x.number,
+            start_date=start_date,
+            end_date=end_date,
+        )
+
+    def account_sum_in_period(self, account, start_date, end_date):
+        return sum(
+            [a for d, a in self.account_in_period(account, start_date, end_date)]
         )
 
     def account_balance_in_period(self, account, start_date, end_date):

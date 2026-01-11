@@ -1,6 +1,7 @@
 from collections import OrderedDict
+from decimal import Decimal
 
-VAT_PCT = 0.25
+VAT_PCT = Decimal("0.25")
 VAT_FRACTION = VAT_PCT / (1 + VAT_PCT)
 
 TEMPLATE_DIR = "templates"
@@ -157,7 +158,7 @@ CSV_SPECS = OrderedDict(
                     (ACCOUNT_NAME, str),
                     (PRICE_TYPE, str),
                     (YYMMDD, str),
-                    (PRICE, float),
+                    (PRICE, str),
                 ]
             ),
         ),
