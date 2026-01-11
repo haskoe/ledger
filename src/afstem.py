@@ -25,14 +25,7 @@ def handle_afstem(ctx):
             )
         ]
     )
-    print(
-        "\n".join(
-            [
-                "%s %s" % (k, bank_transactions[k].total)
-                for k in sorted(bank_transactions.keys())[:10]
-            ]
-        )
-    )
+
     first_diff = next(
         (
             (d, b, bank_transactions[util.format_date(d)].total)
@@ -42,15 +35,7 @@ def handle_afstem(ctx):
         ),
         None,
     )
+    if not first_diff:
+        print("Bank stemmer med regnskab")
+        return
     print(first_diff, first_diff[2] - float(first_diff[1]))
-
-    # grpd = {k: v[-1] for k, v in groupby(transactions, key=lambda x: x[0])}
-    # print(sorted(grpd.keys()))
-
-    # calculated = dict([k, v[1])] for k, v in groupby(transactions, key=lambda x: x[0])
-
-    # if sum([amount for acc, amount in transactions]) != 0:
-    #     print(transactions)
-    #     raise ValueError("Der er aabne SKYLDIG_MOMS transaktioner")
-
-    # saa skal vi have fat i koeb og salg i perioden

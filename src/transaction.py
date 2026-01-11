@@ -25,8 +25,8 @@ class Transaction:
         self.transaction_type = transaction_type
 
     def set_vat(self, vat_pct, amount_vat_non_liable):
-        self.amount_vat_non_liable = amount_vat_non_liable
-        amount_vat_liable_including_vat = self.amount - self.amount_vat_liable
+        self.amount_vat_non_liable = abs(amount_vat_non_liable)
+        amount_vat_liable_including_vat = self.amount_abs - self.amount_vat_liable
         self.amount_vat_liable = amount_vat_liable_including_vat / (1 + vat_pct)
         self.vat_pct = vat_pct
 
@@ -58,14 +58,16 @@ class Transaction:
     def as_dict(self):
         sign = 1 if self.amount > 0 else -1
         return {
-            const.TOTAL: util.format_money(sign * self.amount),
-            const.TOTAL_NEGATED: util.format_money(-sign * self.amount),
+            const.AMOUNT: util.format_money(sign * self.amount_abs),
+            const.AMOUNT_NEGATED: util.format_money(-sign * self.amount_abs),
             const.ACCOUNT: self.account_name,
             const.ACCOUNT2: self.transaction_type[const.ACCOUNT2],
             const.ACCOUNT3: self.transaction_type[const.ACCOUNT3],
             const.ACCOUNT4: self.transaction_type[const.ACCOUNT4],
             const.AMOUNT_WO_VAT: util.format_money(sign * self.amount_wo_vat),
             const.VAT: util.format_money(sign * self.vat),
+            const.AMOUNT_WO_VAT_NEGATED: util.format_money(-sign * self.amount_wo_vat),
+            const.VAT_NEGATED: util.format_money(-sign * self.vat),
             const.CURRENCY: "DKK",  # todo
             const.TEXT: self.transaction_type[const.TEMPLATE_NAME],
             const.EXTRA_TEXT: self.description,  # todo:

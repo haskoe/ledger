@@ -5,7 +5,7 @@ Expenses:Loen:LoenSkat;udgift;Liabilities:Loen:Skat:SkyldigLoenSkat;;
 Expenses:Loen:LoenAnsat;udgift;Liabilities:Ansat:SkyldigLoen;;
 Liabilities:SkyldigATP;udgift_betalt;Assets:Bank:BankErhverv;;
 Liabilities:Loen:SkyldigLoenGebyr;udgift_betalt;Assets:Bank:BankErhverv;;
-Liabilities:Skat;udgift_betalt;Assets:Bank:BankErhverv;;
+Assets:Skat:AcontoSkat;udgift_betalt;Assets:Bank:BankErhverv;;
 Liabilities:Ansat;udgift_betalt;Assets:Bank:BankErhverv;;
 Expenses:Mad;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Computer;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
@@ -15,8 +15,9 @@ Expenses:Forsikring;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErh
 Expenses:Internet;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Telefoni;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Income:Renter;indtaegt;Assets:Bank:BankErhverv;;
-Expenses:Finansielt:Gebyrer;udgift;Assets:Bank:BankErhverv;;
+Expenses:Finansielt:Gebyrer;udgift_betalt;Assets:Bank:BankErhverv;;
 Expenses:Avis;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;
+Liabilities:Skat;udgift_betalt;Assets:Bank:BankErhverv;;
 Liabilities:ATP;udgift_betalt;Assets:Bank:BankErhverv;;
 Expenses:Kontor;udgift_med_moms_betalt;Assets:Moms:KoebMoms;Liabilities:Kreditorer;Assets:Bank:BankErhverv
 Expenses:Kontor:UdenMoms;udgift_med_betalt;Liabilities:Kreditorer;Assets:Bank:BankErhverv;

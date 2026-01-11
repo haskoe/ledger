@@ -45,7 +45,7 @@ class BeancountConnector:
     def account_in_period(self, account, start_date, end_date):
         return self._in_period(
             f"SELECT date, units(position) WHERE account ~ '{account}' ORDER BY date ASC",
-            None,
+            lambda x: float(x.number),
             start_date=None,
             end_date=None,
         )
@@ -59,4 +59,4 @@ class BeancountConnector:
         )
 
     def get_moms_status(self, start_date, end_date):
-        return self.account_in_period("SkyldigMoms", start_date, end_date)
+        return self.account_in_period("SkyldigMoms", None, start_date, end_date)

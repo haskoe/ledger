@@ -30,7 +30,7 @@ LoenSkat;Expenses:Loen
 LoenAnsat;Expenses:Loen
 SkyldigATP;Liabilities:ATP
 SkyldigSkatAfLoen;Liabilities:Skat
-SkyldigVirksomhedsSkat;Liabilities:Skat
+AcontoSkat;Assets:Skat
 SkyldigUdbytteSkat;Liabilities:Skat
 SkyldigUdbytte;Liabilities:Ansat
 SkyldigLoen;Liabilities:Ansat

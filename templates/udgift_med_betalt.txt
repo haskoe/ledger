@@ -1,7 +1,7 @@
 {{ date_posted }} * "{{ text }}" "{{ extra_text}}"
-  {{ account.ljust(50) }} {{ total.rjust(20) }} {{ currency }}
-  {{ account2.ljust(50) }} {{ total_negated.rjust(20) }} {{ currency }}
+  {{ account.ljust(50) }} {{ amount_negated.rjust(20) }} {{ currency }}
+  {{ account2.ljust(50) }} {{ amount.rjust(20) }} {{ currency }}
 
 {{ date_posted }} * "{{ text }} betalt" "{{ extra_text}} betalt"
-  {{ account2.ljust(50) }} {{ total.rjust(20) }} {{ currency }}
-  {{ account3.ljust(50) }} {{ total_negated.rjust(20) }} {{ currency }}
+  {{ account2.ljust(50) }} {{ amount_negated.rjust(20) }} {{ currency }}
+  {{ account3.ljust(50) }} {{ amount.rjust(20) }} {{ currency }}
