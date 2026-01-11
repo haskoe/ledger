@@ -42,7 +42,7 @@ def handle_afstem(ctx):
         ),
         None,
     )
-    print(first_diff)
+    print(first_diff, first_diff[2] - float(first_diff[1]))
 
     # grpd = {k: v[-1] for k, v in groupby(transactions, key=lambda x: x[0])}
     # print(sorted(grpd.keys()))
