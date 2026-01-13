@@ -34,7 +34,6 @@ def date_parser(date_format):
 
 
 def parse_date(dt):
-    print(dt)
     if dt is None:
         return None
 
@@ -66,7 +65,6 @@ except ValueError:
 opposite_decimal_separator = (
     decimal_separator == const.COMMA and const.DOT or const.COMMA
 )
-print(decimal_separator, opposite_decimal_separator)
 
 
 def parse_amount(amount, decimal_separator_in_input):

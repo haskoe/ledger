@@ -120,8 +120,6 @@ class LedgerContext:
             const.CSV_SPECS[const.BANK_TO_INVOICE_DATE_CSV],
             lambda x: (";".join([x[const.DATE_POSTED_KEY], x[const.DESCRIPTION]]), x),
         )
-        if tmp:
-            print(tmp)
         return tmp
 
     @cached_property
