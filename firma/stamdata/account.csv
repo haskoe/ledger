@@ -5,6 +5,7 @@ Politiken;Expenses:UdenMoms:Avis
 Telmore;Expenses:MedMoms:Telefoni
 Fibia;Expenses:MedMoms:Internet
 Frantech;Expenses:UdenMoms:Hosting
+Gogetssl;Expenses:UdenMoms:Hosting
 Punktum;Expenses:MedMoms:Hosting
 Dustin;Expenses:MedMoms:Computer
 Proshop;Expenses:MedMoms:Computer
@@ -38,6 +39,7 @@ SkyldigUdbytteSkat;Liabilities:Skat
 SkyldigUdbytteTilAnsat;Liabilities:Ansat
 Kreditorer;Liabilities
 BagerietHjortev;Expenses:UdenMoms:Mad
+FARUMHUS;Expenses:UdenMoms:Mad
 KDB;Expenses:UdenMoms:Mad
 ONECOM;Expenses:MedMoms:Hosting
 GOTTIT;Assets:Debitorer
@@ -46,8 +48,13 @@ ELG;Expenses:MedMoms:Hardware
 MICROSOFT;Expenses:UdenMoms:Software
 ITACHO;Expenses:UdenMoms:Mad
 CIRCLEK;Expenses:UdenMoms:Mad
+Ikea;Expenses:UdenMoms:Mad
 AXOSOFT;Expenses:UdenMoms:Software
+Gitkraken;Expenses:UdenMoms:Software
 DKHOSTMASTER;Expenses:MedMoms:Hosting
 Mad;Expenses:UdenMoms:Mad
+Restaurantnova;Expenses:UdenMoms:Mad
+SevenEleven;Expenses:UdenMoms:Mad
 REVISOR;Expenses:MedMoms:Revisor
 Sponsorater;Expenses:MedMoms:Sponsorater
+Ellofood;Expenses:UdenMoms:Mad

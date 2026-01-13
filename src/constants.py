@@ -64,6 +64,8 @@ LOEN_ANSAT = "LoenAnsat"
 AM_BIDRAG_MV = "AMBidragMV"
 A_SKAT = "ASkat"
 
+UDBYTTE = "udbytte"
+UDBYTTE_SKAT_PCT = "udbytte_skat_pct"
 # input filnavne
 (
     UDGIFT_MEDMOMS_CSV,
@@ -78,6 +80,7 @@ A_SKAT = "ASkat"
     SALG_TXT,
     PRICES_CSV,
     LOEN_CSV,
+    UDBYTTE_CSV,
 ) = [
     "%s.csv" % (fn,)
     for fn in (
@@ -93,6 +96,7 @@ A_SKAT = "ASkat"
         "salg.txt",
         "prices",
         "loen",
+        "udbytte",
     )
 ]
 
@@ -188,6 +192,15 @@ CSV_SPECS = OrderedDict(
                     (AM_BIDRAG_MV, str),
                     (LOEN_GEBYR, str),
                     ("km", str),
+                ]
+            ),
+        ),
+        (
+            UDBYTTE_CSV,
+            OrderedDict(
+                [
+                    (UDBYTTE, int),
+                    (UDBYTTE_SKAT_PCT, float),
                 ]
             ),
         ),

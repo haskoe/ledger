@@ -36,7 +36,7 @@ def handle_moms_luk(ctx):
     skyldigmoms = salg_moms - koeb_moms
     afrunding = skyldigmoms - (abs(totals[1]) - abs(totals[0]))
     ctx.append_generated_file(
-        "moms_luk",
+        f"moms_luk{ctx.period}",
         "%s\n"
         % ctx.templates["moms_luk"].render(
             {

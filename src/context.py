@@ -51,14 +51,16 @@ class LedgerContext:
         )
 
     def render_period_transactions(self, transactions) -> None:
-        self.render_transactions("%s.beancount" % (self.period,), transactions)
+        self.render_transactions("", transactions)
 
-    def render_transactions(self, filename, transactions) -> None:
+    def render_transactions(self, prefix, transactions) -> None:
         output = []
         for t in transactions:
             template = self.templates[t.template_name]
             output.append(template.render(t.as_dict))
-        self.write_file_in_generated_dir(filename, "\n\n".join(output))
+        self.write_file_in_generated_dir(
+            f"{prefix}{self.period}.beancount", "\n\n".join(output)
+        )
 
     def write_period_file(self, content) -> None:
         self.write_file_in_generated_dir("%s.beancount" % (self.period,), content)

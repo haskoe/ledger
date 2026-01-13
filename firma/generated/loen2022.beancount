@@ -1,0 +1,111 @@
+2022-02-28 * "Løn" "Løn LoenATP. Periode jan-feb"
+  Liabilities:Loen:LoenATP                                        -189.32 DKK
+  Expenses:Loen:LoenATP                                            189.32 DKK
+
+2022-02-28 * "Løn" "Løn LoenAnsat. Periode jan-feb"
+  Liabilities:Loen:LoenAnsat                                    -65631.87 DKK
+  Expenses:Loen:LoenAnsat                                        65631.87 DKK
+
+2022-02-28 * "Løn" "Løn LoenGebyr. Periode jan-feb"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-02-28 * "Løn" "Løn LoenSkat. Periode jan-feb"
+  Liabilities:Loen:LoenSkat                                     -39686.00 DKK
+  Expenses:Loen:LoenSkat                                         39686.00 DKK
+
+2022-03-31 * "Løn" "Løn LoenATP. Periode marts"
+  Liabilities:Loen:LoenATP                                         -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2022-03-31 * "Løn" "Løn LoenAnsat. Periode marts"
+  Liabilities:Loen:LoenAnsat                                    -34546.54 DKK
+  Expenses:Loen:LoenAnsat                                        34546.54 DKK
+
+2022-03-31 * "Løn" "Løn LoenGebyr. Periode marts"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-03-31 * "Løn" "Løn LoenSkat. Periode marts"
+  Liabilities:Loen:LoenSkat                                     -19820.00 DKK
+  Expenses:Loen:LoenSkat                                         19820.00 DKK
+
+2022-06-28 * "Løn" "Løn LoenATP. Periode apr-jun"
+  Liabilities:Loen:LoenATP                                        -284.01 DKK
+  Expenses:Loen:LoenATP                                            284.01 DKK
+
+2022-06-28 * "Løn" "Løn LoenAnsat. Periode apr-jun"
+  Liabilities:Loen:LoenAnsat                                   -101503.16 DKK
+  Expenses:Loen:LoenAnsat                                       101503.16 DKK
+
+2022-06-28 * "Løn" "Løn LoenGebyr. Periode apr-jun"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-06-28 * "Løn" "Løn LoenSkat. Periode apr-jun"
+  Liabilities:Loen:LoenSkat                                     -59463.00 DKK
+  Expenses:Loen:LoenSkat                                         59463.00 DKK
+
+2022-08-31 * "Løn" "Løn LoenATP. Periode aug"
+  Liabilities:Loen:LoenATP                                         -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2022-08-31 * "Løn" "Løn LoenAnsat. Periode aug"
+  Liabilities:Loen:LoenAnsat                                    -33204.43 DKK
+  Expenses:Loen:LoenAnsat                                        33204.43 DKK
+
+2022-08-31 * "Løn" "Løn LoenGebyr. Periode aug"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-08-31 * "Løn" "Løn LoenSkat. Periode aug"
+  Liabilities:Loen:LoenSkat                                     -19820.00 DKK
+  Expenses:Loen:LoenSkat                                         19820.00 DKK
+
+2022-09-30 * "Løn" "Løn LoenATP. Periode sep"
+  Liabilities:Loen:LoenATP                                         -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2022-09-30 * "Løn" "Løn LoenAnsat. Periode sep"
+  Liabilities:Loen:LoenAnsat                                    -33160.03 DKK
+  Expenses:Loen:LoenAnsat                                        33160.03 DKK
+
+2022-09-30 * "Løn" "Løn LoenGebyr. Periode sep"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-09-30 * "Løn" "Løn LoenSkat. Periode sep"
+  Liabilities:Loen:LoenSkat                                     -19820.00 DKK
+  Expenses:Loen:LoenSkat                                         19820.00 DKK
+
+2022-11-30 * "Løn" "Løn LoenATP. Periode okt-nov"
+  Liabilities:Loen:LoenATP                                        -189.34 DKK
+  Expenses:Loen:LoenATP                                            189.34 DKK
+
+2022-11-30 * "Løn" "Løn LoenAnsat. Periode okt-nov"
+  Liabilities:Loen:LoenAnsat                                    -64385.56 DKK
+  Expenses:Loen:LoenAnsat                                        64385.56 DKK
+
+2022-11-30 * "Løn" "Løn LoenGebyr. Periode okt-nov"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-11-30 * "Løn" "Løn LoenSkat. Periode okt-nov"
+  Liabilities:Loen:LoenSkat                                     -39632.00 DKK
+  Expenses:Loen:LoenSkat                                         39632.00 DKK
+
+2022-12-31 * "Løn" "Løn LoenATP. Periode dec"
+  Liabilities:Loen:LoenATP                                         -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2022-12-31 * "Løn" "Løn LoenAnsat. Periode dec"
+  Liabilities:Loen:LoenAnsat                                    -31569.03 DKK
+  Expenses:Loen:LoenAnsat                                        31569.03 DKK
+
+2022-12-31 * "Løn" "Løn LoenGebyr. Periode dec"
+  Liabilities:Loen:LoenGebyr                                       -27.50 DKK
+  Expenses:Loen:LoenGebyr                                           27.50 DKK
+
+2022-12-31 * "Løn" "Løn LoenSkat. Periode dec"
+  Liabilities:Loen:LoenSkat                                     -19820.00 DKK
+  Expenses:Loen:LoenSkat                                         19820.00 DKK

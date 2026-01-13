@@ -1,127 +1,127 @@
-2021-02-26 * "Løn betalt" "Løn LoenATP. Periode jan-feb betalt"
+2021-02-26 * "Løn" "Løn LoenATP. Periode jan-feb"
   Liabilities:Loen:LoenATP                                        -189.34 DKK
   Expenses:Loen:LoenATP                                            189.34 DKK
 
-2021-02-26 * "Løn betalt" "Løn LoenAnsat. Periode jan-feb betalt"
+2021-02-26 * "Løn" "Løn LoenAnsat. Periode jan-feb"
   Liabilities:Loen:LoenAnsat                                    -59852.62 DKK
   Expenses:Loen:LoenAnsat                                        59852.62 DKK
 
-2021-02-26 * "Løn betalt" "Løn LoenGebyr. Periode jan-feb betalt"
+2021-02-26 * "Løn" "Løn LoenGebyr. Periode jan-feb"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-02-26 * "Løn betalt" "Løn LoenSkat. Periode jan-feb betalt"
+2021-02-26 * "Løn" "Løn LoenSkat. Periode jan-feb"
   Liabilities:Loen:LoenSkat                                     -39113.00 DKK
   Expenses:Loen:LoenSkat                                         39113.00 DKK
 
-2021-05-31 * "Løn betalt" "Løn LoenATP. Periode mar-maj betalt"
+2021-05-31 * "Løn" "Løn LoenATP. Periode mar-maj"
   Liabilities:Loen:LoenATP                                        -284.01 DKK
   Expenses:Loen:LoenATP                                            284.01 DKK
 
-2021-05-31 * "Løn betalt" "Løn LoenAnsat. Periode mar-maj betalt"
+2021-05-31 * "Løn" "Løn LoenAnsat. Periode mar-maj"
   Liabilities:Loen:LoenAnsat                                    -90927.39 DKK
   Expenses:Loen:LoenAnsat                                        90927.39 DKK
 
-2021-05-31 * "Løn betalt" "Løn LoenGebyr. Periode mar-maj betalt"
+2021-05-31 * "Løn" "Løn LoenGebyr. Periode mar-maj"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-05-31 * "Løn betalt" "Løn LoenSkat. Periode mar-maj betalt"
+2021-05-31 * "Løn" "Løn LoenSkat. Periode mar-maj"
   Liabilities:Loen:LoenSkat                                     -58670.00 DKK
   Expenses:Loen:LoenSkat                                         58670.00 DKK
 
-2021-06-30 * "Løn betalt" "Løn LoenATP. Periode juni betalt"
+2021-06-30 * "Løn" "Løn LoenATP. Periode juni"
   Liabilities:Loen:LoenATP                                         -94.67 DKK
   Expenses:Loen:LoenATP                                             94.67 DKK
 
-2021-06-30 * "Løn betalt" "Løn LoenAnsat. Periode juni betalt"
+2021-06-30 * "Løn" "Løn LoenAnsat. Periode juni"
   Liabilities:Loen:LoenAnsat                                    -31882.57 DKK
   Expenses:Loen:LoenAnsat                                        31882.57 DKK
 
-2021-06-30 * "Løn betalt" "Løn LoenGebyr. Periode juni betalt"
+2021-06-30 * "Løn" "Løn LoenGebyr. Periode juni"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-06-30 * "Løn betalt" "Løn LoenSkat. Periode juni betalt"
+2021-06-30 * "Løn" "Løn LoenSkat. Periode juni"
   Liabilities:Loen:LoenSkat                                     -19556.00 DKK
   Expenses:Loen:LoenSkat                                         19556.00 DKK
 
-2021-07-31 * "Løn betalt" "Løn LoenATP. Periode juli betalt"
+2021-07-31 * "Løn" "Løn LoenATP. Periode juli"
   Liabilities:Loen:LoenATP                                         -94.67 DKK
   Expenses:Loen:LoenATP                                             94.67 DKK
 
-2021-07-31 * "Løn betalt" "Løn LoenAnsat. Periode juli betalt"
+2021-07-31 * "Løn" "Løn LoenAnsat. Periode juli"
   Liabilities:Loen:LoenAnsat                                    -30207.29 DKK
   Expenses:Loen:LoenAnsat                                        30207.29 DKK
 
-2021-07-31 * "Løn betalt" "Løn LoenGebyr. Periode juli betalt"
+2021-07-31 * "Løn" "Løn LoenGebyr. Periode juli"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-07-31 * "Løn betalt" "Løn LoenSkat. Periode juli betalt"
+2021-07-31 * "Løn" "Løn LoenSkat. Periode juli"
   Liabilities:Loen:LoenSkat                                     -19556.00 DKK
   Expenses:Loen:LoenSkat                                         19556.00 DKK
 
-2021-08-31 * "Løn betalt" "Løn LoenATP. Periode aug betalt"
+2021-08-31 * "Løn" "Løn LoenATP. Periode aug"
   Liabilities:Loen:LoenATP                                         -94.67 DKK
   Expenses:Loen:LoenATP                                             94.67 DKK
 
-2021-08-31 * "Løn betalt" "Løn LoenAnsat. Periode aug betalt"
+2021-08-31 * "Løn" "Løn LoenAnsat. Periode aug"
   Liabilities:Loen:LoenAnsat                                    -31672.73 DKK
   Expenses:Loen:LoenAnsat                                        31672.73 DKK
 
-2021-08-31 * "Løn betalt" "Løn LoenGebyr. Periode aug betalt"
+2021-08-31 * "Løn" "Løn LoenGebyr. Periode aug"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-08-31 * "Løn betalt" "Løn LoenSkat. Periode aug betalt"
+2021-08-31 * "Løn" "Løn LoenSkat. Periode aug"
   Liabilities:Loen:LoenSkat                                     -19556.00 DKK
   Expenses:Loen:LoenSkat                                         19556.00 DKK
 
-2021-09-30 * "Løn betalt" "Løn LoenATP. Periode sep betalt"
+2021-09-30 * "Løn" "Løn LoenATP. Periode sep"
   Liabilities:Loen:LoenATP                                         -94.67 DKK
   Expenses:Loen:LoenATP                                             94.67 DKK
 
-2021-09-30 * "Løn betalt" "Løn LoenAnsat. Periode sep betalt"
+2021-09-30 * "Løn" "Løn LoenAnsat. Periode sep"
   Liabilities:Loen:LoenAnsat                                    -29959.61 DKK
   Expenses:Loen:LoenAnsat                                        29959.61 DKK
 
-2021-09-30 * "Løn betalt" "Løn LoenGebyr. Periode sep betalt"
+2021-09-30 * "Løn" "Løn LoenGebyr. Periode sep"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-09-30 * "Løn betalt" "Løn LoenSkat. Periode sep betalt"
+2021-09-30 * "Løn" "Løn LoenSkat. Periode sep"
   Liabilities:Loen:LoenSkat                                     -19556.00 DKK
   Expenses:Loen:LoenSkat                                         19556.00 DKK
 
-2021-11-30 * "Løn betalt" "Løn LoenATP. Periode okt-nov betalt"
+2021-11-30 * "Løn" "Løn LoenATP. Periode okt-nov"
   Liabilities:Loen:LoenATP                                        -189.34 DKK
   Expenses:Loen:LoenATP                                            189.34 DKK
 
-2021-11-30 * "Løn betalt" "Løn LoenAnsat. Periode okt-nov betalt"
+2021-11-30 * "Løn" "Løn LoenAnsat. Periode okt-nov"
   Liabilities:Loen:LoenAnsat                                    -64105.38 DKK
   Expenses:Loen:LoenAnsat                                        64105.38 DKK
 
-2021-11-30 * "Løn betalt" "Løn LoenGebyr. Periode okt-nov betalt"
+2021-11-30 * "Løn" "Løn LoenGebyr. Periode okt-nov"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-11-30 * "Løn betalt" "Løn LoenSkat. Periode okt-nov betalt"
+2021-11-30 * "Løn" "Løn LoenSkat. Periode okt-nov"
   Liabilities:Loen:LoenSkat                                     -39102.00 DKK
   Expenses:Loen:LoenSkat                                         39102.00 DKK
 
-2021-12-31 * "Løn betalt" "Løn LoenATP. Periode dec betalt"
+2021-12-31 * "Løn" "Løn LoenATP. Periode dec"
   Liabilities:Loen:LoenATP                                         -94.67 DKK
   Expenses:Loen:LoenATP                                             94.67 DKK
 
-2021-12-31 * "Løn betalt" "Løn LoenAnsat. Periode dec betalt"
+2021-12-31 * "Løn" "Løn LoenAnsat. Periode dec"
   Liabilities:Loen:LoenAnsat                                    -31356.25 DKK
   Expenses:Loen:LoenAnsat                                        31356.25 DKK
 
-2021-12-31 * "Løn betalt" "Løn LoenGebyr. Periode dec betalt"
+2021-12-31 * "Løn" "Løn LoenGebyr. Periode dec"
   Liabilities:Loen:LoenGebyr                                       -25.00 DKK
   Expenses:Loen:LoenGebyr                                           25.00 DKK
 
-2021-12-31 * "Løn betalt" "Løn LoenSkat. Periode dec betalt"
+2021-12-31 * "Løn" "Løn LoenSkat. Periode dec"
   Liabilities:Loen:LoenSkat                                     -19556.00 DKK
   Expenses:Loen:LoenSkat                                         19556.00 DKK

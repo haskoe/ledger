@@ -21,16 +21,27 @@ Netto;Netto
 Coop;Coop365
 moms ;SkyldigMoms
 Skatteforvaltninge;SkyldigMoms
+SKAT - Skattekonto;SkyldigMoms
 Virksomhedsskat;AcontoSkat
+Udbetaling fra Skat;AcontoSkat
 Dankort OK ;OkPlus
 Rente af indestående;RenteIndtaegt
 VELOCONCEPT;VELOCONCEPT
 Bageriet Hjortevæn;BagerietHjortev
+FARUMHUS;FARUMHUS
+ikea;ikea
 Kai Dige Bach;KDB
 ONE.COM;ONECOM
 Gottlieb IT ApS;GOTTIT
 Askøe;GOTTIT
 f.nr.;GOTTIT
+fktnr;GOTTIT
+fnr;GOTTIT
+fakt.;GOTTIT
+202207;GOTTIT
+202208;GOTTIT
+202209;GOTTIT
+202210;GOTTIT
 udbytteskat;SkyldigUdbytteSkat
 udbytte;SkyldigUdbytteTilAnsat
 Borgervænget;Mad
@@ -43,3 +54,11 @@ CIRCLE K;CIRCLEK
 AXOSOFT;AXOSOFT
 revisor;REVISOR
 Cycling4Cancer;Sponsorater
+medecins sans;Sponsorater
+hjerteforening;Sponsorater
+scleroseforening;Sponsorater
+gogetssl;gogetssl
+gitkraken;gitkraken
+restaurant nova;restaurantnova
+7-eleven;SevenEleven
+ello food;ellofood
