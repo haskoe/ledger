@@ -9,7 +9,7 @@ from context import LedgerContext
 def handle_opdater(ctx):
     kontoplan_accounts = []
     end_period = int(ctx.period)
-    for period in range(2021, end_period + 1):
+    for period in range(2020, end_period + 1):
         ctx = LedgerContext(
             company_name=ctx.company_name, period=str(period), enddate=ctx.enddate
         )
@@ -46,20 +46,20 @@ def handle_opdater(ctx):
 
             full_account_name = ctx.all_accounts[account_match.casefold()][1]
             account_name = full_account_name.split(":")[-1]
-            print(account_name)
             account_group = ctx.all_accounts[account_match.casefold()][0]
-            bank_row_key = util.get_bank_row_key(
-                account_name, bank_transaction.date_posted
-            )
 
+            bank_row_key = f"{util.format_date(bank_transaction.date_posted)};{bank_transaction.description}"
             if bank_row_key in ctx.bank_to_invoice_date:
+                print(ctx.bank_to_invoice_date[bank_row_key])
+                account_name = ctx.bank_to_invoice_date[bank_row_key][
+                    const.ACCOUNT_NAME
+                ]
                 continue
 
             # transaktionstype hvor der foerst ses om der er en tilknyttet account_group og herefter account:_name
             account_group_split = account_group.split(":")
             for i in reversed(range(len(account_group_split))):
                 tmp = ":".join(account_group_split[:i])
-                print(tmp)
                 if tmp in ctx.transaction_types:
                     transaction_type = ctx.transaction_types[tmp]
                     break
@@ -114,15 +114,41 @@ def handle_opdater(ctx):
         # transaktioner
         ctx.render_period_transactions(transactions)
 
-        # salg = Transaction.from_salg_csv(ctx.salg, ctx)
-        # transactions += salg
-
-        # if errors:
-        #     print("\n".join(errors))
-        #     return
-
         salg_output = Transaction.from_salg_csv(ctx.salg, ctx)
         ctx.render_transactions("salg", salg_output)
+
+        udbytte_output = []
+        for row in ctx.udbytte_csv:
+            date_posted = datetime(int(ctx.period), 12, 31)
+            total = util.parse_amount(row[const.UDBYTTE], const.DOT)
+            tax_pct = util.parse_amount(row[const.UDBYTTE_SKAT_PCT], const.DOT)
+            amount_tax = total * tax_pct
+            amount_owner = total - amount_tax
+
+            for acc1, acc2, amount in (
+                (
+                    "Equity:Retained-Earnings",
+                    "Liabilities:Dividend-Payable:UdbytteSkat",
+                    amount_tax,
+                ),
+                (
+                    "Equity:Retained-Earnings",
+                    "Liabilities:Dividend-Payable:UdbytteEjer",
+                    amount_owner,
+                ),
+            ):
+                udbytte_output.append(
+                    Transaction(
+                        date_posted=date_posted,
+                        text="Generalforsamling",
+                        extra_text=f"Vedtaget udbytte for {ctx.period}",
+                        amount=amount,
+                        account1=acc1,
+                        account2=acc2,
+                        template_name=const.UDEN_MOMS,
+                    )
+                )
+        ctx.render_transactions("udbytte", udbytte_output)
 
         loen_output = []
         for row in ctx.loen_csv:
@@ -157,7 +183,12 @@ def handle_opdater(ctx):
                 )
         ctx.render_transactions("loen", loen_output)
 
-        for all_transactions in (transactions, loen_output, salg_output):
+        for all_transactions in (
+            transactions,
+            loen_output,
+            salg_output,
+            udbytte_output,
+        ):
             for t in all_transactions:
                 kontoplan_accounts += t.all_accounts
         kontoplan_accounts += [

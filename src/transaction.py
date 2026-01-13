@@ -94,13 +94,10 @@ class Transaction:
 
             hour_price = ctx.find_price(account_name, "Timepris", yymmdd)
             support_price = ctx.find_price(account_name, "Support", yymmdd)
-            print(hours, hour_price, support_hours, support_price)
             amount_wo_vat = hours * hour_price + support_hours * support_price
             price_text = f"Timer: {hours} * {hour_price} = {hours * hour_price}"
             if support_hours > 0:
                 price_text += f". Support: {support_hours} * {support_price} = {support_hours * support_price}"
-
-            print(price_text)
 
             transaction = Transaction(
                 date_posted=yymmdd,

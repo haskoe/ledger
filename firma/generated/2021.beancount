@@ -137,7 +137,7 @@
   Assets:Bank:BankErhverv                                          -85.90 DKK
 
 2021-11-08 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              852.03 DKK
+  Expenses:Loen:AtpLivslangPension                                 852.03 DKK
   Assets:Bank:BankErhverv                                         -852.03 DKK
 
 2021-11-08 * "Posteret" "BBB"
@@ -528,7 +528,7 @@
   Assets:Bank:BankErhverv                                          -27.50 DKK
 
 2021-08-09 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                             1136.04 DKK
+  Expenses:Loen:AtpLivslangPension                                1136.04 DKK
   Assets:Bank:BankErhverv                                        -1136.04 DKK
 
 2021-08-09 * "Posteret" "BBB"
@@ -581,7 +581,7 @@
   Assets:Bank:BankErhverv                                        -3190.04 DKK
 
 2021-07-26 * "betalt" "CCC"
-  Liabilities:Skat:SkyldigUdbytteSkat                            31627.77 DKK
+  Liabilities:Dividend-Payable:UdbytteSkat                       31627.77 DKK
   Assets:Bank:BankErhverv                                       -31627.77 DKK
 
 2021-07-16 * "Posteret" "BBB"
@@ -626,7 +626,7 @@
   Assets:Bank:BankErhverv                                          -58.75 DKK
 
 2021-07-07 * "betalt" "CCC"
-  Liabilities:Ansat:SkyldigUdbytteTilAnsat                       82490.00 DKK
+  Liabilities:Dividend-Payable:UdbytteEjer                       82490.00 DKK
   Assets:Bank:BankErhverv                                       -82490.00 DKK
 
 2021-07-07 * "betalt" "CCC"
@@ -859,7 +859,7 @@
   Assets:Bank:BankErhverv                                         -299.00 DKK
 
 2021-05-07 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              568.02 DKK
+  Expenses:Loen:AtpLivslangPension                                 568.02 DKK
   Assets:Bank:BankErhverv                                         -568.02 DKK
 
 2021-05-05 * "Posteret" "BBB"
@@ -1297,7 +1297,7 @@
   Assets:Bank:BankErhverv                                         -299.00 DKK
 
 2021-02-08 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              852.03 DKK
+  Expenses:Loen:AtpLivslangPension                                 852.03 DKK
   Assets:Bank:BankErhverv                                         -852.03 DKK
 
 2021-02-05 * "Posteret" "BBB"

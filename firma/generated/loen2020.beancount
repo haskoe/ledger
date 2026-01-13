@@ -1,0 +1,15 @@
+2020-12-31 * "Løn" "Løn LoenATP. Periode dec"
+  Liabilities:Loen:LoenATP                                         -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2020-12-31 * "Løn" "Løn LoenAnsat. Periode dec"
+  Liabilities:Loen:LoenAnsat                                    -29903.57 DKK
+  Expenses:Loen:LoenAnsat                                        29903.57 DKK
+
+2020-12-31 * "Løn" "Løn LoenGebyr. Periode dec"
+  Liabilities:Loen:LoenGebyr                                       -25.00 DKK
+  Expenses:Loen:LoenGebyr                                           25.00 DKK
+
+2020-12-31 * "Løn" "Løn LoenSkat. Periode dec"
+  Liabilities:Loen:LoenSkat                                     -19100.00 DKK
+  Expenses:Loen:LoenSkat                                         19100.00 DKK

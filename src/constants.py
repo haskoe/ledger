@@ -138,11 +138,8 @@ CSV_SPECS = OrderedDict(
             OrderedDict(
                 [
                     (DATE_POSTED_KEY, str),
-                    (DATE_POSTED_KEY, str),
-                    (DATE_POSTED_KEY, str),
-                    (DATE_POSTED_KEY, str),
-                    (DATE_POSTED_KEY, str),
-                    (DATE_POSTED_KEY, str),
+                    (DESCRIPTION, str),
+                    (ACCOUNT_NAME, str),
                 ]
             ),
         ),
@@ -199,8 +196,8 @@ CSV_SPECS = OrderedDict(
             UDBYTTE_CSV,
             OrderedDict(
                 [
-                    (UDBYTTE, int),
-                    (UDBYTTE_SKAT_PCT, float),
+                    (UDBYTTE, str),
+                    (UDBYTTE_SKAT_PCT, str),
                 ]
             ),
         ),

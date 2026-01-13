@@ -102,7 +102,8 @@ def csv_to_list(filename, spec, transformer=None):
 
 
 def csv_to_dict(filename, spec, transformer):
-    return dict([transformer(x) for x in load_csv(filename, spec)])
+    tmp = load_csv(filename, spec)
+    return dict([transformer(x) for x in tmp])
 
 
 def write_file(filename, content, encoding="utf-8"):

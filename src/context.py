@@ -115,11 +115,14 @@ class LedgerContext:
 
     @cached_property
     def bank_to_invoice_date(self):
-        return util.csv_to_dict(
+        tmp = util.csv_to_dict(
             self.company_period_path(const.BANK_TO_INVOICE_DATE_CSV),
             const.CSV_SPECS[const.BANK_TO_INVOICE_DATE_CSV],
-            lambda x: (x[const.date_posted_KEY], x[const.DATE_POSTED_KEY]),
+            lambda x: (";".join([x[const.DATE_POSTED_KEY], x[const.DESCRIPTION]]), x),
         )
+        if tmp:
+            print(tmp)
+        return tmp
 
     @cached_property
     def bank_csv(self):
@@ -133,6 +136,12 @@ class LedgerContext:
     def loen_csv(self):
         return util.load_csv(
             self.company_period_path("loen.txt"), const.CSV_SPECS[const.LOEN_CSV]
+        )
+
+    @cached_property
+    def udbytte_csv(self):
+        return util.load_csv(
+            self.company_period_path("udbytte.txt"), const.CSV_SPECS[const.UDBYTTE_CSV]
         )
 
     @cached_property

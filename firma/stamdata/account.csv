@@ -3,6 +3,7 @@ Afrunding;Equity
 Gottit;Assets:Debitorer
 Politiken;Expenses:UdenMoms:Avis
 Telmore;Expenses:MedMoms:Telefoni
+Yousee;Expenses:MedMoms:Telefoni
 Fibia;Expenses:MedMoms:Internet
 Frantech;Expenses:UdenMoms:Hosting
 Gogetssl;Expenses:UdenMoms:Hosting
@@ -26,6 +27,7 @@ SalgMoms;Liabilities:Moms
 AfregnetMoms;Assets:Moms
 BankErhverv;Assets:Bank
 AON;Expenses:UdenMoms:Forsikring
+AtpLivslangPension;Expenses:Loen
 LoenATP;Expenses:Loen
 LoenGebyr;Expenses:Loen
 LoenSkat;Expenses:Loen
@@ -35,8 +37,8 @@ SkyldigLoenSkat;Liabilities:Loen:Skat
 SkyldigLoenAnsat;Liabilities:Loen
 SkyldigLoenGebyr;Liabilities:Loen
 AcontoSkat;Assets:Skat
-SkyldigUdbytteSkat;Liabilities:Skat
-SkyldigUdbytteTilAnsat;Liabilities:Ansat
+UdbytteSkat;Liabilities:Dividend-Payable
+UdbytteEjer;Liabilities:Dividend-Payable
 Kreditorer;Liabilities
 BagerietHjortev;Expenses:UdenMoms:Mad
 FARUMHUS;Expenses:UdenMoms:Mad
@@ -58,3 +60,14 @@ SevenEleven;Expenses:UdenMoms:Mad
 REVISOR;Expenses:MedMoms:Revisor
 Sponsorater;Expenses:MedMoms:Sponsorater
 Ellofood;Expenses:UdenMoms:Mad
+Redgate;Expenses:UdenMoms:Software
+Powerdk;Expenses:MedMoms:Hardware
+AvCables;Expenses:MedMoms:Hardware
+Computersalg;Expenses:MedMoms:Computer
+FComputer;Expenses:MedMoms:Computer
+GrannysHouse;Expenses:UdenMoms:Mad
+DenHeltRigtigeBager;Expenses:UdenMoms:Mad
+OnePassword;Expenses:UdenMoms:Software
+SMSSBoost;Expenses:UdenMoms:Software
+PrivatHaevning;Assets:Ansat
+EspressoHouse;Expenses:UdenMoms:Mad
