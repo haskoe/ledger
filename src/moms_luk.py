@@ -25,6 +25,7 @@ def handle_moms_luk(ctx):
         bc.account_sum_in_period(a, start_date, ctx.enddate)
         for a in ["Assets:Moms:KoebMoms", "Liabilities:Moms:SalgMoms"]
     ]
+    totals = [Decimal(t and t or Decimal(0)) for t in totals]
 
     # eksempel: købsmoms=2.36, salgsmoms=3.67
     # til skat: salgsmoms=4, købsmoms=2, skyldig=2

@@ -20,8 +20,8 @@
   Equity:Afrunding                   -891.00 DKK
 
 2021-01-01 * "Overført fra 2020" "Skyldige lønninger til ansatte"
-  Equity:Opening-Balances           29903.57 DKK
-  Liabilities:Ansat:SkyldigLoenAnsat     -29903.57 DKK
+  Equity:Opening-Balances                   29903.57 DKK
+  Liabilities:Loen:Skat:SkyldigLoenSkat    -29903.57 DKK
 
 2021-01-01 * "Overført fra 2020" "Skyldig løn gebyr"
   Equity:Opening-Balances              25.00 DKK

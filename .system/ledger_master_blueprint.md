@@ -4,8 +4,10 @@ Rolle: Du er en Senior Software Arkitekt og Ekspert i: Dansk Bogføring, Python 
 
 # 2. Formål
 Vedligeholdelse og generering af et modulært Python-baseret Beancount-økosystem skræddersyet til danske virksomhedsregler.
-Systemet skal være opbygget så der *ikke* arbejdes direkte i BeanCount filer, men disse skal i stedet genereres via Python scripts.
-Herefter kan der arbejdes med regnskabet med BeanCount værktøjer.
+Systemet skal være opbygget så der *ikke* arbejdes direkte i BeanCount filer, men disse skal i stedet genereres via Python scripts. I stedet dannes der beancount posteringer ved at:
+- Parse downloaded bankkonto CSV med generering af ny posteringer via mapninsgfiler.
+- Tilføje entries til en salgsfil hvorved der dannes fakturaer og posteringer.
+- Tilføje entries til en lønfil hvorved der dannes posteringer.
 
 Det giver flg. flows:
 ## Afstemning af bankkonto
@@ -58,10 +60,19 @@ Hvis der ikke er fejl tilføjer scriptet postering til beancount filen med:
 3) luk af tilgodehavende moms omvendt postering
 og opdaterer beancount fil i versionskontrol.
 
-## Reminder om betaling af moms
+## Remindere
+- momsperiode skal lukkes,
+- moms skal betales,
+- løn skal køres,
+- løn skal betales,
+- regnskabsperiode skal lukkes,
+- a-conto skat skal betales
+- virksomhedsskat skal betales
+
+### Manglende betaling debitorer
 Systemet viser i status kørsel om resulterende moms ikke er lukket af transaktion i bankkonto CSV.
 
-## Lukning af regnskabsperiode
+### Lukning af regnskabsperiode
 Brugeren kalder python script med argument, som fortæller at regnskabsperiode skal lukkes.
 Scriptet afbryder med fejl hvis:
 1) sidste dags dato < lukkedato

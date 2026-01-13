@@ -34,6 +34,7 @@ def date_parser(date_format):
 
 
 def parse_date(dt):
+    print(dt)
     if dt is None:
         return None
 
@@ -65,16 +66,22 @@ except ValueError:
 opposite_decimal_separator = (
     decimal_separator == const.COMMA and const.DOT or const.COMMA
 )
+print(decimal_separator, opposite_decimal_separator)
 
 
-def parse_amount(amount, thousand_separator):
+def parse_amount(amount, decimal_separator_in_input):
+    if decimal_separator_in_input == decimal_separator:
+        return Decimal(amount.replace(opposite_decimal_separator, ""))
+
     return Decimal(
-        amount.replace(thousand_separator, "").replace(
-            thousand_separator == const.DOT and const.COMMA or const.DOT,
-            decimal_separator,
+        amount.replace(decimal_separator, "").replace(
+            decimal_separator_in_input, decimal_separator
         )
     )
 
+
+# print(parse_amount("1.234,23", const.COMMA))
+# print(parse_amount("1,234.23", const.DOT))
 
 bank_date_parser = date_parser("%d-%m-%Y")
 

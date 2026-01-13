@@ -34,10 +34,14 @@ ACCOUNT_NAME = "account_name"
 ACCOUNT_GROUP = "account_group"
 REGEX = "regex"
 DATE_POSTED_KEY = "date_posted_key"
-TEMPLATE_NAME = "template_name"
+
+ANTAL_POSTERINGER = "ANTAL_POSTERINGER"
+MED_MOMS = "med_moms"
+UDEN_MOMS = "uden_moms"
+
+ACCOUNT1 = "account1"
 ACCOUNT2 = "account2"
 ACCOUNT3 = "account3"
-ACCOUNT4 = "account4"
 TRANSACTION_TYPE = "transaction_type"
 TEXT = "text"
 EXTRA_TEXT = "extra_text"
@@ -53,11 +57,12 @@ VAT_NEGATED = "vat_negated"
 
 AM_INDKOMST = "am_indkomst"
 TIL_UDBETALING = "til_udbetaling"
-ATP = "atp"
-A_SKAT = "a_skat"
-AM_BIDRAG_MV = "am_bidrag_mv"
-LOEN_GEBYR = "loen_gebyr"
-KM = "km"
+LOEN_ATP = "LoenATP"
+LOEN_SKAT = "LoenSkat"
+LOEN_GEBYR = "LoenGebyr"
+LOEN_ANSAT = "LoenAnsat"
+AM_BIDRAG_MV = "AMBidragMV"
+A_SKAT = "ASkat"
 
 # input filnavne
 (
@@ -142,10 +147,8 @@ CSV_SPECS = OrderedDict(
             OrderedDict(
                 [
                     (ACCOUNT_GROUP, str),
-                    (TEMPLATE_NAME, str),
-                    (ACCOUNT2, str),
-                    (ACCOUNT3, str),
-                    (ACCOUNT4, str),
+                    (ANTAL_POSTERINGER, int),
+                    (MED_MOMS, int),
                 ]
             ),
         ),
@@ -180,11 +183,11 @@ CSV_SPECS = OrderedDict(
                     (PERIOD_TXT, str),
                     (AM_INDKOMST, str),
                     (TIL_UDBETALING, str),
-                    (ATP, str),
+                    (LOEN_ATP, str),
                     (A_SKAT, str),
                     (AM_BIDRAG_MV, str),
                     (LOEN_GEBYR, str),
-                    (KM, str),
+                    ("km", str),
                 ]
             ),
         ),

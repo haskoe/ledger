@@ -4,9 +4,9 @@ FIBIA;Fibia
 FRANTECH;Frantech
 DUSTIN;Dustin
 OVERFØRSEL;SkyldigLoenGebyr
-AFREGNING TIL TOLD & SKAT;SkyldigSkatAfLoen
+AFREGNING TIL TOLD & SKAT;SkyldigLoenSkat
 proshop;Proshop
-Betalingsservice ATP;SkyldigATP
+Betalingsservice ATP;SkyldigLoenATP
 forsikring;AON
 punktum;Punktum
 DAN CATERING;Dancatering
@@ -32,7 +32,7 @@ Gottlieb IT ApS;GOTTIT
 Askøe;GOTTIT
 f.nr.;GOTTIT
 udbytteskat;SkyldigUdbytteSkat
-udbytte;SkyldigUdbytte
+udbytte;SkyldigUdbytteTilAnsat
 Borgervænget;Mad
 DK HOSTMASTER;DKHOSTMASTER
 BilligToner.dk;BilligToner

@@ -44,11 +44,24 @@ class LedgerContext:
     def company_metadata_path(self, filename: str) -> str:
         return path.join(self.company_path, "stamdata", filename)
 
-    def write_period_file(self, content) -> None:
+    def write_file_in_generated_dir(self, filename: str, content) -> None:
         util.write_file(
-            path.join(self.company_generated_path, "%s.beancount" % (self.period,)),
+            path.join(self.company_generated_path, filename),
             content,
         )
+
+    def render_period_transactions(self, transactions) -> None:
+        self.render_transactions("%s.beancount" % (self.period,), transactions)
+
+    def render_transactions(self, filename, transactions) -> None:
+        output = []
+        for t in transactions:
+            template = self.templates[t.template_name]
+            output.append(template.render(t.as_dict))
+        self.write_file_in_generated_dir(filename, "\n\n".join(output))
+
+    def write_period_file(self, content) -> None:
+        self.write_file_in_generated_dir("%s.beancount" % (self.period,), content)
 
     def append_generated_file(self, prefix, content) -> None:
         util.append_file(

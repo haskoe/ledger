@@ -1,4 +1,5 @@
 from transaction import Transaction
+from bank_transaction import BankTransaction
 from datetime import date
 from itertools import groupby
 import util
@@ -21,20 +22,18 @@ def handle_afstem(ctx):
         [
             (util.format_date(k), list(v)[-1])
             for k, v in groupby(
-                Transaction.from_bank_csv(ctx.bank_csv), key=lambda x: x.date_posted
+                BankTransaction.from_bank_csv(ctx.bank_csv), key=lambda x: x.date_posted
             )
         ]
     )
 
-    first_diff = next(
-        (
-            (d, b, bank_transactions[util.format_date(d)].total)
-            for d, b in transactions[1:]
-            if util.format_date(d) in bank_transactions
-            and bank_transactions[util.format_date(d)].total != b
-        ),
-        None,
-    )
+    afstemning = [
+        (d, b, bank_transactions[util.format_date(d)].total)
+        for d, b in transactions[1:]
+        if util.format_date(d) in bank_transactions
+    ]
+
+    first_diff = next((a for a in afstemning if a[1] != a[2]), None)
     if not first_diff:
         print("Bank stemmer med regnskab")
         return
