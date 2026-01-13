@@ -1,0 +1,49 @@
+2021-01-31 * "Salg betalt" "Salg GOTTIT. Periode jan. Timer: 33 * 900 = 29700 betalt"
+  Income:Salg:GOTTIT                                             37125.00 DKK
+  Assets:Debitorer:GOTTIT                                       -29700.00 DKK
+  Liabilities:Moms:SalgMoms                                      -7425.00 DKK
+
+2021-04-30 * "Salg betalt" "Salg GOTTIT. Periode feb-apr. Timer: 30 * 900 = 27000 betalt"
+  Income:Salg:GOTTIT                                             33750.00 DKK
+  Assets:Debitorer:GOTTIT                                       -27000.00 DKK
+  Liabilities:Moms:SalgMoms                                      -6750.00 DKK
+
+2021-05-31 * "Salg betalt" "Salg GOTTIT. Periode maj. Timer: 105 * 900 = 94500 betalt"
+  Income:Salg:GOTTIT                                            118125.00 DKK
+  Assets:Debitorer:GOTTIT                                       -94500.00 DKK
+  Liabilities:Moms:SalgMoms                                     -23625.00 DKK
+
+2021-06-30 * "Salg betalt" "Salg GOTTIT. Periode jun. Timer: 88 * 900 = 79200 betalt"
+  Income:Salg:GOTTIT                                             99000.00 DKK
+  Assets:Debitorer:GOTTIT                                       -79200.00 DKK
+  Liabilities:Moms:SalgMoms                                     -19800.00 DKK
+
+2021-07-31 * "Salg betalt" "Salg GOTTIT. Periode jul. Timer: 40 * 900 = 36000. Support: 5 * 1000 = 5000 betalt"
+  Income:Salg:GOTTIT                                             51250.00 DKK
+  Assets:Debitorer:GOTTIT                                       -41000.00 DKK
+  Liabilities:Moms:SalgMoms                                     -10250.00 DKK
+
+2021-08-31 * "Salg betalt" "Salg GOTTIT. Periode aug. Timer: 74 * 900 = 66600 betalt"
+  Income:Salg:GOTTIT                                             83250.00 DKK
+  Assets:Debitorer:GOTTIT                                       -66600.00 DKK
+  Liabilities:Moms:SalgMoms                                     -16650.00 DKK
+
+2021-09-30 * "Salg betalt" "Salg GOTTIT. Periode sep. Timer: 90 * 900 = 81000 betalt"
+  Income:Salg:GOTTIT                                            101250.00 DKK
+  Assets:Debitorer:GOTTIT                                       -81000.00 DKK
+  Liabilities:Moms:SalgMoms                                     -20250.00 DKK
+
+2021-10-31 * "Salg betalt" "Salg GOTTIT. Periode okt. Timer: 84 * 900 = 75600 betalt"
+  Income:Salg:GOTTIT                                             94500.00 DKK
+  Assets:Debitorer:GOTTIT                                       -75600.00 DKK
+  Liabilities:Moms:SalgMoms                                     -18900.00 DKK
+
+2021-11-30 * "Salg betalt" "Salg GOTTIT. Periode nov. Timer: 64 * 900 = 57600 betalt"
+  Income:Salg:GOTTIT                                             72000.00 DKK
+  Assets:Debitorer:GOTTIT                                       -57600.00 DKK
+  Liabilities:Moms:SalgMoms                                     -14400.00 DKK
+
+2021-12-31 * "Salg betalt" "Salg GOTTIT. Periode dec. Timer: 74 * 900 = 66600 betalt"
+  Income:Salg:GOTTIT                                             83250.00 DKK
+  Assets:Debitorer:GOTTIT                                       -66600.00 DKK
+  Liabilities:Moms:SalgMoms                                     -16650.00 DKK
