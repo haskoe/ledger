@@ -1,7 +1,7 @@
 2022-12-31 * "Generalforsamling" "Vedtaget udbytte for 2022"
-  Equity:Retained-Earnings                                      -32940.00 DKK
-  Liabilities:Dividend-Payable:UdbytteSkat                       32940.00 DKK
+  Liabilities:Dividend-Payable:UdbytteSkat                      -32940.00 DKK
+  Equity:Retained-Earnings                                       32940.00 DKK
 
 2022-12-31 * "Generalforsamling" "Vedtaget udbytte for 2022"
-  Equity:Retained-Earnings                                      -89060.00 DKK
-  Liabilities:Dividend-Payable:UdbytteEjer                       89060.00 DKK
+  Liabilities:Dividend-Payable:UdbytteEjer                      -89060.00 DKK
+  Equity:Retained-Earnings                                       89060.00 DKK

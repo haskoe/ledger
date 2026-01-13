@@ -127,13 +127,13 @@ def handle_opdater(ctx):
 
             for acc1, acc2, amount in (
                 (
-                    "Equity:Retained-Earnings",
                     "Liabilities:Dividend-Payable:UdbytteSkat",
+                    "Equity:Retained-Earnings",
                     amount_tax,
                 ),
                 (
-                    "Equity:Retained-Earnings",
                     "Liabilities:Dividend-Payable:UdbytteEjer",
+                    "Equity:Retained-Earnings",
                     amount_owner,
                 ),
             ):
