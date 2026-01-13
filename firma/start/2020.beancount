@@ -1,0 +1,27 @@
+2020-06-30 * "Momsafregning" "Moms 2020 Q1-Q2"
+  Equity:Opening-Balances           52718.00 DKK
+  Liabilities:Moms:SkyldigMoms     -52718.00 DKK
+
+2020-12-31 * "Momsafregning" "Moms 2020 Q3-Q4"
+  Equity:Opening-Balances           73077.00 DKK
+  Liabilities:Moms:SkyldigMoms     -73077.00 DKK
+
+2020-12-31 * "Bank saldo" "Bank ultimo 2020"
+  Equity:Opening-Balances        -1279251.09 DKK
+  Assets:Bank:BankErhverv         1279251.09 DKK
+
+2020-12-31 * "Debitorer" "Debitorer ultimo 2020"
+  Assets:Debitorer:GOTTIT           93375.00 DKK
+  Equity:Opening-Balances          -93375.00 DKK
+
+2020-12-31 * "Overført fra 2020" "Skyldige lønninger til ansatte"
+  Equity:Opening-Balances                   29903.57 DKK
+  Liabilities:Loen:Skat:SkyldigLoenSkat    -29903.57 DKK
+
+2020-12-31 * "Overført fra 2020" "Skyldig løn gebyr"
+  Equity:Opening-Balances              25.00 DKK
+  Liabilities:Loen:SkyldigLoenGebyr   -25.00 DKK
+
+2020-12-31 * "Overført fra 2020" "Skyldige lønninger til ansatte"
+  Equity:Opening-Balances                   29903.57 DKK
+  Liabilities:Loen:Skat:SkyldigLoenSkat    -29903.57 DKK

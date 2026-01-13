@@ -39,8 +39,8 @@
   Assets:Bank:BankErhverv                                       -39102.00 DKK
 
 2021-12-10 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -1299.00 DKK
-  Liabilities:Kreditorer:ELG                                      1039.20 DKK
+  Expenses:MedMoms:Hardware:ELG                                   1039.20 DKK
+  Liabilities:Kreditorer:ELG                                     -1299.00 DKK
   Assets:Moms:KoebMoms                                             259.80 DKK
 
 2021-12-10 * "betalt betalt" "CCC betalt"
@@ -68,8 +68,8 @@
   Assets:Bank:BankErhverv                                          -63.45 DKK
 
 2021-12-06 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-12-06 * "betalt betalt" "CCC betalt"
@@ -149,8 +149,8 @@
   Assets:Bank:BankErhverv                                         -299.00 DKK
 
 2021-11-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Revisor:REVISOR                              -12500.00 DKK
-  Liabilities:Kreditorer:REVISOR                                 10000.00 DKK
+  Expenses:MedMoms:Revisor:REVISOR                               10000.00 DKK
+  Liabilities:Kreditorer:REVISOR                                -12500.00 DKK
   Assets:Moms:KoebMoms                                            2500.00 DKK
 
 2021-11-04 * "betalt betalt" "CCC betalt"
@@ -158,8 +158,8 @@
   Assets:Bank:BankErhverv                                       -12500.00 DKK
 
 2021-11-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-11-04 * "betalt betalt" "CCC betalt"
@@ -195,8 +195,8 @@
   Assets:Bank:BankErhverv                                        -3806.40 DKK
 
 2021-11-01 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Sponsorater:Sponsorater                        -500.00 DKK
-  Liabilities:Kreditorer:Sponsorater                               400.00 DKK
+  Expenses:MedMoms:Sponsorater:Sponsorater                         400.00 DKK
+  Liabilities:Kreditorer:Sponsorater                              -500.00 DKK
   Assets:Moms:KoebMoms                                             100.00 DKK
 
 2021-11-01 * "betalt betalt" "CCC betalt"
@@ -212,8 +212,8 @@
   Assets:Bank:BankErhverv                                          -56.90 DKK
 
 2021-10-28 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -1917.00 DKK
-  Liabilities:Kreditorer:ELG                                      1533.60 DKK
+  Expenses:MedMoms:Hardware:ELG                                   1533.60 DKK
+  Liabilities:Kreditorer:ELG                                     -1917.00 DKK
   Assets:Moms:KoebMoms                                             383.40 DKK
 
 2021-10-28 * "betalt betalt" "CCC betalt"
@@ -237,8 +237,8 @@
   Assets:Bank:BankErhverv                                          -12.00 DKK
 
 2021-10-14 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -5999.00 DKK
-  Liabilities:Kreditorer:ELG                                      4799.20 DKK
+  Expenses:MedMoms:Hardware:ELG                                   4799.20 DKK
+  Liabilities:Kreditorer:ELG                                     -5999.00 DKK
   Assets:Moms:KoebMoms                                            1199.80 DKK
 
 2021-10-14 * "betalt betalt" "CCC betalt"
@@ -298,8 +298,8 @@
   Assets:Bank:BankErhverv                                          -89.80 DKK
 
 2021-10-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-10-04 * "betalt betalt" "CCC betalt"
@@ -331,8 +331,8 @@
   Assets:Bank:BankErhverv                                          -44.95 DKK
 
 2021-10-01 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Internet:Fibia                                 -966.75 DKK
-  Liabilities:Kreditorer:Fibia                                     773.40 DKK
+  Expenses:MedMoms:Internet:Fibia                                  773.40 DKK
+  Liabilities:Kreditorer:Fibia                                    -966.75 DKK
   Assets:Moms:KoebMoms                                             193.35 DKK
 
 2021-10-01 * "betalt betalt" "CCC betalt"
@@ -404,8 +404,8 @@
   Assets:Bank:BankErhverv                                          -25.00 DKK
 
 2021-09-07 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -1599.00 DKK
-  Liabilities:Kreditorer:ELG                                      1279.20 DKK
+  Expenses:MedMoms:Hardware:ELG                                   1279.20 DKK
+  Liabilities:Kreditorer:ELG                                     -1599.00 DKK
   Assets:Moms:KoebMoms                                             319.80 DKK
 
 2021-09-07 * "betalt betalt" "CCC betalt"
@@ -417,8 +417,8 @@
   Assets:Bank:BankErhverv                                       233500.00 DKK
 
 2021-09-06 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-09-06 * "betalt betalt" "CCC betalt"
@@ -466,8 +466,8 @@
   Assets:Bank:BankErhverv                                        93375.00 DKK
 
 2021-08-23 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -1320.00 DKK
-  Liabilities:Kreditorer:ELG                                      1056.00 DKK
+  Expenses:MedMoms:Hardware:ELG                                   1056.00 DKK
+  Liabilities:Kreditorer:ELG                                     -1320.00 DKK
   Assets:Moms:KoebMoms                                             264.00 DKK
 
 2021-08-23 * "betalt betalt" "CCC betalt"
@@ -487,8 +487,8 @@
   Assets:Bank:BankErhverv                                          -56.90 DKK
 
 2021-08-18 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -2199.00 DKK
-  Liabilities:Kreditorer:ELG                                      1759.20 DKK
+  Expenses:MedMoms:Hardware:ELG                                   1759.20 DKK
+  Liabilities:Kreditorer:ELG                                     -2199.00 DKK
   Assets:Moms:KoebMoms                                             439.80 DKK
 
 2021-08-18 * "betalt betalt" "CCC betalt"
@@ -556,8 +556,8 @@
   Assets:Bank:BankErhverv                                          -92.95 DKK
 
 2021-08-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-08-04 * "betalt betalt" "CCC betalt"
@@ -617,8 +617,8 @@
   Assets:Bank:BankErhverv                                          -85.20 DKK
 
 2021-07-08 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hosting:DKHOSTMASTER                            -58.75 DKK
-  Liabilities:Kreditorer:DKHOSTMASTER                               47.00 DKK
+  Expenses:MedMoms:Hosting:DKHOSTMASTER                             47.00 DKK
+  Liabilities:Kreditorer:DKHOSTMASTER                              -58.75 DKK
   Assets:Moms:KoebMoms                                              11.75 DKK
 
 2021-07-08 * "betalt betalt" "CCC betalt"
@@ -654,8 +654,8 @@
   Assets:Bank:BankErhverv                                          -95.65 DKK
 
 2021-07-05 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-07-05 * "betalt betalt" "CCC betalt"
@@ -663,8 +663,8 @@
   Assets:Bank:BankErhverv                                         -348.00 DKK
 
 2021-07-01 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Internet:Fibia                                 -966.75 DKK
-  Liabilities:Kreditorer:Fibia                                     773.40 DKK
+  Expenses:MedMoms:Internet:Fibia                                  773.40 DKK
+  Liabilities:Kreditorer:Fibia                                    -966.75 DKK
   Assets:Moms:KoebMoms                                             193.35 DKK
 
 2021-07-01 * "betalt betalt" "CCC betalt"
@@ -748,8 +748,8 @@
   Assets:Bank:BankErhverv                                         -299.00 DKK
 
 2021-06-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-06-04 * "betalt betalt" "CCC betalt"
@@ -801,8 +801,8 @@
   Assets:Bank:BankErhverv                                          -73.95 DKK
 
 2021-05-20 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hosting:ONECOM                                 -468.00 DKK
-  Liabilities:Kreditorer:ONECOM                                    374.40 DKK
+  Expenses:MedMoms:Hosting:ONECOM                                  374.40 DKK
+  Liabilities:Kreditorer:ONECOM                                   -468.00 DKK
   Assets:Moms:KoebMoms                                              93.60 DKK
 
 2021-05-20 * "betalt betalt" "CCC betalt"
@@ -842,8 +842,8 @@
   Assets:Bank:BankErhverv                                        33750.00 DKK
 
 2021-05-10 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:BilligToner                           -246.00 DKK
-  Liabilities:Kreditorer:BilligToner                               196.80 DKK
+  Expenses:MedMoms:Hardware:BilligToner                            196.80 DKK
+  Liabilities:Kreditorer:BilligToner                              -246.00 DKK
   Assets:Moms:KoebMoms                                              49.20 DKK
 
 2021-05-10 * "betalt betalt" "CCC betalt"
@@ -863,8 +863,8 @@
   Assets:Bank:BankErhverv                                         -568.02 DKK
 
 2021-05-05 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                   -668.00 DKK
-  Liabilities:Kreditorer:ELG                                       534.40 DKK
+  Expenses:MedMoms:Hardware:ELG                                    534.40 DKK
+  Liabilities:Kreditorer:ELG                                      -668.00 DKK
   Assets:Moms:KoebMoms                                             133.60 DKK
 
 2021-05-05 * "betalt betalt" "CCC betalt"
@@ -888,8 +888,8 @@
   Assets:Bank:BankErhverv                                          -94.23 DKK
 
 2021-05-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -348.00 DKK
-  Liabilities:Kreditorer:Telmore                                   278.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                278.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -348.00 DKK
   Assets:Moms:KoebMoms                                              69.60 DKK
 
 2021-05-04 * "betalt betalt" "CCC betalt"
@@ -977,8 +977,8 @@
   Assets:Bank:BankErhverv                                         -181.83 DKK
 
 2021-04-12 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hardware:ELG                                  -5049.00 DKK
-  Liabilities:Kreditorer:ELG                                      4039.20 DKK
+  Expenses:MedMoms:Hardware:ELG                                   4039.20 DKK
+  Liabilities:Kreditorer:ELG                                     -5049.00 DKK
   Assets:Moms:KoebMoms                                            1009.80 DKK
 
 2021-04-12 * "betalt betalt" "CCC betalt"
@@ -1042,8 +1042,8 @@
   Assets:Bank:BankErhverv                                         -288.20 DKK
 
 2021-04-06 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Internet:Fibia                                 -966.75 DKK
-  Liabilities:Kreditorer:Fibia                                     773.40 DKK
+  Expenses:MedMoms:Internet:Fibia                                  773.40 DKK
+  Liabilities:Kreditorer:Fibia                                    -966.75 DKK
   Assets:Moms:KoebMoms                                             193.35 DKK
 
 2021-04-06 * "betalt betalt" "CCC betalt"
@@ -1059,8 +1059,8 @@
   Assets:Bank:BankErhverv                                         -311.72 DKK
 
 2021-04-06 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -338.00 DKK
-  Liabilities:Kreditorer:Telmore                                   270.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                270.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -338.00 DKK
   Assets:Moms:KoebMoms                                              67.60 DKK
 
 2021-04-06 * "betalt betalt" "CCC betalt"
@@ -1240,8 +1240,8 @@
   Assets:Bank:BankErhverv                                         -299.00 DKK
 
 2021-03-05 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -367.00 DKK
-  Liabilities:Kreditorer:Telmore                                   293.60 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                293.60 DKK
+  Liabilities:Kreditorer:Telmore                                  -367.00 DKK
   Assets:Moms:KoebMoms                                              73.40 DKK
 
 2021-03-05 * "betalt betalt" "CCC betalt"
@@ -1301,8 +1301,8 @@
   Assets:Bank:BankErhverv                                         -852.03 DKK
 
 2021-02-05 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -309.00 DKK
-  Liabilities:Kreditorer:Telmore                                   247.20 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                247.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -309.00 DKK
   Assets:Moms:KoebMoms                                              61.80 DKK
 
 2021-02-05 * "betalt betalt" "CCC betalt"
@@ -1330,8 +1330,8 @@
   Assets:Bank:BankErhverv                                       -38144.00 DKK
 
 2021-01-25 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Computer:Proshop                              -2134.00 DKK
-  Liabilities:Kreditorer:Proshop                                  1707.20 DKK
+  Expenses:MedMoms:Computer:Proshop                               1707.20 DKK
+  Liabilities:Kreditorer:Proshop                                 -2134.00 DKK
   Assets:Moms:KoebMoms                                             426.80 DKK
 
 2021-01-25 * "betalt betalt" "CCC betalt"
@@ -1351,8 +1351,8 @@
   Assets:Bank:BankErhverv                                        -5137.52 DKK
 
 2021-01-20 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Hosting:Punktum                                 -50.00 DKK
-  Liabilities:Kreditorer:Punktum                                    40.00 DKK
+  Expenses:MedMoms:Hosting:Punktum                                  40.00 DKK
+  Liabilities:Kreditorer:Punktum                                   -50.00 DKK
   Assets:Moms:KoebMoms                                              10.00 DKK
 
 2021-01-20 * "betalt betalt" "CCC betalt"
@@ -1372,8 +1372,8 @@
   Assets:Bank:BankErhverv                                          -30.00 DKK
 
 2021-01-05 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Computer:Dustin                               -2349.36 DKK
-  Liabilities:Kreditorer:Dustin                                   1879.49 DKK
+  Expenses:MedMoms:Computer:Dustin                                1879.49 DKK
+  Liabilities:Kreditorer:Dustin                                  -2349.36 DKK
   Assets:Moms:KoebMoms                                             469.87 DKK
 
 2021-01-05 * "betalt betalt" "CCC betalt"
@@ -1393,8 +1393,8 @@
   Assets:Bank:BankErhverv                                          -92.82 DKK
 
 2021-01-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Internet:Fibia                                 -966.75 DKK
-  Liabilities:Kreditorer:Fibia                                     773.40 DKK
+  Expenses:MedMoms:Internet:Fibia                                  773.40 DKK
+  Liabilities:Kreditorer:Fibia                                    -966.75 DKK
   Assets:Moms:KoebMoms                                             193.35 DKK
 
 2021-01-04 * "betalt betalt" "CCC betalt"
@@ -1402,8 +1402,8 @@
   Assets:Bank:BankErhverv                                         -966.75 DKK
 
 2021-01-04 * "Posteret betalt" "BBB betalt"
-  Expenses:MedMoms:Telefoni:Telmore                               -238.00 DKK
-  Liabilities:Kreditorer:Telmore                                   190.40 DKK
+  Expenses:MedMoms:Telefoni:Telmore                                190.40 DKK
+  Liabilities:Kreditorer:Telmore                                  -238.00 DKK
   Assets:Moms:KoebMoms                                              47.60 DKK
 
 2021-01-04 * "betalt betalt" "CCC betalt"

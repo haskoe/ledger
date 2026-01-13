@@ -140,8 +140,8 @@ def handle_opdater(ctx):
         ):
             loen_output.append(
                 Transaction(
-                    account1="Expenses:Loen:%s" % (account,),
-                    account2="Liabilities:Loen:%s" % (account,),
+                    account2="Expenses:Loen:%s" % (account,),
+                    account1="Liabilities:Loen:%s" % (account,),
                     amount=amount,
                     date_posted=date_posted,
                     text="Løn",
@@ -161,6 +161,7 @@ def handle_opdater(ctx):
         "Liabilities:Moms:SalgMoms",
         "Assets:Moms:KoebMoms",
         "Equity:Opening-Balances",
+        "Equity:Korrektion",
     ]
 
     # opdater kontoplan fil

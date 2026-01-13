@@ -60,3 +60,14 @@ moms (som regel) med 3 konti:
 4 stk. 2-konto transaktioner (ATP,Gebyr,Skat,Ansat)
 1) Expenses:Loen:<konto> + 
 2) Expenses:Loen:<konto> -
+
+## moms-luk
+1) Assets:Moms:KoebMoms +
+2) Liabilities:Moms:SalgMoms +
+3) Liabilities:Moms:SkyldigMoms -
+4) Equity:Afrunding +
+
+## luk af regnskabsperiode
+Kreditorer
+Debitorer
+
