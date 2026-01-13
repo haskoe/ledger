@@ -22,21 +22,30 @@ def handle_opdater(ctx):
         for bank_transaction in reversed(bank_transactions):
             # match account
             desc = bank_transaction.description.casefold()
-            account_matches = [
-                (a, srch_str)
-                for a, regex, srch_str in ctx.account_regexes
-                if srch_str in desc
-            ]
-            if len(account_matches) == 0:
-                errors.append("Ingen matches for %s" % (desc,))
-                continue
 
-            account_matches = list(set(account_matches))
-            if len(account_matches) > 1:
-                # vi tager den med bedste match
-                account_matches.sort(key=lambda x: -len(x[1]))
-                # print(account_matches)
-            account_match = account_matches[0][0]
+            bank_row_key = f"{util.format_date(bank_transaction.date_posted)};{bank_transaction.description}"
+            if bank_row_key in ctx.bank_to_invoice_date:
+                print("Matched bank row key:", bank_row_key)
+                account_match = ctx.bank_to_invoice_date[bank_row_key][
+                    const.ACCOUNT_NAME
+                ]
+            else:
+                account_matches = [
+                    (a, srch_str)
+                    for a, regex, srch_str in ctx.account_regexes
+                    if srch_str in desc
+                ]
+                if len(account_matches) == 0:
+                    errors.append("Ingen matches for %s" % (desc,))
+                    continue
+
+                account_matches = list(set(account_matches))
+                if len(account_matches) > 1:
+                    # vi tager den med bedste match
+                    account_matches.sort(key=lambda x: -len(x[1]))
+                    # print(account_matches)
+                account_match = account_matches[0][0]
+
             if account_match.casefold() not in ctx.all_accounts:
                 errors.append(
                     "Konto %s (matchet fra %s) findes ikke i ctx.all_accounts"
@@ -47,14 +56,6 @@ def handle_opdater(ctx):
             full_account_name = ctx.all_accounts[account_match.casefold()][1]
             account_name = full_account_name.split(":")[-1]
             account_group = ctx.all_accounts[account_match.casefold()][0]
-
-            bank_row_key = f"{util.format_date(bank_transaction.date_posted)};{bank_transaction.description}"
-            if bank_row_key in ctx.bank_to_invoice_date:
-                print(ctx.bank_to_invoice_date[bank_row_key])
-                account_name = ctx.bank_to_invoice_date[bank_row_key][
-                    const.ACCOUNT_NAME
-                ]
-                continue
 
             # transaktionstype hvor der foerst ses om der er en tilknyttet account_group og herefter account:_name
             account_group_split = account_group.split(":")
