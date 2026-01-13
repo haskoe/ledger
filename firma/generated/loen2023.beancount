@@ -1,0 +1,143 @@
+2023-01-31 * "Løn" "Løn LoenATP. Periode jan"
+  Liabilities:Loen:SkyldigLoenATP                                  -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2023-01-31 * "Løn" "Løn LoenAnsat. Periode jan"
+  Liabilities:Loen:SkyldigLoenAnsat                             -33496.43 DKK
+  Expenses:Loen:LoenAnsat                                        33496.43 DKK
+
+2023-01-31 * "Løn" "Løn LoenGebyr. Periode jan"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-01-31 * "Løn" "Løn LoenSkat. Periode jan"
+  Liabilities:Loen:SkyldigLoenSkat                              -19653.00 DKK
+  Expenses:Loen:LoenSkat                                         19653.00 DKK
+
+2023-03-31 * "Løn" "Løn LoenATP. Periode feb-mar"
+  Liabilities:Loen:SkyldigLoenATP                                 -189.34 DKK
+  Expenses:Loen:LoenATP                                            189.34 DKK
+
+2023-03-31 * "Løn" "Løn LoenAnsat. Periode feb-mar"
+  Liabilities:Loen:SkyldigLoenAnsat                             -64444.76 DKK
+  Expenses:Loen:LoenAnsat                                        64444.76 DKK
+
+2023-03-31 * "Løn" "Løn LoenGebyr. Periode feb-mar"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-03-31 * "Løn" "Løn LoenSkat. Periode feb-mar"
+  Liabilities:Loen:SkyldigLoenSkat                              -39357.00 DKK
+  Expenses:Loen:LoenSkat                                         39357.00 DKK
+
+2023-04-30 * "Løn" "Løn LoenATP. Periode apr"
+  Liabilities:Loen:SkyldigLoenATP                                  -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2023-04-30 * "Løn" "Løn LoenAnsat. Periode apr"
+  Liabilities:Loen:SkyldigLoenAnsat                             -32340.13 DKK
+  Expenses:Loen:LoenAnsat                                        32340.13 DKK
+
+2023-04-30 * "Løn" "Løn LoenGebyr. Periode apr"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-04-30 * "Løn" "Løn LoenSkat. Periode apr"
+  Liabilities:Loen:SkyldigLoenSkat                              -19653.00 DKK
+  Expenses:Loen:LoenSkat                                         19653.00 DKK
+
+2023-05-31 * "Løn" "Løn LoenATP. Periode maj"
+  Liabilities:Loen:SkyldigLoenATP                                  -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2023-05-31 * "Løn" "Løn LoenAnsat. Periode maj"
+  Liabilities:Loen:SkyldigLoenAnsat                             -31747.06 DKK
+  Expenses:Loen:LoenAnsat                                        31747.06 DKK
+
+2023-05-31 * "Løn" "Løn LoenGebyr. Periode maj"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-05-31 * "Løn" "Løn LoenSkat. Periode maj"
+  Liabilities:Loen:SkyldigLoenSkat                              -19653.00 DKK
+  Expenses:Loen:LoenSkat                                         19653.00 DKK
+
+2023-06-30 * "Løn" "Løn LoenATP. Periode jun"
+  Liabilities:Loen:SkyldigLoenATP                                  -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2023-06-30 * "Løn" "Løn LoenAnsat. Periode jun"
+  Liabilities:Loen:SkyldigLoenAnsat                             -33884.35 DKK
+  Expenses:Loen:LoenAnsat                                        33884.35 DKK
+
+2023-06-30 * "Løn" "Løn LoenGebyr. Periode jun"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-06-30 * "Løn" "Løn LoenSkat. Periode jun"
+  Liabilities:Loen:SkyldigLoenSkat                              -19653.00 DKK
+  Expenses:Loen:LoenSkat                                         19653.00 DKK
+
+2023-08-31 * "Løn" "Løn LoenATP. Periode aug"
+  Liabilities:Loen:SkyldigLoenATP                                 -189.34 DKK
+  Expenses:Loen:LoenATP                                            189.34 DKK
+
+2023-08-31 * "Løn" "Løn LoenAnsat. Periode aug"
+  Liabilities:Loen:SkyldigLoenAnsat                             -63007.03 DKK
+  Expenses:Loen:LoenAnsat                                        63007.03 DKK
+
+2023-08-31 * "Løn" "Løn LoenGebyr. Periode aug"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-08-31 * "Løn" "Løn LoenSkat. Periode aug"
+  Liabilities:Loen:SkyldigLoenSkat                              -39299.00 DKK
+  Expenses:Loen:LoenSkat                                         39299.00 DKK
+
+2023-09-29 * "Løn" "Løn LoenATP. Periode sep"
+  Liabilities:Loen:SkyldigLoenATP                                  -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2023-09-29 * "Løn" "Løn LoenAnsat. Periode sep"
+  Liabilities:Loen:SkyldigLoenAnsat                             -31996.97 DKK
+  Expenses:Loen:LoenAnsat                                        31996.97 DKK
+
+2023-09-29 * "Løn" "Løn LoenGebyr. Periode sep"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-09-29 * "Løn" "Løn LoenSkat. Periode sep"
+  Liabilities:Loen:SkyldigLoenSkat                              -19654.00 DKK
+  Expenses:Loen:LoenSkat                                         19654.00 DKK
+
+2023-11-30 * "Løn" "Løn LoenATP. Periode okt-nov"
+  Liabilities:Loen:SkyldigLoenATP                                 -189.34 DKK
+  Expenses:Loen:LoenATP                                            189.34 DKK
+
+2023-11-30 * "Løn" "Løn LoenAnsat. Periode okt-nov"
+  Liabilities:Loen:SkyldigLoenAnsat                             -64252.85 DKK
+  Expenses:Loen:LoenAnsat                                        64252.85 DKK
+
+2023-11-30 * "Løn" "Løn LoenGebyr. Periode okt-nov"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-11-30 * "Løn" "Løn LoenSkat. Periode okt-nov"
+  Liabilities:Loen:SkyldigLoenSkat                              -23642.00 DKK
+  Expenses:Loen:LoenSkat                                         23642.00 DKK
+
+2023-12-31 * "Løn" "Løn LoenATP. Periode dec"
+  Liabilities:Loen:SkyldigLoenATP                                  -94.67 DKK
+  Expenses:Loen:LoenATP                                             94.67 DKK
+
+2023-12-31 * "Løn" "Løn LoenAnsat. Periode dec"
+  Liabilities:Loen:SkyldigLoenAnsat                             -32126.42 DKK
+  Expenses:Loen:LoenAnsat                                        32126.42 DKK
+
+2023-12-31 * "Løn" "Løn LoenGebyr. Periode dec"
+  Liabilities:Loen:SkyldigLoenGebyr                                 -1.00 DKK
+  Expenses:Loen:LoenGebyr                                            1.00 DKK
+
+2023-12-31 * "Løn" "Løn LoenSkat. Periode dec"
+  Liabilities:Loen:SkyldigLoenSkat                              -20517.00 DKK
+  Expenses:Loen:LoenSkat                                         20517.00 DKK

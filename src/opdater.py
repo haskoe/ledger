@@ -25,7 +25,6 @@ def handle_opdater(ctx):
 
             bank_row_key = f"{util.format_date(bank_transaction.date_posted)};{bank_transaction.description}"
             if bank_row_key in ctx.bank_to_invoice_date:
-                print("Matched bank row key:", bank_row_key)
                 account_match = ctx.bank_to_invoice_date[bank_row_key][
                     const.ACCOUNT_NAME
                 ]
@@ -174,7 +173,7 @@ def handle_opdater(ctx):
                 loen_output.append(
                     Transaction(
                         account2="Expenses:Loen:%s" % (account,),
-                        account1="Liabilities:Loen:%s" % (account,),
+                        account1="Liabilities:Loen:Skyldig%s" % (account,),
                         amount=amount,
                         date_posted=date_posted,
                         text="Løn",

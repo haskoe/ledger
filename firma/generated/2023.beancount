@@ -51,7 +51,7 @@
   Assets:Bank:BankErhverv                                         -500.00 DKK
 
 2023-12-11 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          39299.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               39299.00 DKK
   Assets:Bank:BankErhverv                                       -39299.00 DKK
 
 2023-12-07 * "Posteret" "BBB"
@@ -200,7 +200,7 @@
   Assets:Bank:BankErhverv                                         -145.00 DKK
 
 2023-10-31 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          19654.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               19654.00 DKK
   Assets:Bank:BankErhverv                                       -19654.00 DKK
 
 2023-10-26 * "Posteret" "BBB"
@@ -232,7 +232,7 @@
   Assets:Bank:BankErhverv                                          -69.80 DKK
 
 2023-10-16 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              554.00 DKK
+  Liabilities:Loen:SkyldigLoenATP                                  554.00 DKK
   Assets:Bank:BankErhverv                                         -554.00 DKK
 
 2023-10-13 * "Posteret" "BBB"
@@ -252,7 +252,7 @@
   Assets:Bank:BankErhverv                                          -74.75 DKK
 
 2023-10-10 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          19654.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               19654.00 DKK
   Assets:Bank:BankErhverv                                       -19654.00 DKK
 
 2023-10-10 * "Posteret" "BBB"
@@ -373,7 +373,7 @@
   Assets:Bank:BankErhverv                                          -72.35 DKK
 
 2023-09-11 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          39299.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               39299.00 DKK
   Assets:Bank:BankErhverv                                       -39299.00 DKK
 
 2023-09-07 * "Posteret" "BBB"
@@ -569,7 +569,7 @@
   Assets:Bank:BankErhverv                                         -837.47 DKK
 
 2023-07-14 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              554.00 DKK
+  Liabilities:Loen:SkyldigLoenATP                                  554.00 DKK
   Assets:Bank:BankErhverv                                         -554.00 DKK
 
 2023-07-07 * "Posteret" "BBB"
@@ -694,7 +694,7 @@
   Assets:Bank:BankErhverv                                          -77.85 DKK
 
 2023-06-12 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          19654.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               19654.00 DKK
   Assets:Bank:BankErhverv                                       -19654.00 DKK
 
 2023-06-08 * "Posteret" "BBB"
@@ -807,7 +807,7 @@
   Assets:Bank:BankErhverv                                        68900.00 DKK
 
 2023-05-10 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          19654.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               19654.00 DKK
   Assets:Bank:BankErhverv                                       -19654.00 DKK
 
 2023-05-09 * "Posteret" "BBB"
@@ -908,7 +908,7 @@
   Assets:Bank:BankErhverv                                          -85.90 DKK
 
 2023-04-14 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              585.75 DKK
+  Liabilities:Loen:SkyldigLoenATP                                  585.75 DKK
   Assets:Bank:BankErhverv                                         -585.75 DKK
 
 2023-04-12 * "Posteret" "BBB"
@@ -928,7 +928,7 @@
   Assets:Bank:BankErhverv                                         -412.68 DKK
 
 2023-04-11 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          39357.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               39357.00 DKK
   Assets:Bank:BankErhverv                                       -39357.00 DKK
 
 2023-04-11 * "Posteret" "BBB"
@@ -1150,7 +1150,7 @@
   Assets:Bank:BankErhverv                                        -3000.00 DKK
 
 2023-02-10 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          19654.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               19654.00 DKK
   Assets:Bank:BankErhverv                                       -19654.00 DKK
 
 2023-02-10 * "Posteret" "BBB"
@@ -1227,7 +1227,7 @@
   Assets:Bank:BankErhverv                                          -95.85 DKK
 
 2023-01-20 * "betalt" "CCC"
-  Liabilities:Loen:ATP:SkyldigLoenATP                              293.09 DKK
+  Liabilities:Loen:SkyldigLoenATP                                  293.09 DKK
   Assets:Bank:BankErhverv                                         -293.09 DKK
 
 2023-01-18 * "Posteret" "BBB"
@@ -1239,7 +1239,7 @@
   Assets:Bank:BankErhverv                                          -62.90 DKK
 
 2023-01-17 * "betalt" "CCC"
-  Liabilities:Loen:Skat:SkyldigLoenSkat                          19820.00 DKK
+  Liabilities:Loen:SkyldigLoenSkat                               19820.00 DKK
   Assets:Bank:BankErhverv                                       -19820.00 DKK
 
 2023-01-17 * "betalt" "CCC"

@@ -32,8 +32,8 @@ LoenATP;Expenses:Loen
 LoenGebyr;Expenses:Loen
 LoenSkat;Expenses:Loen
 LoenAnsat;Expenses:Loen
-SkyldigLoenATP;Liabilities:Loen:ATP
-SkyldigLoenSkat;Liabilities:Loen:Skat
+SkyldigLoenATP;Liabilities:Loen
+SkyldigLoenSkat;Liabilities:Loen
 SkyldigLoenAnsat;Liabilities:Loen
 SkyldigLoenGebyr;Liabilities:Loen
 AcontoSkat;Assets:Skat
@@ -64,6 +64,7 @@ Redgate;Expenses:UdenMoms:Software
 Powerdk;Expenses:MedMoms:Hardware
 AvCables;Expenses:MedMoms:Hardware
 Computersalg;Expenses:MedMoms:Computer
+Komplett;Expenses:MedMoms:Computer
 FComputer;Expenses:MedMoms:Computer
 GrannysHouse;Expenses:UdenMoms:Mad
 DenHeltRigtigeBager;Expenses:UdenMoms:Mad
@@ -71,3 +72,5 @@ OnePassword;Expenses:UdenMoms:Software
 SMSSBoost;Expenses:UdenMoms:Software
 PrivatHaevning;Assets:Ansat
 EspressoHouse;Expenses:UdenMoms:Mad
+Hetzner;Expenses:UdenMoms:Hosting
+RundeRie;Expenses:UdenMoms:Mad

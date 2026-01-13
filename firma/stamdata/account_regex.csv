@@ -7,14 +7,16 @@ OVERFØRSEL;SkyldigLoenGebyr
 AFREGNING TIL TOLD & SKAT;SkyldigLoenSkat
 proshop;Proshop
 Betalingsservice ATP - SAMLET BETALING;SkyldigLoenATP
-betalingsservice atp livslang pension;AtpLivslangPension
-atp livslang pension;AtpLivslangPension
+Aftalenr. 903811345;AtpLivslangPension
 atp - samlet betaling;SkyldigLoenATP
 forsikring;AON
+aon dk insurance;AON
 punktum;Punktum
 DAN CATERING;Dancatering
+MobilePay Nota 2012683922;Dancatering
 POLITIKEN;Politiken
 NATUR-ENERGI;Naturenergi
+nrgi elhandel;Naturenergi
 OK Plus;OkPlus
 Gebyr;GebyrBank
 LIDL;LIDL
@@ -22,7 +24,7 @@ ALDI;ALDI
 Rema;Rema1000
 Netto;Netto
 Coop;Coop365
-moms ;SkyldigMoms
+moms;SkyldigMoms
 Skatteforvaltninge;SkyldigMoms
 SKAT - Skattekonto;SkyldigMoms
 Virksomhedsskat;AcontoSkat
@@ -80,11 +82,15 @@ av-cables;AvCables
 yousee;Yousee
 computersalg;Computersalg
 fcomputer;FComputer
+komplett.dk;Komplett
 granny's house;GrannysHouse
 espresso house;EspressoHouse
 1password;OnePassword
 MYCOMMERCE.COM;SMSSBoost
 defence ukraine danmark;Sponsorater
+rynkeby;Sponsorater
 5081sj;Sponsorater
 Pengeautomat ;PrivatHaevning
 skattekontoen;AcontoSkat
+hetzner;Hetzner
+runde rie;RundeRie
