@@ -191,7 +191,7 @@ def handle_opdater(ctx):
             "Liabilities:Moms:SalgMoms",
             "Assets:Moms:KoebMoms",
             "Equity:Opening-Balances",
-            "Equity:Korrektion",
+            "Equity:MomsKorrektion",
         ]
 
     # opdater kontoplan fil

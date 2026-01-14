@@ -27,33 +27,3 @@
   Income:Salg:GOTTIT                                            -52140.00 DKK
   Assets:Debitorer:GOTTIT                                        65175.00 DKK
   Liabilities:Moms:SalgMoms                                     -13035.00 DKK
-
-2022-07-31 * "Salg" "Salg GOTTIT. Periode jul. Timer: 24 * 948 = 22752"
-  Income:Salg:GOTTIT                                            -22752.00 DKK
-  Assets:Debitorer:GOTTIT                                        28440.00 DKK
-  Liabilities:Moms:SalgMoms                                      -5688.00 DKK
-
-2022-08-31 * "Salg" "Salg GOTTIT. Periode aug. Timer: 59 * 948 = 55932"
-  Income:Salg:GOTTIT                                            -55932.00 DKK
-  Assets:Debitorer:GOTTIT                                        69915.00 DKK
-  Liabilities:Moms:SalgMoms                                     -13983.00 DKK
-
-2022-09-30 * "Salg" "Salg GOTTIT. Periode sep. Timer: 77 * 948 = 72996"
-  Income:Salg:GOTTIT                                            -72996.00 DKK
-  Assets:Debitorer:GOTTIT                                        91245.00 DKK
-  Liabilities:Moms:SalgMoms                                     -18249.00 DKK
-
-2022-10-31 * "Salg" "Salg GOTTIT. Periode okt. Timer: 49 * 948 = 46452"
-  Income:Salg:GOTTIT                                            -46452.00 DKK
-  Assets:Debitorer:GOTTIT                                        58065.00 DKK
-  Liabilities:Moms:SalgMoms                                     -11613.00 DKK
-
-2022-11-30 * "Salg" "Salg GOTTIT. Periode nov. Timer: 68 * 948 = 64464"
-  Income:Salg:GOTTIT                                            -64464.00 DKK
-  Assets:Debitorer:GOTTIT                                        80580.00 DKK
-  Liabilities:Moms:SalgMoms                                     -16116.00 DKK
-
-2022-12-31 * "Salg" "Salg GOTTIT. Periode dec. Timer: 43 * 948 = 40764"
-  Income:Salg:GOTTIT                                            -40764.00 DKK
-  Assets:Debitorer:GOTTIT                                        50955.00 DKK
-  Liabilities:Moms:SalgMoms                                     -10191.00 DKK
