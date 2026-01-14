@@ -14,7 +14,7 @@ def handle_moms_luk(ctx):
     transactions = bc.account_in_period(SKYLDIG_MOMS, date(1900, 1, 1), ctx.enddate)
     diff = sum([amount for acc, amount in transactions])
     if diff != 0:
-        print("Der er aabne SKYLDIG_MOMS transaktioner", transactions)
+        print(f"SKYLDIG_MOMS konto er ikke i nul. Diff: {diff}")
         return
 
     # saa skal vi have fat i koebs og salgs moms i periode

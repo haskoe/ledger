@@ -9,3 +9,8 @@
 2020-12-31 * "Bank saldo" "Bank ultimo 2020"
   Equity:Opening-Balances        -1279251.09 DKK
   Assets:Bank:BankErhverv         1279251.09 DKK
+
+2020-12-31 * "Salg" "Salg GOTTIT. Periode dec. Timer: 83 * 900 = 74700"
+  Equity:Opening-Balances               -93375.00 DKK
+  Assets:Debitorer:GOTTIT               93375.00 DKK
+  
