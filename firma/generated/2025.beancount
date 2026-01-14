@@ -1,0 +1,805 @@
+2025-12-30 * "betalt" "CCC"
+  Expenses:Finansielt:Gebyrer:GebyrBank                            850.50 DKK
+  Assets:Bank:BankErhverv                                         -850.50 DKK
+
+2025-12-30 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-12-29 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              97998.44 DKK
+  Assets:Bank:BankErhverv                                       -97998.44 DKK
+
+2025-12-29 * "Posteret" "BBB"
+  Expenses:MedMoms:Sponsorater:Sponsorater                        4000.00 DKK
+  Liabilities:Kreditorer:Sponsorater                             -5000.00 DKK
+  Assets:Moms:KoebMoms                                            1000.00 DKK
+
+2025-12-29 * "betalt" "CCC"
+  Liabilities:Kreditorer:Sponsorater                              5000.00 DKK
+  Assets:Bank:BankErhverv                                        -5000.00 DKK
+
+2025-12-29 * "Posteret" "BBB"
+  Expenses:MedMoms:Sponsorater:Sponsorater                        2000.00 DKK
+  Liabilities:Kreditorer:Sponsorater                             -2500.00 DKK
+  Assets:Moms:KoebMoms                                             500.00 DKK
+
+2025-12-29 * "betalt" "CCC"
+  Liabilities:Kreditorer:Sponsorater                              2500.00 DKK
+  Assets:Bank:BankErhverv                                        -2500.00 DKK
+
+2025-12-16 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-12-16 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -39975.00 DKK
+  Assets:Bank:BankErhverv                                        39975.00 DKK
+
+2025-12-16 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:TreDanmark                             336.00 DKK
+  Liabilities:Kreditorer:TreDanmark                               -420.00 DKK
+  Assets:Moms:KoebMoms                                              84.00 DKK
+
+2025-12-16 * "betalt" "CCC"
+  Liabilities:Kreditorer:TreDanmark                                420.00 DKK
+  Assets:Bank:BankErhverv                                         -420.00 DKK
+
+2025-12-12 * "Posteret" "BBB"
+  Expenses:UdenMoms:Software:Github                                 52.15 DKK
+  Liabilities:Kreditorer:Github                                    -52.15 DKK
+
+2025-12-12 * "betalt" "CCC"
+  Liabilities:Kreditorer:Github                                     52.15 DKK
+  Assets:Bank:BankErhverv                                          -52.15 DKK
+
+2025-12-08 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-12-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-11-26 * "Posteret" "BBB"
+  Expenses:MedMoms:Computer:Proshop                               2430.07 DKK
+  Liabilities:Kreditorer:Proshop                                 -3037.59 DKK
+  Assets:Moms:KoebMoms                                             607.52 DKK
+
+2025-11-26 * "betalt" "CCC"
+  Liabilities:Kreditorer:Proshop                                  3037.59 DKK
+  Assets:Bank:BankErhverv                                        -3037.59 DKK
+
+2025-11-20 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-11-20 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-11-18 * "betalt" "CCC"
+  Expenses:Finansielt:Gebyrer:GebyrBank                            250.00 DKK
+  Assets:Bank:BankErhverv                                         -250.00 DKK
+
+2025-11-18 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -69290.00 DKK
+  Assets:Bank:BankErhverv                                        69290.00 DKK
+
+2025-11-11 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-11-03 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 30.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -30.00 DKK
+
+2025-11-03 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                30.00 DKK
+  Assets:Bank:BankErhverv                                          -30.00 DKK
+
+2025-11-03 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-11-03 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-10-31 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:Mytrendyphone                          181.60 DKK
+  Liabilities:Kreditorer:Mytrendyphone                            -227.00 DKK
+  Assets:Moms:KoebMoms                                              45.40 DKK
+
+2025-10-31 * "betalt" "CCC"
+  Liabilities:Kreditorer:Mytrendyphone                             227.00 DKK
+  Assets:Bank:BankErhverv                                         -227.00 DKK
+
+2025-10-31 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:TreDanmark                             216.00 DKK
+  Liabilities:Kreditorer:TreDanmark                               -270.00 DKK
+  Assets:Moms:KoebMoms                                              54.00 DKK
+
+2025-10-31 * "betalt" "CCC"
+  Liabilities:Kreditorer:TreDanmark                                270.00 DKK
+  Assets:Bank:BankErhverv                                         -270.00 DKK
+
+2025-10-31 * "Posteret" "BBB"
+  Expenses:UdenMoms:Hosting:Hetzner                                 57.19 DKK
+  Liabilities:Kreditorer:Hetzner                                   -57.19 DKK
+
+2025-10-31 * "betalt" "CCC"
+  Liabilities:Kreditorer:Hetzner                                    57.19 DKK
+  Assets:Bank:BankErhverv                                          -57.19 DKK
+
+2025-10-30 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 40.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -40.00 DKK
+
+2025-10-30 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                40.00 DKK
+  Assets:Bank:BankErhverv                                          -40.00 DKK
+
+2025-10-28 * "betalt" "CCC"
+  Assets:Ansat:PrivatHaevning                                     1309.94 DKK
+  Assets:Bank:BankErhverv                                        -1309.94 DKK
+
+2025-10-28 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:Powerdk                                410.40 DKK
+  Liabilities:Kreditorer:Powerdk                                  -513.00 DKK
+  Assets:Moms:KoebMoms                                             102.60 DKK
+
+2025-10-28 * "betalt" "CCC"
+  Liabilities:Kreditorer:Powerdk                                   513.00 DKK
+  Assets:Bank:BankErhverv                                         -513.00 DKK
+
+2025-10-27 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 42.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -42.00 DKK
+
+2025-10-27 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                42.00 DKK
+  Assets:Bank:BankErhverv                                          -42.00 DKK
+
+2025-10-23 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 10.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -10.00 DKK
+
+2025-10-23 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                10.00 DKK
+  Assets:Bank:BankErhverv                                          -10.00 DKK
+
+2025-10-23 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 12.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -12.00 DKK
+
+2025-10-23 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                12.00 DKK
+  Assets:Bank:BankErhverv                                          -12.00 DKK
+
+2025-10-23 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 30.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -30.00 DKK
+
+2025-10-23 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                30.00 DKK
+  Assets:Bank:BankErhverv                                          -30.00 DKK
+
+2025-10-20 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 30.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -30.00 DKK
+
+2025-10-20 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                30.00 DKK
+  Assets:Bank:BankErhverv                                          -30.00 DKK
+
+2025-10-15 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -87945.00 DKK
+  Assets:Bank:BankErhverv                                        87945.00 DKK
+
+2025-10-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               19585.00 DKK
+  Assets:Bank:BankErhverv                                       -19585.00 DKK
+
+2025-10-09 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 10.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -10.00 DKK
+
+2025-10-09 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                10.00 DKK
+  Assets:Bank:BankErhverv                                          -10.00 DKK
+
+2025-10-09 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 30.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -30.00 DKK
+
+2025-10-09 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                30.00 DKK
+  Assets:Bank:BankErhverv                                          -30.00 DKK
+
+2025-10-07 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-10-07 * "betalt" "CCC"
+  Assets:Ansat:PrivatHaevning                                      716.01 DKK
+  Assets:Bank:BankErhverv                                         -716.01 DKK
+
+2025-10-07 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-10-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-10-06 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 23.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -23.00 DKK
+
+2025-10-06 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                23.00 DKK
+  Assets:Bank:BankErhverv                                          -23.00 DKK
+
+2025-10-03 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:ELG                                   2846.40 DKK
+  Liabilities:Kreditorer:ELG                                     -3558.00 DKK
+  Assets:Moms:KoebMoms                                             711.60 DKK
+
+2025-10-03 * "betalt" "CCC"
+  Liabilities:Kreditorer:ELG                                      3558.00 DKK
+  Assets:Bank:BankErhverv                                        -3558.00 DKK
+
+2025-10-02 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 27.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -27.00 DKK
+
+2025-10-02 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                27.00 DKK
+  Assets:Bank:BankErhverv                                          -27.00 DKK
+
+2025-10-02 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              31062.76 DKK
+  Assets:Bank:BankErhverv                                       -31062.76 DKK
+
+2025-10-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-10-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-10-01 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenATP                                 2264.21 DKK
+  Assets:Bank:BankErhverv                                        -2264.21 DKK
+
+2025-10-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Internet:Fibia                                  869.40 DKK
+  Liabilities:Kreditorer:Fibia                                   -1086.75 DKK
+  Assets:Moms:KoebMoms                                             217.35 DKK
+
+2025-10-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Fibia                                    1086.75 DKK
+  Assets:Bank:BankErhverv                                        -1086.75 DKK
+
+2025-09-30 * "betalt" "CCC"
+  Expenses:Finansielt:Gebyrer:GebyrBank                            851.50 DKK
+  Assets:Bank:BankErhverv                                         -851.50 DKK
+
+2025-09-30 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:TreDanmark                             322.45 DKK
+  Liabilities:Kreditorer:TreDanmark                               -403.06 DKK
+  Assets:Moms:KoebMoms                                              80.61 DKK
+
+2025-09-30 * "betalt" "CCC"
+  Liabilities:Kreditorer:TreDanmark                                403.06 DKK
+  Assets:Bank:BankErhverv                                         -403.06 DKK
+
+2025-09-29 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:CimtKantine                                 30.00 DKK
+  Liabilities:Kreditorer:CimtKantine                               -30.00 DKK
+
+2025-09-29 * "betalt" "CCC"
+  Liabilities:Kreditorer:CimtKantine                                30.00 DKK
+  Assets:Bank:BankErhverv                                          -30.00 DKK
+
+2025-09-29 * "Posteret" "BBB"
+  Expenses:UdenMoms:Mad:Netto                                      134.25 DKK
+  Liabilities:Kreditorer:Netto                                    -134.25 DKK
+
+2025-09-29 * "betalt" "CCC"
+  Liabilities:Kreditorer:Netto                                     134.25 DKK
+  Assets:Bank:BankErhverv                                         -134.25 DKK
+
+2025-09-23 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              61448.76 DKK
+  Assets:Bank:BankErhverv                                       -61448.76 DKK
+
+2025-09-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               39100.00 DKK
+  Assets:Bank:BankErhverv                                       -39100.00 DKK
+
+2025-09-09 * "Posteret" "BBB"
+  Expenses:UdenMoms:Software:Redgate                              3347.70 DKK
+  Liabilities:Kreditorer:Redgate                                 -3347.70 DKK
+
+2025-09-09 * "betalt" "CCC"
+  Liabilities:Kreditorer:Redgate                                  3347.70 DKK
+  Assets:Bank:BankErhverv                                        -3347.70 DKK
+
+2025-09-09 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-09-09 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-09-08 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:ELG                                   1617.60 DKK
+  Liabilities:Kreditorer:ELG                                     -2022.00 DKK
+  Assets:Moms:KoebMoms                                             404.40 DKK
+
+2025-09-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:ELG                                      2022.00 DKK
+  Assets:Bank:BankErhverv                                        -2022.00 DKK
+
+2025-09-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-09-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-09-01 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                             -61448.76 DKK
+  Assets:Bank:BankErhverv                                        61448.76 DKK
+
+2025-09-01 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              61448.76 DKK
+  Assets:Bank:BankErhverv                                       -61448.76 DKK
+
+2025-09-01 * "betalt" "CCC"
+  Liabilities:Moms:SkyldigMoms                                   74620.00 DKK
+  Assets:Bank:BankErhverv                                       -74620.00 DKK
+
+2025-08-29 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-08-29 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:ELG                                    399.20 DKK
+  Liabilities:Kreditorer:ELG                                      -499.00 DKK
+  Assets:Moms:KoebMoms                                              99.80 DKK
+
+2025-08-29 * "betalt" "CCC"
+  Liabilities:Kreditorer:ELG                                       499.00 DKK
+  Assets:Bank:BankErhverv                                         -499.00 DKK
+
+2025-08-14 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -71955.00 DKK
+  Assets:Bank:BankErhverv                                        71955.00 DKK
+
+2025-08-12 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-08-08 * "Posteret" "BBB"
+  Expenses:MedMoms:Computer:Proshop                                261.60 DKK
+  Liabilities:Kreditorer:Proshop                                  -327.00 DKK
+  Assets:Moms:KoebMoms                                              65.40 DKK
+
+2025-08-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Proshop                                   327.00 DKK
+  Assets:Bank:BankErhverv                                         -327.00 DKK
+
+2025-08-08 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-08-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-08-08 * "Posteret" "BBB"
+  Expenses:UdenMoms:Hosting:Hetzner                                 57.14 DKK
+  Liabilities:Kreditorer:Hetzner                                   -57.14 DKK
+
+2025-08-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Hetzner                                    57.14 DKK
+  Assets:Bank:BankErhverv                                          -57.14 DKK
+
+2025-08-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-08-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-07-31 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:ELG                                   2066.40 DKK
+  Liabilities:Kreditorer:ELG                                     -2583.00 DKK
+  Assets:Moms:KoebMoms                                             516.60 DKK
+
+2025-07-31 * "betalt" "CCC"
+  Liabilities:Kreditorer:ELG                                      2583.00 DKK
+  Assets:Bank:BankErhverv                                        -2583.00 DKK
+
+2025-07-15 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -61295.00 DKK
+  Assets:Bank:BankErhverv                                        61295.00 DKK
+
+2025-07-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               39160.00 DKK
+  Assets:Bank:BankErhverv                                       -39160.00 DKK
+
+2025-07-09 * "betalt" "CCC"
+  Liabilities:Dividend-Payable:UdbytteSkat                       36450.00 DKK
+  Assets:Bank:BankErhverv                                       -36450.00 DKK
+
+2025-07-08 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-07-08 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-07-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-07-07 * "Posteret" "BBB"
+  Expenses:MedMoms:Revisor:REVISOR                               10000.00 DKK
+  Liabilities:Kreditorer:REVISOR                                -12500.00 DKK
+  Assets:Moms:KoebMoms                                            2500.00 DKK
+
+2025-07-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:REVISOR                                 12500.00 DKK
+  Assets:Bank:BankErhverv                                       -12500.00 DKK
+
+2025-07-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-07-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-07-01 * "betalt" "CCC"
+  Liabilities:Dividend-Payable:UdbytteEjer                       98550.00 DKK
+  Assets:Bank:BankErhverv                                       -98550.00 DKK
+
+2025-07-01 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              63636.66 DKK
+  Assets:Bank:BankErhverv                                       -63636.66 DKK
+
+2025-07-01 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenATP                                 1474.75 DKK
+  Assets:Bank:BankErhverv                                        -1474.75 DKK
+
+2025-07-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Internet:Fibia                                  869.40 DKK
+  Liabilities:Kreditorer:Fibia                                   -1086.75 DKK
+  Assets:Moms:KoebMoms                                             217.35 DKK
+
+2025-07-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Fibia                                    1086.75 DKK
+  Assets:Bank:BankErhverv                                        -1086.75 DKK
+
+2025-06-30 * "betalt" "CCC"
+  Expenses:Finansielt:Gebyrer:GebyrBank                            850.00 DKK
+  Assets:Bank:BankErhverv                                         -850.00 DKK
+
+2025-06-13 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -58630.00 DKK
+  Assets:Bank:BankErhverv                                        58630.00 DKK
+
+2025-06-11 * "Posteret" "BBB"
+  Expenses:UdenMoms:Hosting:Hetzner                                 57.12 DKK
+  Liabilities:Kreditorer:Hetzner                                   -57.12 DKK
+
+2025-06-11 * "betalt" "CCC"
+  Liabilities:Kreditorer:Hetzner                                    57.12 DKK
+  Assets:Bank:BankErhverv                                          -57.12 DKK
+
+2025-06-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               19585.00 DKK
+  Assets:Bank:BankErhverv                                       -19585.00 DKK
+
+2025-06-10 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-06-10 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-06-04 * "Posteret" "BBB"
+  Expenses:UdenMoms:Software:OnePassword                           500.78 DKK
+  Liabilities:Kreditorer:OnePassword                              -500.78 DKK
+
+2025-06-04 * "betalt" "CCC"
+  Liabilities:Kreditorer:OnePassword                               500.78 DKK
+  Assets:Bank:BankErhverv                                         -500.78 DKK
+
+2025-06-03 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-06-02 * "Posteret" "BBB"
+  Expenses:MedMoms:Hosting:Punktum                                  56.80 DKK
+  Liabilities:Kreditorer:Punktum                                   -71.00 DKK
+  Assets:Moms:KoebMoms                                              14.20 DKK
+
+2025-06-02 * "betalt" "CCC"
+  Liabilities:Kreditorer:Punktum                                    71.00 DKK
+  Assets:Bank:BankErhverv                                          -71.00 DKK
+
+2025-06-02 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-06-02 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-05-26 * "Posteret" "BBB"
+  Expenses:MedMoms:Hosting:ONECOM                                  566.40 DKK
+  Liabilities:Kreditorer:ONECOM                                   -708.00 DKK
+  Assets:Moms:KoebMoms                                             141.60 DKK
+
+2025-05-26 * "betalt" "CCC"
+  Liabilities:Kreditorer:ONECOM                                    708.00 DKK
+  Assets:Bank:BankErhverv                                         -708.00 DKK
+
+2025-05-26 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -71955.00 DKK
+  Assets:Bank:BankErhverv                                        71955.00 DKK
+
+2025-05-12 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               19585.00 DKK
+  Assets:Bank:BankErhverv                                       -19585.00 DKK
+
+2025-05-07 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-05-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-05-06 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-05-02 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              31561.87 DKK
+  Assets:Bank:BankErhverv                                       -31561.87 DKK
+
+2025-05-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-05-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-04-14 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -37310.00 DKK
+  Assets:Bank:BankErhverv                                        37310.00 DKK
+
+2025-04-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               19585.00 DKK
+  Assets:Bank:BankErhverv                                       -19585.00 DKK
+
+2025-04-08 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-04-08 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-04-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-04-08 * "Posteret" "BBB"
+  Expenses:UdenMoms:Hosting:Hetzner                                 57.14 DKK
+  Liabilities:Kreditorer:Hetzner                                   -57.14 DKK
+
+2025-04-08 * "betalt" "CCC"
+  Liabilities:Kreditorer:Hetzner                                    57.14 DKK
+  Assets:Bank:BankErhverv                                          -57.14 DKK
+
+2025-04-03 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              32072.41 DKK
+  Assets:Bank:BankErhverv                                       -32072.41 DKK
+
+2025-04-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-04-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-04-01 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenATP                                 2164.30 DKK
+  Assets:Bank:BankErhverv                                        -2164.30 DKK
+
+2025-04-01 * "Posteret" "BBB"
+  Expenses:MedMoms:Internet:Fibia                                  885.40 DKK
+  Liabilities:Kreditorer:Fibia                                   -1106.75 DKK
+  Assets:Moms:KoebMoms                                             221.35 DKK
+
+2025-04-01 * "betalt" "CCC"
+  Liabilities:Kreditorer:Fibia                                    1106.75 DKK
+  Assets:Bank:BankErhverv                                        -1106.75 DKK
+
+2025-03-31 * "betalt" "CCC"
+  Expenses:Finansielt:Gebyrer:GebyrBank                            851.50 DKK
+  Assets:Bank:BankErhverv                                         -851.50 DKK
+
+2025-03-31 * "Posteret" "BBB"
+  Expenses:MedMoms:Sponsorater:Sponsorater                        2880.00 DKK
+  Liabilities:Kreditorer:Sponsorater                             -3600.00 DKK
+  Assets:Moms:KoebMoms                                             720.00 DKK
+
+2025-03-31 * "betalt" "CCC"
+  Liabilities:Kreditorer:Sponsorater                              3600.00 DKK
+  Assets:Bank:BankErhverv                                        -3600.00 DKK
+
+2025-03-17 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -86612.50 DKK
+  Assets:Bank:BankErhverv                                        86612.50 DKK
+
+2025-03-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               39221.00 DKK
+  Assets:Bank:BankErhverv                                       -39221.00 DKK
+
+2025-03-07 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:ELG                                   5631.20 DKK
+  Liabilities:Kreditorer:ELG                                     -7039.00 DKK
+  Assets:Moms:KoebMoms                                            1407.80 DKK
+
+2025-03-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:ELG                                      7039.00 DKK
+  Assets:Bank:BankErhverv                                        -7039.00 DKK
+
+2025-03-07 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-03-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-03-04 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 31.25 DKK
+  Assets:Bank:BankErhverv                                          -31.25 DKK
+
+2025-03-03 * "betalt" "CCC"
+  Liabilities:Moms:SkyldigMoms                                   88352.00 DKK
+  Assets:Bank:BankErhverv                                       -88352.00 DKK
+
+2025-03-03 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-03-03 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-02-28 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              62714.60 DKK
+  Assets:Bank:BankErhverv                                       -62714.60 DKK
+
+2025-02-21 * "betalt" "CCC"
+  Expenses:Finansielt:Gebyrer:GebyrBank                            250.00 DKK
+  Assets:Bank:BankErhverv                                         -250.00 DKK
+
+2025-02-13 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -85800.00 DKK
+  Assets:Bank:BankErhverv                                        85800.00 DKK
+
+2025-02-10 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenSkat                               20960.00 DKK
+  Assets:Bank:BankErhverv                                       -20960.00 DKK
+
+2025-02-10 * "Posteret" "BBB"
+  Expenses:UdenMoms:Hosting:Hetzner                                 57.13 DKK
+  Liabilities:Kreditorer:Hetzner                                   -57.13 DKK
+
+2025-02-10 * "betalt" "CCC"
+  Liabilities:Kreditorer:Hetzner                                    57.13 DKK
+  Assets:Bank:BankErhverv                                          -57.13 DKK
+
+2025-02-07 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-02-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-02-04 * "Posteret" "BBB"
+  Expenses:MedMoms:Hardware:ELG                                   1119.20 DKK
+  Liabilities:Kreditorer:ELG                                     -1399.00 DKK
+  Assets:Moms:KoebMoms                                             279.80 DKK
+
+2025-02-04 * "betalt" "CCC"
+  Liabilities:Kreditorer:ELG                                      1399.00 DKK
+  Assets:Bank:BankErhverv                                        -1399.00 DKK
+
+2025-02-03 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                447.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -559.00 DKK
+  Assets:Moms:KoebMoms                                             111.80 DKK
+
+2025-02-03 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   559.00 DKK
+  Assets:Bank:BankErhverv                                         -559.00 DKK
+
+2025-01-21 * "Posteret" "BBB"
+  Expenses:UdenMoms:Forsikring:AON                                6274.72 DKK
+  Liabilities:Kreditorer:AON                                     -6274.72 DKK
+
+2025-01-21 * "betalt" "CCC"
+  Liabilities:Kreditorer:AON                                      6274.72 DKK
+  Assets:Bank:BankErhverv                                        -6274.72 DKK
+
+2025-01-20 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenAnsat                              32651.54 DKK
+  Assets:Bank:BankErhverv                                       -32651.54 DKK
+
+2025-01-15 * "betalt" "CCC"
+  Assets:Debitorer:GOTTIT                                       -98800.00 DKK
+  Assets:Bank:BankErhverv                                        98800.00 DKK
+
+2025-01-14 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenGebyr                                 62.50 DKK
+  Assets:Bank:BankErhverv                                          -62.50 DKK
+
+2025-01-07 * "Posteret" "BBB"
+  Expenses:UdenMoms:Avis:Politiken                                 339.00 DKK
+  Liabilities:Kreditorer:Politiken                                -339.00 DKK
+
+2025-01-07 * "betalt" "CCC"
+  Liabilities:Kreditorer:Politiken                                 339.00 DKK
+  Assets:Bank:BankErhverv                                         -339.00 DKK
+
+2025-01-02 * "Posteret" "BBB"
+  Expenses:MedMoms:Internet:Fibia                                  821.40 DKK
+  Liabilities:Kreditorer:Fibia                                   -1026.75 DKK
+  Assets:Moms:KoebMoms                                             205.35 DKK
+
+2025-01-02 * "betalt" "CCC"
+  Liabilities:Kreditorer:Fibia                                    1026.75 DKK
+  Assets:Bank:BankErhverv                                        -1026.75 DKK
+
+2025-01-02 * "betalt" "CCC"
+  Liabilities:Loen:SkyldigLoenATP                                  474.64 DKK
+  Assets:Bank:BankErhverv                                         -474.64 DKK
+
+2025-01-02 * "Posteret" "BBB"
+  Expenses:MedMoms:Telefoni:Telmore                                407.20 DKK
+  Liabilities:Kreditorer:Telmore                                  -509.00 DKK
+  Assets:Moms:KoebMoms                                             101.80 DKK
+
+2025-01-02 * "betalt" "CCC"
+  Liabilities:Kreditorer:Telmore                                   509.00 DKK
+  Assets:Bank:BankErhverv                                         -509.00 DKK
