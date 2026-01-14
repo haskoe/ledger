@@ -30,8 +30,8 @@ def handle_afstem(ctx):
         for d, b in transactions[1:]
         if util.format_date(d) in bank_transactions
     ]
-    print("afstemningsdatoer:")
-    print("\n".join([d[0] for d in afstemning]))
+    print("afstemningsdatoer:", len(afstemning))
+    # print("\n".join([d[0] for d in afstemning]))
 
     first_diff = next((a for a in afstemning if a[1] != a[2]), None)
     if not first_diff:

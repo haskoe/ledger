@@ -1,0 +1,59 @@
+2024-01-31 * "Salg" "Salg GOTTIT. Periode jan. Timer: 59 * 1040 = 61360. Support: 5 * 1000 = 5000"
+  Income:Salg:GOTTIT                                            -66360.00 DKK
+  Assets:Debitorer:GOTTIT                                        82950.00 DKK
+  Liabilities:Moms:SalgMoms                                     -16590.00 DKK
+
+2024-02-28 * "Salg" "Salg GOTTIT. Periode feb. Timer: 48 * 1040 = 49920"
+  Income:Salg:GOTTIT                                            -49920.00 DKK
+  Assets:Debitorer:GOTTIT                                        62400.00 DKK
+  Liabilities:Moms:SalgMoms                                     -12480.00 DKK
+
+2024-03-31 * "Salg" "Salg GOTTIT. Periode mar. Timer: 70 * 1040 = 72800"
+  Income:Salg:GOTTIT                                            -72800.00 DKK
+  Assets:Debitorer:GOTTIT                                        91000.00 DKK
+  Liabilities:Moms:SalgMoms                                     -18200.00 DKK
+
+2024-04-30 * "Salg" "Salg GOTTIT. Periode apr. Timer: 60 * 1040 = 62400"
+  Income:Salg:GOTTIT                                            -62400.00 DKK
+  Assets:Debitorer:GOTTIT                                        78000.00 DKK
+  Liabilities:Moms:SalgMoms                                     -15600.00 DKK
+
+2024-05-31 * "Salg" "Salg GOTTIT. Periode maj. Timer: 70 * 1040 = 72800"
+  Income:Salg:GOTTIT                                            -72800.00 DKK
+  Assets:Debitorer:GOTTIT                                        91000.00 DKK
+  Liabilities:Moms:SalgMoms                                     -18200.00 DKK
+
+2024-06-30 * "Salg" "Salg GOTTIT. Periode jun. Timer: 87 * 1040 = 90480"
+  Income:Salg:GOTTIT                                            -90480.00 DKK
+  Assets:Debitorer:GOTTIT                                       113100.00 DKK
+  Liabilities:Moms:SalgMoms                                     -22620.00 DKK
+
+2024-07-31 * "Salg" "Salg GOTTIT. Periode jul. Timer: 42 * 1040 = 43680"
+  Income:Salg:GOTTIT                                            -43680.00 DKK
+  Assets:Debitorer:GOTTIT                                        54600.00 DKK
+  Liabilities:Moms:SalgMoms                                     -10920.00 DKK
+
+2024-08-31 * "Salg" "Salg GOTTIT. Periode aug. Timer: 51 * 1040 = 53040"
+  Income:Salg:GOTTIT                                            -53040.00 DKK
+  Assets:Debitorer:GOTTIT                                        66300.00 DKK
+  Liabilities:Moms:SalgMoms                                     -13260.00 DKK
+
+2024-09-30 * "Salg" "Salg GOTTIT. Periode sep. Timer: 55 * 1040 = 57200"
+  Income:Salg:GOTTIT                                            -57200.00 DKK
+  Assets:Debitorer:GOTTIT                                        71500.00 DKK
+  Liabilities:Moms:SalgMoms                                     -14300.00 DKK
+
+2024-10-31 * "Salg" "Salg GOTTIT. Periode okt. Timer: 71 * 1040 = 73840"
+  Income:Salg:GOTTIT                                            -73840.00 DKK
+  Assets:Debitorer:GOTTIT                                        92300.00 DKK
+  Liabilities:Moms:SalgMoms                                     -18460.00 DKK
+
+2024-11-30 * "Salg" "Salg GOTTIT. Periode nov. Timer: 76 * 1040 = 79040"
+  Income:Salg:GOTTIT                                            -79040.00 DKK
+  Assets:Debitorer:GOTTIT                                        98800.00 DKK
+  Liabilities:Moms:SalgMoms                                     -19760.00 DKK
+
+2024-12-31 * "Salg" "Salg GOTTIT. Periode dec. Timer: 66 * 1040 = 68640"
+  Income:Salg:GOTTIT                                            -68640.00 DKK
+  Assets:Debitorer:GOTTIT                                        85800.00 DKK
+  Liabilities:Moms:SalgMoms                                     -17160.00 DKK
