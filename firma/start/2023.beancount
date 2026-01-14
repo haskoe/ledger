@@ -1,0 +1,3 @@
+2023-03-01 * "Momsafregning" "Korrektion for lidt betalt moms for periode H2 2022"
+  Liabilities:Moms:SkyldigMoms         806.00 DKK
+  Equity:MomsKorrektion               -806.00 DKK
