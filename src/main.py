@@ -12,11 +12,11 @@ def main():
     parent_parser.add_argument(
         "--firma", default="firma", help="Navn på firmaet (default: 'firma')"
     )
+    # parent_parser.add_argument(
+    #     "--periode", default="", help="Regnskabsperiode/år (default: '2021')"
+    # )
     parent_parser.add_argument(
-        "--periode", default="2021", help="Regnskabsperiode/år (default: '2021')"
-    )
-    parent_parser.add_argument(
-        "--enddate", help="Slutdato for perioden (format: YYYY-MM-DD)"
+        "--enddate", default="", help="Slutdato for perioden (format: YYMMDD)"
     )
 
     parser = argparse.ArgumentParser(description="Ledger CLI - Dansk Bogføringssystem")
@@ -51,9 +51,7 @@ def main():
 
     from context import LedgerContext
 
-    ctx = LedgerContext(
-        company_name=args.firma, period=args.periode, enddate=args.enddate
-    )
+    ctx = LedgerContext(company_name=args.firma, enddate=args.enddate)
 
     if args.command == "afstem":
         handle_afstem(ctx)

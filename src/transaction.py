@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, date
 from functools import cached_property
 import constants as const
 import util
@@ -8,7 +8,7 @@ from decimal import Decimal
 
 @dataclass
 class Transaction:
-    date_posted: datetime
+    date_posted: date
     text: str
     extra_text: str
     amount: Decimal
@@ -17,6 +17,8 @@ class Transaction:
     template_name: str
 
     def __post_init__(self):
+        if isinstance(self.date_posted, datetime):
+            self.date_posted = self.date_posted.date()
         self.amount_abs = abs(self.amount)
         self.amount_vat_liable = 0
         self.amount_vat_non_liable = self.amount_abs

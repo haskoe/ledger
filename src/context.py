@@ -15,7 +15,6 @@ from decimal import Decimal
 @dataclass
 class LedgerContext:
     company_name: str
-    period: str
     enddate: date
     root_path: str = "."
 
@@ -24,7 +23,23 @@ class LedgerContext:
             try:
                 self.enddate = datetime.strptime(self.enddate, "%Y%m%d").date()
             except ValueError:
-                self.enddate = datetime.strptime(self.enddate, "%Y-%m-%d").date()
+                raise ValueError(f"Period {self.period} does not exist")
+
+        if not self.enddate:
+            self.enddate = datetime(int(self.period), 12, 31).date()
+
+    @cached_property
+    def periods(self) -> list[str]:
+        period = int(self.enddate.strftime("%Y"))
+        periods = sorted(
+            [
+                str(d)
+                for d in os.listdir(self.company_path)
+                if d.startswith("20") and int(d) <= period
+            ]
+        )
+        print(periods)
+        return periods
 
     @cached_property
     def company_path(self) -> str:
@@ -38,8 +53,8 @@ class LedgerContext:
     def templates_path(self) -> str:
         return path.join(self.root_path, const.TEMPLATE_DIR)
 
-    def company_period_path(self, filename: str) -> str:
-        return path.join(self.company_path, self.period, filename)
+    def company_period_path(self, period: str, filename: str) -> str:
+        return path.join(self.company_path, period, filename)
 
     def company_metadata_path(self, filename: str) -> str:
         return path.join(self.company_path, "stamdata", filename)
@@ -50,22 +65,24 @@ class LedgerContext:
             content,
         )
 
-    def render_period_transactions(self, transactions) -> None:
-        self.render_transactions("", transactions)
+    def render_period_transactions(self, period: str, transactions) -> None:
+        self.render_transactions(period, "", transactions)
 
-    def render_transactions(self, prefix, transactions) -> None:
+    def render_transactions(self, period: str, prefix: str, transactions) -> None:
         output = []
         for t in transactions:
+            if t.date_posted > self.enddate:
+                continue
             template = self.templates[t.template_name]
             output.append(template.render(t.as_dict))
         self.write_file_in_generated_dir(
-            f"{prefix}{self.period}.beancount", "\n\n".join(output)
+            f"{prefix}{period}.beancount", "\n\n".join(output)
         )
 
-    def write_period_file(self, content) -> None:
-        self.write_file_in_generated_dir("%s.beancount" % (self.period,), content)
+    def write_period_file(self, period: str, content) -> None:
+        self.write_file_in_generated_dir("%s.beancount" % (period,), content)
 
-    def append_generated_file(self, prefix, content) -> None:
+    def append_generated_file(self, period, prefix, content) -> None:
         util.append_file(
             path.join(self.company_generated_path, "%s.beancount" % (prefix,)),
             content,
@@ -113,33 +130,32 @@ class LedgerContext:
             ),
         )
 
-    @cached_property
-    def bank_to_invoice_date(self):
+    def get_bank_to_invoice_date(self, period: str):
         tmp = util.csv_to_dict(
-            self.company_period_path(const.BANK_TO_INVOICE_DATE_CSV),
+            self.company_period_path(period, const.BANK_TO_INVOICE_DATE_CSV),
             const.CSV_SPECS[const.BANK_TO_INVOICE_DATE_CSV],
             lambda x: (";".join([x[const.DATE_POSTED_KEY], x[const.DESCRIPTION]]), x),
         )
         return tmp
 
-    @cached_property
-    def bank_csv(self):
+    def get_bank_csv(self, period: str):
         return reversed(
             util.load_csv(
-                self.company_period_path("bank.csv"), const.CSV_SPECS[const.BANK_CSV]
+                self.company_period_path(period, "bank.csv"),
+                const.CSV_SPECS[const.BANK_CSV],
             )
         )
 
-    @cached_property
-    def loen_csv(self):
+    def get_loen_csv(self, period: str):
         return util.load_csv(
-            self.company_period_path("loen.txt"), const.CSV_SPECS[const.LOEN_CSV]
+            self.company_period_path(period, "loen.txt"),
+            const.CSV_SPECS[const.LOEN_CSV],
         )
 
-    @cached_property
-    def udbytte_csv(self):
+    def get_udbytte_csv(self, period: str):
         return util.load_csv(
-            self.company_period_path("udbytte.txt"), const.CSV_SPECS[const.UDBYTTE_CSV]
+            self.company_period_path(period, "udbytte.txt"),
+            const.CSV_SPECS[const.UDBYTTE_CSV],
         )
 
     @cached_property
@@ -158,10 +174,10 @@ class LedgerContext:
         # return {k: dict(v) for k, v in _prices.items()}
         return prices
 
-    @cached_property
-    def salg(self):
+    def get_salg_csv(self, period):
         return util.load_csv(
-            self.company_period_path("salg.txt"), const.CSV_SPECS[const.SALG_TXT]
+            self.company_period_path(period, "salg.txt"),
+            const.CSV_SPECS[const.SALG_TXT],
         )
 
     @cached_property
