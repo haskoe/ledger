@@ -648,8 +648,13 @@
   Liabilities:Kreditorer:ELG                                     -1333.00 DKK
   Assets:Bank:BankErhverv                                         1333.00 DKK
 
+2023-06-21 * "Posteret" "BBB"
+  Expenses:MedMoms:Kurser:SuperUsers                             20600.00 DKK
+  Liabilities:Kreditorer:SuperUsers                             -25750.00 DKK
+  Assets:Moms:KoebMoms                                            5150.00 DKK
+
 2023-06-21 * "betalt" "CCC"
-  Liabilities:Loen:SkyldigLoenGebyr                              25750.00 DKK
+  Liabilities:Kreditorer:SuperUsers                              25750.00 DKK
   Assets:Bank:BankErhverv                                       -25750.00 DKK
 
 2023-06-20 * "Posteret" "BBB"

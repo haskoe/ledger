@@ -1,7 +1,7 @@
 2023-06-30 * "Momsafregning" "Lukning af moms "
-  Assets:Moms:KoebMoms                                           -6378.70 DKK
+  Assets:Moms:KoebMoms                                          -11528.70 DKK
   Liabilities:Moms:SalgMoms                                      79108.00 DKK
-  Liabilities:Moms:SkyldigMoms                                  -72729.00 DKK
+  Liabilities:Moms:SkyldigMoms                                  -67579.00 DKK
   Equity:Afrunding                                                  -0.30 DKK
 2023-12-31 * "Momsafregning" "Lukning af moms "
   Assets:Moms:KoebMoms                                           -3171.96 DKK
