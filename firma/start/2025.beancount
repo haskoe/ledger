@@ -1,3 +1,0 @@
-2025-09-04 * "Momsafregning" "Korrektion for betalt moms for periode H1 2025"
-  Liabilities:Moms:SkyldigMoms         -719.00 DKK
-  Equity:MomsKorrektion                 719.00 DKK
